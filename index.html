@@ -1,0 +1,2989 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Белые Перчатки - Чистота без забот</title>
+    <link rel="icon" type="image/png" href="/pics/favicon2.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./styles/app.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/inputmask.min.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <!-- Хэдер, меню, контакты -->
+
+    <header class="header">
+      <div class="container">
+        <div class="header__content">
+          <div class="header__logo txt_logo txt_white">White Gloves</div>
+          <div class="phoneWrapper">
+            <a
+              class="phone txt_regular txt_bold txt_white"
+              href="tel:+79818728636"
+              >+7 (981) 872-86-36</a
+            >
+            <div class="timeWrapper">
+              <svg
+                class="header__elips"
+                width="10"
+                height="10"
+                viewBox="0 0 10 10"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle cx="5" cy="5" r="5" fill="#def2f1" />
+              </svg>
+              <span class="txt_regular txt_white">Пн-Вс: 9:00 - 21:00</span>
+            </div>
+          </div>
+          <div class="header__socials">
+            <span class="txt_regular txt_white"
+              >Быстрая связь с нами<br />в мессенджерах:</span
+            >
+            <a href="https://wa.me/79818728636" target="_blank">
+              <img class="socialsLogo" src="pics/social-wa.svg" alt="WA-icon" />
+            </a>
+            <a href="https://vk.com/id350750052" target="_blank">
+              <img class="socialsLogo" src="pics/social-vk.svg" alt="VK-icon" />
+            </a>
+            <a href="https://t.me/AlenaEfimenkoo" target="_blank">
+              <img
+                class="socialsLogo"
+                src="pics/social-telegram.svg"
+                alt="Tg-icon"
+              />
+            </a>
+          </div>
+          <div>
+            <a class="button openModalOrder">
+              <span class="txt_regular txt_white">Заказать консультацию</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Новости -->
+
+    <div class="news" id="news">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide swiper-slide_firstBackground">
+            <div class="container">
+              <div class="swiper-slide__content">
+                <h1 class="txt_title txt_bold txt_white">
+                  Бережная уборка квартир и домов в СПБ
+                  <span class="txt_title txt_white"
+                    >по фиксированной стоимости от 80₽/м²</span
+                  >
+                  <span class="txt_regular txt_bold txt_white">
+                    <span class="dash"></span>
+                    с гарантией качества по договору</span
+                  >
+                </h1>
+
+                <p class="txt_regular txt_white">
+                  Выберите вид уборки, получите точный расчёт стоимости и
+                  <span class="txt_bold">скидку 10%</span> на первый заказ
+                </p>
+                <div>
+                  <a class="button openModalCalc">
+                    <span class="txt_regular txt_white"
+                      >РАССЧИТАТЬ СТОИМОСТЬ</span
+                    >
+                    <span class="bubble"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide_secondBackground">
+            <div class="container">
+              <div class="swiper-slide__content">
+                <h1 class="txt_title txt_bold txt_white">
+                  Профессиональная химчистка ковров в СПБ
+                  <span class="txt_title txt_white"
+                    >со стоимостью от 1000₽</span
+                  >
+                  <span class="txt_regular txt_bold txt_white">
+                    <span class="dash"></span>
+                    используем гипоаллергенные средства</span
+                  >
+                </h1>
+                <p class="txt_regular txt_white">
+                  Удаление въевшихся, твердых, засохших загрязнений и неприятных
+                  запахов
+                </p>
+                <div>
+                  <a class="button openModalOrder">
+                    <span class="txt_regular txt_white"
+                      >РАССЧИТАТЬ СТОИМОСТЬ</span
+                    >
+                    <span class="bubble"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide_thirdBackground">
+            <div class="container">
+              <div class="swiper-slide__content">
+                <h1 class="txt_title txt_bold txt_white">
+                  Качественная уборка офисных помещений
+                  <span class="txt_title txt_white"
+                    >с доступной ценой от 130₽/м²</span
+                  >
+                  <span class="txt_regular txt_white txt_bold">
+                    <span class="dash"></span>
+                    прозрачные условия без переплат</span
+                  >
+                </h1>
+                <p class="txt_regular txt_white">
+                  Работаем с гарантией качества и
+                  <span class="txt_bold">выгодными скидками</span> для
+                  постоянных клиентов
+                </p>
+                <div>
+                  <button class="button openModalCalc">
+                    <span class="txt_regular txt_white"
+                      >РАССЧИТАТЬ СТОИМОСТЬ</span
+                    >
+                    <span class="bubble"></span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+
+    <!-- Презентация -->
+
+    <section id="presentation" class="presentation">
+      <div class="container">
+        <h1 class="title txt_logo">White Gloves</h1>
+        <p class="txt_regular">
+          Мы профессиональная клининговая компания в Санкт-Петербурге,
+          предоставляющая полный спектр услуг по уборке квартир, домов, офисов и
+          коммерческих помещений по всему городу. Наша команда берётся за любые
+          задачи: от экспресс-уборки за час до генеральной «под ключ».
+          <br />
+          White Gloves — это высокие стандарты, доступные цены и забота о вашем
+          комфорте. Свяжитесь с нами уже сегодня и узнайте, как просто сделать
+          вашу квартиру, дом или офис сияющими:
+          <a class="text_mobile" href="tel:+79818728636">+7 (981) 872-86-36</a>.
+        </p>
+      </div>
+    </section>
+
+    <!-- Панель навигации -->
+    <section class="navbar">
+      <div class="container">
+        <nav class="navbar__tabs">
+          <div class="navbar__tab txt_regular">
+            <a href="#presentation">О нас</a>
+          </div>
+          <div class="navbar__tab txt_regular">
+            <a href="#services">Услуги</a>
+          </div>
+          <div class="navbar__tab txt_regular">
+            <a href="#extraServices">Дополнительно</a>
+          </div>
+          <div class="navbar__tab txt_regular">
+            <a href="#demonstration">Как мы работаем</a>
+          </div>
+          <div class="navbar__tab txt_regular">
+            <a href="#FAQ">Вопрос-ответ</a>
+          </div>
+          <div class="navbar__tab txt_regular openModalCalc">
+            <a>Рассчитать стоимость</a>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Достоинства  -->
+
+    <section class="advantages">
+      <div class="container">
+        <div class="advantages__cardboard">
+          <div
+            class="advantages__item advantages__item_firstBackground fadeInSection"
+            data-index="0"
+          >
+            <div class="advantages__itemContent txt_title txt_bold txt_white">
+              Немецкое<br />и американское<br />оборудование
+            </div>
+          </div>
+          <div
+            class="advantages__item advantages__item_secondBackground fadeInSection"
+            data-index="1"
+          >
+            <div class="advantages__itemContent txt_title txt_bold txt_white">
+              Безопасные<br />гипоаллергенные<br />моющие средства
+            </div>
+          </div>
+          <div
+            class="advantages__item advantages__item_thirdBackground fadeInSection"
+            data-index="2"
+          >
+            <div class="advantages__itemContent txt_title txt_bold txt_white">
+              Соблюдаем<br />санитарные<br />нормы
+            </div>
+          </div>
+          <div
+            class="advantages__item advantages__item_fourthBackground fadeInSection"
+            data-index="3"
+          >
+            <div class="advantages__itemContent txt_title txt_bold txt_white">
+              Оплата<br />по результату<br />после уборки
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Услуги -->
+
+    <section id="services" class="services">
+      <div class="container">
+        <h1 class="title txt_title txt_aquamarine txt_bold">
+          9 видов уборки
+          <span class="txt_title">под любую Вашу задачу</span>
+        </h1>
+        <p class="txt_subtitle txt_grey">
+          Идеальное решение для семей с детьми,<br />аллергиков, арендодателей и
+          владельцев пушистых любимцев
+        </p>
+        <div class="services__cardboard">
+          <div class="services__item fadeInSection" data-index="0">
+            <div class="services__itemInner">
+              <div class="services__itemFront">
+                <div
+                  class="services__itemImg services__itemImg_firstBackground"
+                ></div>
+                <div class="services__itemFrontText">
+                  <h1 class="txt_title txt_bold">Гeнеральная уборка</h1>
+                  <p class="txt_regular">
+                    Комплексная уборка с удалением пыли, жира и грязи
+                  </p>
+                </div>
+                <div class="services__itemBottom">
+                  <span class="services__itemTerm"
+                    ><span class="txt_regular txt_aquamarine txt_bold"
+                      >Время работы: </span
+                    ><span class="txt_regular txt_grey">5-7 часов</span></span
+                  >
+                  <div
+                    class="services__itemPrice txt_regular txt_bold txt_aquamarine"
+                  >
+                    от 150 ₽/м²
+                  </div>
+                  <button
+                    class="services__button openModalCalc txt_regular txt_white"
+                  >
+                    РАССЧИТАТЬ СТОИМОСТЬ
+                  </button>
+                  <span class="details txt_regular txt_softAqua"
+                    >Подробнее</span
+                  >
+                </div>
+              </div>
+              <div class="services__itemBack">
+                <div class="title">
+                  <h1 class="txt_title txt_bold txt_softAqua">
+                    Генеральная уборка
+                  </h1>
+                  <div class="closeBtn">&times;</div>
+                </div>
+                <div class="services__itemBackText">
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Общие работы:</h1>
+                    <li>Сухая уборка пылесосом мягкой мебели и ковров</li>
+                    <li>Мойка полов и плинтусов профессиональной химией</li>
+                    <li>Влажная уборка корпусной мебели снаружи и внутри</li>
+                    <li>
+                      Чистка дверей, наличников, уплотнителей и дверных коробок
+                    </li>
+                    <li>Мойка окон (стекла, рамы) снаружи и внутри</li>
+                    <li>Мойка осветительных приборов</li>
+                    <li>
+                      Удаление всех сложных загрязнений (жир, ржавчина, налёт)
+                    </li>
+                    <li>Обеспыливание всех доступных поверхностей</li>
+                  </ul>
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Кухня:</h1>
+                    <li>
+                      Влажная уборка кухонного гарнитура, столешниц, фасадов
+                      шкафов
+                    </li>
+                    <li>Чистка и обезжиривание сантехники</li>
+                    <li>Мойка всех бытовых приборов снаружи</li>
+                    <li>Мойка холодильника снаружи</li>
+                    <li>Мойка жалюзи, окон и подоконников</li>
+                    <li>Влажная уборка зеркал и стеклянных поверхностей</li>
+                  </ul>
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">
+                      Комнаты, прихожая, коридоры:
+                    </h1>
+                    <li>Обеспыливание предметов интерьера</li>
+                    <li>
+                      Влажная уборка тумб, шкафов, полок, фурнитуры и другой
+                      корпусной мебели
+                    </li>
+                    <li>Очистка радиаторов и батарей, мойка подоконников</li>
+                    <li>Влажная уборка зеркал и стеклянных поверхностей</li>
+                    <li>Сухая уборка ковролина и ковров</li>
+                    <li>Бережная уборка кожаной мебели и паркета</li>
+                    <li>Дезинфекция дверных ручек</li>
+                  </ul>
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Ванная:</h1>
+                    <li>Влажная уборка и дезинфекция всей сантехники</li>
+                    <li>Удаление ржавчины и известкового налёта</li>
+                    <li>Мойка душевых кабин, сушилок и смесителей</li>
+                    <li>Мойка кафеля и очистка межплиточных швов</li>
+                    <li>Обеспыливание предметов интерьера</li>
+                    <li>Влажная уборка зеркал и стеклянных поверхностей</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="services__item fadeInSection" data-index="1">
+            <div class="services__itemInner">
+              <div class="services__itemFront">
+                <div
+                  class="services__itemImg services__itemImg_secondBackground"
+                ></div>
+                <div class="services__itemFrontText">
+                  <h1 class="txt_title txt_bold">Уборка после ремонта</h1>
+                  <p class="txt_regular">
+                    Подготовим ваше помещение к комфортному проживанию
+                  </p>
+                </div>
+                <div class="services__itemBottom">
+                  <span class="services__itemTerm"
+                    ><span class="txt_regular txt_aquamarine txt_bold"
+                      >Время работы: </span
+                    ><span class="txt_regular txt_grey">5-7 часов</span></span
+                  >
+                  <div
+                    class="services__itemPrice txt_regular txt_aquamarine txt_bold"
+                  >
+                    от 150 ₽/м²
+                  </div>
+                  <button
+                    class="services__button openModalCalc txt_regular txt_white"
+                  >
+                    РАССЧИТАТЬ СТОИМОСТЬ
+                  </button>
+                  <span class="details txt_regular txt_softAqua"
+                    >Подробнее</span
+                  >
+                </div>
+              </div>
+              <div class="services__itemBack">
+                <div class="title">
+                  <h1 class="txt_title txt_bold txt_softAqua">
+                    Уборка после ремонта
+                  </h1>
+                  <div class="closeBtn">&times;</div>
+                </div>
+                <div class="services__itemBackText">
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Удаление пыли:</h1>
+                    <li>
+                      Удаление пыли со стен, потолков, дверей и всех доступных
+                      поверхностей
+                    </li>
+                    <li>Удаление пыли со всех бытовых приборов и техники</li>
+                    <li>Сухая уборка мягкой мебели, ковров</li>
+                  </ul>
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">
+                      Удаление строительных загрязнений:
+                    </h1>
+                    <li>Удаление следов цемента, краски</li>
+                    <li>
+                      Удаление строительного клея, разводов от затирок,
+                      штукатурки
+                    </li>
+                    <li>Отмываем водоэмульсионную краску, герметик</li>
+                    <li>Удаление следов затирки с плитки, мойка кафеля</li>
+                    <li>Вынос мелкого строительного мусора</li>
+                  </ul>
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Влажная уборка:</h1>
+                    <li>Мойка полов и плинтусов после ремонта</li>
+                    <li>Мойка окон(стекла, рамы) снаружи и внутри</li>
+                    <li>Мойка осветительных приборов и зеркал</li>
+                    <li>
+                      Мойка выключателей, розеток, фурнитуры, предметов
+                      интерьера
+                    </li>
+                    <li>
+                      Мойка дверей, наличников, уплотнителей и дверных коробок
+                    </li>
+                    <li>Очистка радиаторов и батарей, мойка подоконников</li>
+                    <li>Дезинфекция сантехники (туалет, раковина, ванна)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="services__item fadeInSection" data-index="2">
+            <div class="services__itemInner">
+              <div class="services__itemFront">
+                <div
+                  class="services__itemImg services__itemImg_thirdBackground"
+                ></div>
+                <div class="services__itemFrontText">
+                  <h1 class="txt_title txt_bold">Поддерживающая уборка</h1>
+                  <p class="txt_regular">
+                    Уборка для поддержания чистоты в квартире
+                  </p>
+                </div>
+                <div class="services__itemBottom">
+                  <span class="services__itemTerm"
+                    ><span class="txt_regular txt_bold txt_aquamarine"
+                      >Время работы: </span
+                    ><span class="txt_regular txt_grey">2-4 часа</span></span
+                  >
+                  <div
+                    class="services__itemPrice txt_regular txt_bold txt_aquamarine"
+                  >
+                    от 80 ₽/м²
+                  </div>
+                  <button
+                    class="services__button openModalCalc txt_regular txt_white"
+                  >
+                    РАССЧИТАТЬ СТОИМОСТЬ
+                  </button>
+                  <span class="details txt_regular txt_softAqua"
+                    >Подробнее</span
+                  >
+                </div>
+              </div>
+              <div class="services__itemBack">
+                <div class="title">
+                  <h1 class="txt_title txt_bold txt_softAqua">
+                    Поддерживающая уборка
+                  </h1>
+                  <div class="closeBtn">&times;</div>
+                </div>
+                <div class="services__itemBackText">
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Общие работы:</h1>
+                    <li>
+                      Обеспыливание всех доступных поверхностей (кроме стен и
+                      потолка)
+                    </li>
+                    <li>
+                      Удаление пыли с внешней части бытовых приборов и техники
+                    </li>
+                    <li>Мойка пола</li>
+                    <li>Дезинфекция сантехники, туалет, ванна, раковина</li>
+                    <li>Дезинфекция дверных ручек</li>
+                    <li>Наружнее обезжиривание кухонного гарнитура</li>
+                    <li>Мойка фасадов кухонной мебели</li>
+                    <li>Сухая уборка мягкой мебели и ковров</li>
+                    <li>Мойка осветительных приборов и зеркал</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="services__item fadeInSection" data-index="0">
+            <div class="services__itemInner">
+              <div class="services__itemFront">
+                <div
+                  class="services__itemImg services__itemImg_fourthBackground"
+                ></div>
+                <div class="services__itemFrontText">
+                  <h1 class="txt_title txt_bold">Мойка окон и панорам</h1>
+                  <p class="txt_regular">
+                    За блестящими окнами грязь не живёт!
+                  </p>
+                </div>
+                <div class="services__itemBottom">
+                  <span class="services__itemTerm"
+                    ><span class="txt_regular txt_aquamarine txt_bold"
+                      >Время работы: </span
+                    ><span class="txt_regular txt_grey">2-4 часа</span></span
+                  >
+                  <div
+                    class="services__itemPrice txt_regular txt_aquamarine txt_bold"
+                  >
+                    от 500 ₽
+                  </div>
+                  <button
+                    class="services__button openModalOrder txt_regular txt_white"
+                  >
+                    РАССЧИТАТЬ СТОИМОСТЬ
+                  </button>
+                  <span class="details txt_regular txt_softAqua"
+                    >Подробнее</span
+                  >
+                </div>
+              </div>
+              <div class="services__itemBack">
+                <div class="title">
+                  <h1 class="txt_title txt_bold txt_softAqua">
+                    Мойка окон и панорам
+                  </h1>
+                  <div class="closeBtn">&times;</div>
+                </div>
+                <div class="services__itemBackText">
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Общие работы:</h1>
+                    <li>Отмываем стекла, полируем и не оставляем разводов</li>
+                    <li>Мойка рам, ручек и уплотнительных резинок</li>
+                    <li>Мойка подоконников</li>
+                    <li>Мойка москитных сеток</li>
+                    <li>Протираем жалюзи и рулонные шторы</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="services__item fadeInSection" data-index="1">
+            <div class="services__itemInner">
+              <div class="services__itemFront">
+                <div
+                  class="services__itemImg services__itemImg_fifthBackground"
+                ></div>
+                <div class="services__itemFrontText">
+                  <h1 class="txt_title txt_bold">Защитное покрытие</h1>
+                  <p class="txt_regular">
+                    Глубокая очистка и нанесение защитного слоя полироли
+                  </p>
+                </div>
+                <div class="services__itemBottom">
+                  <span class="services__itemTerm"
+                    ><span class="txt_regular txt_aquamarine txt_bold"
+                      >Время работы: </span
+                    ><span class="txt_regular txt_grey">8-12 часов</span></span
+                  >
+                  <div
+                    class="services__itemPrice txt_regular txt_aquamarine txt_bold"
+                  >
+                    от 100 ₽/м²
+                  </div>
+                  <button
+                    class="services__button openModalOrder txt_regular txt_white"
+                  >
+                    РАССЧИТАТЬ СТОИМОСТЬ
+                  </button>
+                  <span class="details txt_regular txt_softAqua"
+                    >Подробнее</span
+                  >
+                </div>
+              </div>
+              <div class="services__itemBack">
+                <div class="title">
+                  <h1 class="txt_title txt_bold txt_softAqua">
+                    Защитное покрытие
+                  </h1>
+                  <div class="closeBtn">&times;</div>
+                </div>
+                <div class="services__itemBackText">
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_bold">
+                      Глубокая очистка поверхности пола специальными моющими
+                      средствами и нанесение защитного слоя полироли. Полироль
+                      является универсальным и основным средством для бережного
+                      ухода за полами.
+                    </h1>
+                    <li>
+                      Долгосрочная защита от повреждений (царапин, следов от
+                      обуви)
+                    </li>
+                    <li>Долгосрочная защита от большинства видов пятен</li>
+                    <li>Обладает противоскользящим свойством</li>
+                    <li>
+                      Обеспечивает длительный блеск и отличный внешний вид
+                    </li>
+                    <li>
+                      Значительно уменьшает износ и продлевает срок службы полов
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="services__item fadeInSection" data-index="2">
+            <div class="services__itemInner">
+              <div class="services__itemFront">
+                <div
+                  class="services__itemImg services__itemImg_sixthBackground"
+                ></div>
+                <div class="services__itemFrontText">
+                  <h1 class="txt_title txt_bold">Экспресс уборка</h1>
+                  <p class="txt_regular">
+                    Срочная уборка с выездом в течении часа
+                  </p>
+                </div>
+                <div class="services__itemBottom">
+                  <span class="services__itemTerm"
+                    ><span class="txt_regular txt_aquamarine txt_bold"
+                      >Время работы: </span
+                    ><span class="txt_regular txt_grey">до 3 часов</span></span
+                  >
+                  <div
+                    class="services__itemPrice txt_regular txt_aquamarine txt_bold"
+                  >
+                    от 130 ₽/м²
+                  </div>
+                  <button
+                    class="services__button openModalCalc txt_regular txt_white"
+                  >
+                    РАССЧИТАТЬ СТОИМОСТЬ
+                  </button>
+                  <span class="details txt_regular txt_softAqua"
+                    >Подробнее</span
+                  >
+                </div>
+              </div>
+              <div class="services__itemBack">
+                <div class="title">
+                  <h1 class="txt_title txt_bold txt_softAqua">
+                    Экспресс-уборка
+                  </h1>
+                  <div class="closeBtn">&times;</div>
+                </div>
+                <div class="services__itemBackText">
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Общие работы:</h1>
+                    <li>
+                      Обеспыливание всех доступных поверхностей (кроме стен и
+                      потолка)
+                    </li>
+                    <li>Влажная уборка полов и плинтусов.</li>
+                    <li>
+                      Удаление пыли с внешней части бытовых приборов и техники
+                    </li>
+                    <li>Мойка окон (стекла, рамы) снаружи и внутри</li>
+                    <li>Мойка дверей и дезинфекция дверных ручек</li>
+                    <li>Дезинфекция сантехники, туалет, ванна, раковина</li>
+                    <li>Наружнее обезжиривание кухонного гарнитура</li>
+                    <li>Мойка столешницы и фасадов шкафов</li>
+                    <li>Сухая экспресс-очистка ковров и мягкой мебели.</li>
+                    <li>Мойка осветительных приборов и зеркал</li>
+                    <li>
+                      Вынос бытового или мелкого строительного мусора из
+                      квартиры
+                    </li>
+                    <li>Замена комплекта спального белья</li>
+                    <li>
+                      Лёгкая уборка, для подготовки к мероприятиям (за
+                      исключением сильных беспорядков)
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="services__item fadeInSection" data-index="0">
+            <div class="services__itemInner">
+              <div class="services__itemFront">
+                <div
+                  class="services__itemImg services__itemImg_seventhBackground"
+                ></div>
+                <div class="services__itemFrontText">
+                  <h1 class="txt_title txt_bold">Химчистка</h1>
+                  <p class="txt_regular">
+                    Чистка ковров, паласов, кавролина и мягкой мебели
+                  </p>
+                </div>
+                <div class="services__itemBottom">
+                  <span class="services__itemTerm"
+                    ><span class="txt_regular txt_bold txt_aquamarine"
+                      >Время работы: </span
+                    ><span class="txt_regular txt_grey">3-5 часов</span></span
+                  >
+                  <div
+                    class="services__itemPrice txt_regular txt_bold txt_aquamarine"
+                  >
+                    от 1000 ₽
+                  </div>
+                  <button
+                    class="services__button openModalOrder txt_regular txt_white"
+                  >
+                    РАССЧИТАТЬ СТОИМОСТЬ
+                  </button>
+                  <span class="details txt_regular txt_softAqua"
+                    >Подробнее</span
+                  >
+                </div>
+              </div>
+              <div class="services__itemBack">
+                <div class="title">
+                  <h1 class="txt_title txt_bold txt_softAqua">Химчистка</h1>
+                  <div class="closeBtn">&times;</div>
+                </div>
+                <div class="services__itemBackText">
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Общие работы:</h1>
+                    <li>Осмотр, оценка стойкости и глубины загрязнений</li>
+                    <li>Сухая обработка с помощью пылесоса</li>
+                    <li>
+                      Удаление въевшихся, твердых, засохших загрязнений ручным
+                      способом
+                    </li>
+                    <li>
+                      Использование на пятнах специальных средств для их
+                      удаления, подобранных с учетом материала обивки, состава
+                      пятен
+                    </li>
+                    <li>
+                      Использование специальной химии для удаления неприятных
+                      запахов
+                    </li>
+                    <li>
+                      Нанесение по всей поверхности дивана моющего средства для
+                      удаления общих загрязнений обивки
+                    </li>
+                    <li>
+                      Тщательное смывание средства, удаление всех его остатков
+                    </li>
+                    <li>
+                      Сушка дивана специальным оборудованием, которое позволяет
+                      удалить до 90% влаги из дивана. Проводится не только чтобы
+                      диван быстрее вернулся в эксплуатацию, но и чтобы на
+                      обивке не образовывалось плесени и грибков из-за застоя
+                      влаги
+                    </li>
+                    <li>
+                      Обработка дивана защитными средствами при необходимости и
+                      желании заказчика
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="services__item fadeInSection" data-index="1">
+            <div class="services__itemInner">
+              <div class="services__itemFront">
+                <div
+                  class="services__itemImg services__itemImg_eighthBackground"
+                ></div>
+                <div class="services__itemFrontText">
+                  <h1 class="txt_title txt_bold">Уборка офисов</h1>
+                  <p class="txt_regular">
+                    Уборка с удалением пыли, грязи и выносом мусора
+                  </p>
+                </div>
+                <div class="services__itemBottom">
+                  <span class="services__itemTerm"
+                    ><span class="txt_regular txt_bold txt_aquamarine"
+                      >Время работы: </span
+                    ><span class="txt_regular txt_grey">3-4 часа</span></span
+                  >
+                  <div
+                    class="services__itemPrice txt_regular txt_bold txt_aquamarine"
+                  >
+                    от 130 ₽/м²
+                  </div>
+                  <button
+                    class="services__button openModalCalc txt_regular txt_white"
+                  >
+                    РАССЧИТАТЬ СТОИМОСТЬ
+                  </button>
+                  <span class="details txt_regular txt_softAqua"
+                    >Подробнее</span
+                  >
+                </div>
+              </div>
+              <div class="services__itemBack">
+                <div class="title">
+                  <h1 class="txt_title txt_bold txt_softAqua">Уборка офисов</h1>
+                  <div class="closeBtn">&times;</div>
+                </div>
+                <div class="services__itemBackText">
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Общие работы:</h1>
+                    <li>
+                      Уборка пыли с поверхностей (столов, полок, подоконников)
+                    </li>
+                    <li>Обеспыливание зеркал в офисе</li>
+                    <li>Удаление пыли со стеклянных поверхностей</li>
+                    <li>Очистка подоконников</li>
+                    <li>Чистка плинтусов</li>
+                    <li>Сухая уборка пола пылесосом</li>
+                    <li>Влажная уборка пола в офисе</li>
+                    <li>Уборка пыли с офисной оргтехники</li>
+                    <li>Очистка от пыли радиаторов отопления</li>
+                    <li>Мойка осветительных приборов</li>
+                    <li>Чистка дверных ручек</li>
+                    <li>Вынос мусора</li>
+                  </ul>
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Санузлы:</h1>
+                    <li>Чистка напольной плитки</li>
+                    <li>Мытье унитаза</li>
+                    <li>Мытье раковины</li>
+                    <li>Мытье смесителей</li>
+                    <li>Проведение работ по дезинфекции помещения</li>
+                    <li>Пополнение расходников</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="services__item fadeInSection" data-index="2">
+            <div class="services__itemInner">
+              <div class="services__itemFront">
+                <div
+                  class="services__itemImg services__itemImg_ninthBackground"
+                ></div>
+                <div class="services__itemFrontText">
+                  <h1 class="txt_title txt_bold">Мойка офисных окон</h1>
+                  <p class="txt_regular">
+                    За блестящими окнами грязь не живёт!
+                  </p>
+                </div>
+                <div class="services__itemBottom">
+                  <span class="services__itemTerm"
+                    ><span class="txt_regular txt_bold txt_aquamarine"
+                      >Время работы: </span
+                    ><span class="txt_regular txt_grey">2-4 часа</span></span
+                  >
+                  <div
+                    class="services__itemPrice txt_regular txt_bold txt_aquamarine"
+                  >
+                    от 500 ₽
+                  </div>
+                  <button
+                    class="services__button openModalOrder txt_regular txt_white"
+                  >
+                    РАССЧИТАТЬ СТОИМОСТЬ
+                  </button>
+                  <span class="details txt_regular txt_softAqua"
+                    >Подробнее</span
+                  >
+                </div>
+              </div>
+              <div class="services__itemBack">
+                <div class="title">
+                  <h1 class="txt_title txt_bold txt_softAqua">
+                    Мойка офисных окон
+                  </h1>
+                  <div class="closeBtn">&times;</div>
+                </div>
+                <div class="services__itemBackText">
+                  <ul class="txt_regular">
+                    <h1 class="txt_subtitle txt_softAqua">Общие работы:</h1>
+                    <li>Отмываем стекла, полируем и не оставляем разводов</li>
+                    <li>Мойка рам, ручек и уплотнительных резинок</li>
+                    <li>Мойка подоконников</li>
+                    <li>Мойка москитных сеток</li>
+                    <li>Протираем жалюзи и рулонные шторы</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Дополнительные услуги -->
+
+    <section id="extraServices" class="extraServices">
+      <div class="container">
+        <div class="textWrapper txt_subtitle txt_white">
+          Не нашли нужный вариант?
+        </div>
+        <h1 class="title txt_title">
+          Взгляните на
+          <span class="txt_title txt_bold txt_aquamarine"
+            >дополнительные услуги</span
+          >
+        </h1>
+        <p class="txt_subtitle txt_grey">
+          Любые задачи по уборке — нам по плечу
+        </p>
+
+        <div class="extraServices__cardBoard">
+          <div class="extraServices__item">
+            <div
+              class="extraServices__itemImg extraServices__itemImg_firstBackground"
+            ></div>
+            <div class="extraServices__itemText">
+              <h1 class="txt_regular">Мойка варочной плиты</h1>
+              <span class="dash"></span>
+              <span class="txt_regular txt_bold txt_softAqua">400 ₽</span>
+            </div>
+          </div>
+          <div class="extraServices__item">
+            <div
+              class="extraServices__itemImg extraServices__itemImg_secondBackground"
+            ></div>
+            <div class="extraServices__itemText">
+              <h1 class="txt_regular">Мойка микроволновки</h1>
+              <span class="dash"></span>
+              <span class="txt_regular txt_bold txt_softAqua">400 ₽</span>
+            </div>
+          </div>
+          <div class="extraServices__item">
+            <div
+              class="extraServices__itemImg extraServices__itemImg_thirdBackground"
+            ></div>
+            <div class="extraServices__itemText">
+              <h1 class="txt_regular">Мойка холодильника</h1>
+              <span class="dash"></span>
+              <span class="txt_regular txt_bold txt_softAqua">600 ₽</span>
+            </div>
+          </div>
+          <div class="extraServices__item">
+            <div
+              class="extraServices__itemImg extraServices__itemImg_fourthBackground"
+            ></div>
+            <div class="extraServices__itemText">
+              <h1 class="txt_regular">Убраться на балконе</h1>
+              <span class="dash"></span>
+              <span class="txt_regular txt_bold txt_softAqua">от 1000 ₽</span>
+            </div>
+          </div>
+          <div class="extraServices__item">
+            <div
+              class="extraServices__itemImg extraServices__itemImg_fifthBackground"
+            ></div>
+            <div class="extraServices__itemText">
+              <h1 class="txt_regular">Мойка вытяжки</h1>
+              <span class="dash"></span>
+              <span class="txt_regular txt_bold txt_softAqua">500 ₽</span>
+            </div>
+          </div>
+          <div class="extraServices__item">
+            <div
+              class="extraServices__itemImg extraServices__itemImg_sixthBackground"
+            ></div>
+            <div class="extraServices__itemText">
+              <h1 class="txt_regular">Мойка духовки</h1>
+              <span class="dash"></span>
+              <span class="txt_regular txt_bold txt_softAqua">500 ₽</span>
+            </div>
+          </div>
+          <div class="extraServices__item">
+            <div
+              class="extraServices__itemImg extraServices__itemImg_seventhBackground"
+            ></div>
+            <div class="extraServices__itemText">
+              <h1 class="txt_regular">Поменяем постельное</h1>
+              <span class="dash"></span>
+              <span class="txt_regular txt_bold txt_softAqua">200 ₽</span>
+            </div>
+          </div>
+          <div class="extraServices__item">
+            <div
+              class="extraServices__itemImg extraServices__itemImg_eighthBackground"
+            ></div>
+            <div class="extraServices__itemText">
+              <h1 class="txt_regular">Мойка стен</h1>
+              <span class="dash"></span>
+              <span class="txt_regular txt_bold txt_softAqua">50 ₽/м²</span>
+            </div>
+          </div>
+          <div class="extraServices__item">
+            <div
+              class="extraServices__itemImg extraServices__itemImg_ninthBackground"
+            ></div>
+            <div class="extraServices__itemText">
+              <h1 class="txt_regular">Мойка потолков</h1>
+              <span class="dash"></span>
+              <span class="txt_regular txt_bold txt_softAqua">от 35 ₽/м²</span>
+            </div>
+          </div>
+          <div class="extraServices__offerBlock">
+            <div class="extraServices__offerText">
+              <h1 class="txt_title">Закажите 3 дополнительные услуги</h1>
+              <h1 class="txt_title txt_bold txt_softAqua">
+                и получите четвёртую в подарок
+              </h1>
+            </div>
+            <a
+              class="extraServices__button openModalCalc txt_regular txt_white"
+            >
+              ЗАКАЗАТЬ УБОРКУ
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Демонстрация -->
+
+    <section class="demonstration" id="demonstration">
+      <div class="container">
+        <h1 class="txt_title">Посмотрите наглядно, как мы делаем уборку</h1>
+        <p class="txt_subtitle txt_grey">
+          Так выглядит качественная работа в наших глазах
+        </p>
+        <div class="swiper__tabs">
+          <div class="swiper__tab txt_regular active" data-tab="0">Спальня</div>
+          <div class="swiper__tab txt_regular" data-tab="1">Кухня</div>
+          <div class="swiper__tab txt_regular" data-tab="2">Уборная</div>
+          <div class="swiper__tab txt_regular" data-tab="3">Прихожая</div>
+        </div>
+
+        <div class="demonstration__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="./pics/demonstration_bedroom.jpg"
+                alt="bedroom picture"
+                class="swiper__pic"
+              />
+              <div class="dotWrapper dotWrapper_1">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_right">
+                  <span class="txt_regular"
+                    >Отмоем осветительные<br />
+                    приборы</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_2">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_right">
+                  <span class="txt_regular">Помоем окна</span>
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_3">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_right">
+                  <span class="txt_regular"
+                    >Обеспылим<br />предметы интерьера</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_4">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_top">
+                  <span class="txt_regular">Аккуратно<br />сложим вещи</span>
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_5">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_right">
+                  <span class="txt_regular">Заправим кровать</span>
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_6">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_right">
+                  <span class="txt_regular">Помоем пол</span>
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_7">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_right">
+                  <span class="txt_regular">Пропылесосим ковер</span>
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_8">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_left">
+                  <span class="txt_regular"
+                    >Обеспылим<br />все доступные<br />поверхности</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./pics/demonstration_kitchen.jpg"
+                alt="kitchen picture"
+                class="swiper__pic"
+              />
+              <div class="dotWrapper dotWrapper_9">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_right">
+                  <span class="txt_regular"
+                    >Помоем фасады<br />
+                    шкафов</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_10">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_right">
+                  <span class="txt_regular"
+                    >Отмоем осветительные<br />
+                    приборы</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_11">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_left">
+                  <span class="txt_regular"
+                    >Помоем окна<br />
+                    и жалюзи</span
+                  >
+                </div>
+              </div>
+
+              <div class="dotWrapper dotWrapper_12">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_top">
+                  <span class="txt_regular"
+                    >Помоем посуду<br />
+                    и раковину</span
+                  >
+                </div>
+              </div>
+
+              <div class="dotWrapper dotWrapper_13">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_top">
+                  <span class="txt_regular"
+                    >Помоем снаружи<br />
+                    плиту, холодильник<br />
+                    и вытяжку</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_14">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_left">
+                  <span class="txt_regular">Отмоем столешницу</span>
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_15">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_left">
+                  <span class="txt_regular"
+                    >Обеспылим <br />все доступные<br />поверхности</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_16">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_left">
+                  <span class="txt_regular"
+                    >Обеспылим <br />
+                    предметы интерьера</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_17">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_top">
+                  <span class="txt_regular">Помоем пол</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./pics/demonstration_bathroom.jpg"
+                alt="bathroom picture"
+                class="swiper__pic"
+              />
+              <div class="dotWrapper dotWrapper_18">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_right">
+                  <span class="txt_regular"
+                    >Отмоем зеркала<br />и стеклянные поверхности</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_19">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_right">
+                  <span class="txt_regular"
+                    >Протрем<br />предметы интерьера</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_20">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_top">
+                  <span class="txt_regular">Помоем раковину</span>
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_21">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_left">
+                  <span class="txt_regular"
+                    >Помоем шкафы,<br />полочки и фасады</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_22">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_left">
+                  <span class="txt_regular">Помоем ванну<br />и душевую</span>
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_23">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_top">
+                  <span class="txt_regular"
+                    >Отмоем<br />и продезинфецируем<br />
+                    сантехнику</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_24">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_top">
+                  <span class="txt_regular">Помоем пол</span>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./pics/demonstration_vestibule.jpg"
+                alt="vestibule picture"
+                class="swiper__pic"
+              />
+              <div class="dotWrapper dotWrapper_25">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_left">
+                  <span class="txt_regular"
+                    >Отмоем зеркала<br />и стеклянные поверхности</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_26">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_right">
+                  <span class="txt_regular"
+                    >Отмываем двери<br />и дезинфецируем ручки</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_27">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_left">
+                  <span class="txt_regular"
+                    >Протираются<br />все доступные<br />поверхности</span
+                  >
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_28">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_top">
+                  <span class="txt_regular">Расставим обувь</span>
+                </div>
+              </div>
+              <div class="dotWrapper dotWrapper_29">
+                <img src="./pics/circle.svg" alt="circle" class="dot" />
+                <div class="textWrapper textWrapper_top">
+                  <span class="txt_regular">Помоем пол и плинтусы</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Отчет "До/после" -->
+
+    <section class="report">
+      <div class="container">
+        <h1 class="title txt_title">
+          Выполним уборку
+          <strong class="txt_bold txt_aquamarine">любой сложности</strong>
+        </h1>
+        <p class="txt_subtitle txt_grey">
+          Посмотрите, как преображается квартира<br />даже в самых непростых
+          случаях
+        </p>
+        <div class="report__swiper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="beforeAfterContainer">
+                <img src="./pics/afterBathroom.jpg" class="afterPic" />
+                <img
+                  id="afterPic"
+                  src="./pics/beforeBathroom.jpg"
+                  class="beforePic"
+                />
+                <div class="slider-line" id="line-1"></div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="1"
+                />
+              </div>
+              <div class="report__slideInfo">
+                <div class="report__slideText">
+                  <h1 class="txt_title txt_bold">
+                    Объект: однокомнатная квартира
+                  </h1>
+                  <p class="txt_regular">
+                    Пакет:
+                    <span class="txt_regular txt_grey">Генеральная уборка</span>
+                  </p>
+                  <p class="txt_regular">
+                    Площадь: <span class="txt_regular txt_grey">32 м2</span>
+                  </p>
+                  <p class="txt_regular">
+                    Сложные загрязнения:
+                    <span class="txt_regular txt_grey"
+                      >сильный налёт на сантехнике в ванной</span
+                    >
+                  </p>
+                  <p class="txt_regular">
+                    Время работы:
+                    <span class="txt_regular txt_grey">4 часа</span>
+                  </p>
+                  <p class="txt_regular">
+                    Бригада: <span class="txt_regular txt_grey">1 человек</span>
+                  </p>
+                </div>
+                <div
+                  class="report__slidePrice txt_regular txt_bold txt_aquamarine"
+                >
+                  Стоимость: 3 456 ₽
+                </div>
+                <div class="swiper__pagination"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="beforeAfterContainer">
+                <img src="./pics/afterHouse.jpg" class="afterPic" />
+                <img
+                  id="afterPic"
+                  src="./pics/beforeHouse.jpg"
+                  class="beforePic"
+                />
+                <div class="slider-line" id="line-2"></div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="2"
+                />
+              </div>
+              <div class="report__slideInfo">
+                <div class="report__slideText">
+                  <h1 class="txt_title txt_bold">
+                    Объект: частный 2-х этажный дом
+                  </h1>
+                  <p class="txt_regular">
+                    Пакет:
+                    <span class="txt_regular txt_grey"
+                      >Уборка после ремонта</span
+                    >
+                  </p>
+                  <p class="txt_regular">
+                    Площадь: <span class="txt_regular txt_grey">230 м2</span>
+                  </p>
+                  <p class="txt_regular">
+                    Сложные загрязнения:
+                    <span class="txt_regular txt_grey"
+                      >большое количество пыли и цемента на поверхностях</span
+                    >
+                  </p>
+                  <p class="txt_regular">
+                    Время работы:
+                    <span class="txt_regular txt_grey">11 часов</span>
+                  </p>
+                  <p class="txt_regular">
+                    Бригада:
+                    <span class="txt_regular txt_grey">3 человека</span>
+                  </p>
+                </div>
+                <div
+                  class="report__slidePrice txt_regular txt_bold txt_aquamarine"
+                >
+                  Стоимость: 31 050 ₽
+                </div>
+                <div class="swiper__pagination"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="beforeAfterContainer">
+                <img src="./pics/afterKitchen.jpg" class="afterPic" />
+                <img
+                  id="afterPic"
+                  src="./pics/beforeKitchen.jpg"
+                  class="beforePic"
+                />
+                <div class="slider-line" id="line-3"></div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="3"
+                />
+              </div>
+              <div class="report__slideInfo">
+                <div class="report__slideText">
+                  <h1 class="txt_title txt_bold">
+                    Объект: трёхкомнатная квартира
+                  </h1>
+                  <p class="txt_regular">
+                    Пакет:
+                    <span class="txt_regular txt_grey">Генеральная уборка</span>
+                  </p>
+                  <p class="txt_regular">
+                    Площадь: <span class="txt_regular txt_grey">70 м2</span>
+                  </p>
+                  <p class="txt_regular">
+                    Сложные загрязнения:
+                    <span class="txt_regular txt_grey"
+                      >потдтёки, въевшийся жир на кафеле кухни</span
+                    >
+                  </p>
+                  <p class="txt_regular">
+                    Время работы:
+                    <span class="txt_regular txt_grey">3 часа</span>
+                  </p>
+                  <p class="txt_regular">
+                    Бригада:
+                    <span class="txt_regular txt_grey">2 человека</span>
+                  </p>
+                </div>
+                <div
+                  class="report__slidePrice txt_regular txt_aquamarine txt_bold"
+                >
+                  Стоимость: 9 316 ₽
+                </div>
+                <div class="swiper__pagination"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="beforeAfterContainer">
+                <img src="./pics/afterRadiator.jpg" class="afterPic" />
+                <img
+                  id="afterPic"
+                  src="./pics/beforeRadiator.jpg"
+                  class="beforePic"
+                />
+                <div class="slider-line" id="line-4"></div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="4"
+                />
+              </div>
+              <div class="report__slideInfo">
+                <div class="report__slideText">
+                  <h1 class="txt_title txt_bold">
+                    Объект: однокомнатная квартира
+                  </h1>
+                  <p class="txt_regular">
+                    Пакет:
+                    <span class="txt_regular txt_grey">Генеральная уборка</span>
+                  </p>
+                  <p class="txt_regular">
+                    Площадь: <span class="txt_regular txt_grey">30 м2</span>
+                  </p>
+                  <p class="txt_regular">
+                    Сложные загрязнения:
+                    <span class="txt_regular txt_grey"
+                      >многолетний нагар на радиаторе отопления</span
+                    >
+                  </p>
+                  <p class="txt_regular">
+                    Время работы:
+                    <span class="txt_regular txt_grey">3 часа</span>
+                  </p>
+                  <p class="txt_regular">
+                    Бригада: <span class="txt_regular txt_grey">1 человек</span>
+                  </p>
+                </div>
+                <div
+                  class="report__slidePrice txt_regular txt_aquamarine txt_bold"
+                >
+                  Стоимость: 3 240 ₽
+                </div>
+                <div class="swiper__pagination"></div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="beforeAfterContainer">
+                <img src="./pics/afterBathroom2.jpg" class="afterPic" />
+                <img
+                  id="afterPic"
+                  src="./pics/beforeBathroom2.jpg"
+                  class="beforePic"
+                />
+                <div class="slider-line" id="line-5"></div>
+                <input
+                  type="range"
+                  min="0"
+                  max="100"
+                  value="50"
+                  class="slider"
+                  id="5"
+                />
+              </div>
+              <div class="report__slideInfo">
+                <div class="report__slideText">
+                  <h1 class="txt_title txt_bold">
+                    Объект: двухкомнатная квартира
+                  </h1>
+                  <p class="txt_regular">
+                    Пакет:
+                    <span class="txt_regular txt_grey"
+                      >Уборка после ремонта</span
+                    >
+                  </p>
+                  <p class="txt_regular">
+                    Площадь: <span class="txt_regular txt_grey">45 м2</span>
+                  </p>
+                  <p class="txt_regular">
+                    Сложные загрязнения:
+                    <span class="txt_regular txt_grey"
+                      >ржавчина, сильный налёт на ванне</span
+                    >
+                  </p>
+                  <p class="txt_regular">
+                    Время работы:
+                    <span class="txt_regular txt_grey">5 часов</span>
+                  </p>
+                  <p class="txt_regular">
+                    Бригада: <span class="txt_regular txt_grey">1 человек</span>
+                  </p>
+                </div>
+                <div
+                  class="report__slidePrice txt_regular txt_aquamarine txt_bold"
+                >
+                  Стоимость: 4 860 ₽
+                </div>
+                <div class="swiper__pagination"></div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Блок-призыв -->
+
+    <section class="call">
+      <div class="container">
+        <div class="call__content">
+          <div class="call__title">
+            <h1 class="txt_title">
+              Моментальный расчёт стоимости по фотографии
+            </h1>
+            <p class="txt_subtitle txt_grey">
+              Пришлите фото в мессенджере, чтобы рассчитать стоимость, быстро
+              заказать уборку или задать нам вопрос
+            </p>
+            <div class="call__bottomBlock fadeInSection" data-index="0">
+              <p class="call__text txt_regular">
+                Кликните на удобный способ<br />связи и напишите нам:
+              </p>
+              <div class="call__socials">
+                <a
+                  class="button_socials button_socials_telegram"
+                  href="https://t.me/AlenaEfimenkoo"
+                  target="_blank"
+                >
+                  <img
+                    src="/pics/social-telegram.svg"
+                    alt="telegram"
+                    class="call__socials_telegram"
+                  />
+                </a>
+                <a
+                  class="button_socials button_socials_wa"
+                  href="https://wa.me/79818728636"
+                  target="_blank"
+                >
+                  <img
+                    src="/pics/social-wa.svg"
+                    alt="WhatsApp"
+                    class="call__socials_wa"
+                  />
+                </a>
+              </div>
+              <div class="call__time">
+                <img src="/pics/clock.svg" alt="clock" class="clock" />
+                <span class="txt_regular txt_grey"
+                  >Скорость ответа 60 секунд</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Инвентарь -->
+
+    <section class="equipment">
+      <div class="container">
+        <h1 class="title txt_title">
+          Что входит в инвентарь нашего сотрудника
+        </h1>
+        <p class="subtitle txt_subtitle txt_grey">
+          Инструменты, с помощью которых<br />создаём уют в вашем доме
+        </p>
+        <div class="equipmentContent">
+          <div class="equipmentItem item_1">
+            <div class="equipmentItem__pic equipmentItem__pic_1"></div>
+            <span class="txt_regular">5 видов моющих средств</span>
+            <p class="txt_regular txt_grey">
+              Подходят для всех<br />типов поверхностей<br />от паркета до
+              кафеля
+            </p>
+          </div>
+          <div class="equipmentItem item_2">
+            <div class="equipmentItem__pic equipmentItem__pic_2"></div>
+            <span class="txt_regular">Маски и перчатки</span>
+            <p class="txt_regular txt_grey">
+              Соблюдаем<br />меры санитарной<br />безопасности
+            </p>
+          </div>
+          <div class="equipmentItem item_3">
+            <div class="equipmentItem__pic equipmentItem__pic_3"></div>
+            <span class="txt_regular">8 видов оборудования</span>
+            <p class="txt_regular txt_grey">
+              Профессиональная<br />техника для создания<br />чистоты на уровне
+              блеска
+            </p>
+          </div>
+          <div class="equipmentItem item_4">
+            <div class="equipmentItem__pic equipmentItem__pic_4"></div>
+            <span class="txt_regular">Швабры и салфетки</span>
+            <p class="txt_regular txt_grey">
+              Из различной ткани для<br />эффективной уборки всех<br />типов
+              поверхностей
+            </p>
+          </div>
+          <div class="item_5">
+            <img src="/pics/cleaner3.png" alt="cleaner" class="cleanerPic" />
+            <div class="circle"></div>
+            <form class="equipment__form" action="">
+              <input
+                class="equipment__input txt_regular"
+                placeholder="Введите Ваш телефон"
+                type="tel"
+                required
+              />
+              <a class="equipment__button txt_regular txt_white">
+                ЗАКАЗАТЬ УБОРКУ
+              </a>
+              <div class="equipment__checkboxBlock">
+                <div class="checkboxWrapper">
+                  <img class="check" src="/pics/check.svg" alt="check" />
+                </div>
+                <p class="txt_regular txt_grey">
+                  Нажимая на кнопку вы соглашаетесь с<br />условиями
+                  <a class="openModalPrivacy txt_regular txt_bold txt_grey"
+                    >Политики конфиденциальности</a
+                  >
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Вопрос-ответ -->
+
+    <section class="FAQ" id="FAQ">
+      <div class="container">
+        <h1 class="title txt_title">
+          Часто задаваемые
+          <strong class="txt_bold txt_aquamarine">вопросы</strong>
+        </h1>
+        <div class="FAQ__list">
+          <div class="FAQ__item fadeInSection" data-index="0">
+            <div class="FAQ__itemQuestion">
+              <span class="txt_regular"
+                >Что нужно, чтобы подготовиться к уборке?</span
+              >
+              <div class="FAQ__button">
+                <img
+                  class="FAQ__buttonImg"
+                  src="/pics/angle.svg"
+                  alt="button"
+                />
+              </div>
+            </div>
+            <p class="FAQ__itemAnswer txt_regular txt_grey">
+              Всё что вам нужно сделать - предоставить помещение нашим клинерам,
+              где планируется клининг, а также обеспечить доступ к электросети и
+              к санузлу. Все моющие средства, инвентарь и оборудование мы берём
+              сами.
+            </p>
+          </div>
+          <div class="FAQ__item fadeInSection" data-index="1">
+            <div class="FAQ__itemQuestion">
+              <span class="txt_regular"
+                >Могу ли я быть дома во время уборки?</span
+              >
+              <div class="FAQ__button">
+                <img
+                  class="FAQ__buttonImg"
+                  src="/pics/angle.svg"
+                  alt="button"
+                />
+              </div>
+            </div>
+            <p class="FAQ__itemAnswer txt_regular txt_grey">
+              При желании вы можете находится дома и наблюдать за процессом
+              создания чистоты и уюта.
+            </p>
+          </div>
+          <div class="FAQ__item fadeInSection" data-index="2">
+            <div class="FAQ__itemQuestion">
+              <span class="txt_regular"
+                >За сколько дней до приезда клинеров необходимо сделать
+                заказ?</span
+              >
+              <div class="FAQ__button">
+                <img
+                  class="FAQ__buttonImg"
+                  src="/pics/angle.svg"
+                  alt="button"
+                />
+              </div>
+            </div>
+            <p class="FAQ__itemAnswer txt_regular txt_grey">
+              Вы можете забронировать уборку в любое удобное для вас время. При
+              необходимости наши клинеры могут выехать на точку в течении часа.
+              Так же у нас есть экспресс уборка, как наиболее быстрый и не менее
+              эффективный вариант.
+            </p>
+          </div>
+          <div class="FAQ__item fadeInSection" data-index="3">
+            <div class="FAQ__itemQuestion">
+              <span class="txt_regular">Сколько времени длится уборка?</span>
+              <div class="FAQ__button">
+                <img
+                  class="FAQ__buttonImg"
+                  src="/pics/angle.svg"
+                  alt="button"
+                />
+              </div>
+            </div>
+            <p class="FAQ__itemAnswer txt_regular txt_grey">
+              В среднем, не дольше шести часов. В зависимости от объема и
+              характера уборки. Вы можете уточнить продолжительность уборки
+              через соответствующую форму на сайте у нашего менеджера.
+            </p>
+          </div>
+          <div class="FAQ__item fadeInSection" data-index="4">
+            <div class="FAQ__itemQuestion">
+              <span class="txt_regular"
+                >Какие моющие средства вы используете?</span
+              >
+              <div class="FAQ__button">
+                <img
+                  class="FAQ__buttonImg"
+                  src="/pics/angle.svg"
+                  alt="button"
+                />
+              </div>
+            </div>
+            <p class="FAQ__itemAnswer txt_regular txt_grey">
+              Независимо от объема и характера работ, используем только
+              гипоаллергенные, нетоксичные и безопасные для здоровья моющие
+              средства от проверенных производителей.
+            </p>
+          </div>
+          <div class="FAQ__item fadeInSection" data-index="5">
+            <div class="FAQ__itemQuestion">
+              <span class="txt_regular"
+                >Можно ли заказать уборку в выходные или вечером?</span
+              >
+              <div class="FAQ__button">
+                <img
+                  class="FAQ__buttonImg"
+                  src="/pics/angle.svg"
+                  alt="button"
+                />
+              </div>
+            </div>
+            <p class="FAQ__itemAnswer txt_regular txt_grey">
+              Да, мы работаем без выходных. Вы можете заказать уборку на
+              вечерние часы или выходной день, выбрав удобное время при
+              оформлении заявки.
+            </p>
+          </div>
+          <div class="FAQ__item fadeInSection" data-index="6">
+            <div class="FAQ__itemQuestion">
+              <span class="txt_regular">Есть ли у вас гарантии качества?</span>
+              <div class="FAQ__button">
+                <img
+                  class="FAQ__buttonImg"
+                  src="/pics/angle.svg"
+                  alt="button"
+                />
+              </div>
+            </div>
+            <p class="FAQ__itemAnswer txt_regular txt_grey">
+              Мы гарантируем качество наших услуг. Если вы не удовлетворены
+              результатом уборки, мы вернемся и устраним недочеты бесплатно.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Футер -->
+    <section class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="txt_logo txt_white">White Gloves</div>
+          <a class="openModalRequisites txt_regular txt_white">Реквизиты</a>
+          <a class="openModalPrivacy txt_regular txt_white"
+            >Политика конфиденциальности</a
+          >
+          <div class="socialsWrapper">
+            <span class="txt_regular txt_white">Быстрая связь:</span>
+            <div class="socialsIcons">
+              <a href="https://wa.me/79818728636" target="_blank">
+                <img
+                  class="socialsLogo"
+                  src="pics/social-wa.svg"
+                  alt="WA-icon"
+                />
+              </a>
+              <a href="https://vk.com/id350750052" target="_blank">
+                <img
+                  class="socialsLogo"
+                  src="pics/social-vk.svg"
+                  alt="VK-icon"
+                />
+              </a>
+              <a href="https://t.me/AlenaEfimenkoo" target="_blank">
+                <img
+                  class="socialsLogo"
+                  src="pics/social-telegram.svg"
+                  alt="Tg-icon"
+                />
+              </a>
+            </div>
+          </div>
+          <span class="txt_regular txt_white"
+            >Разработка сайта:
+            <a href="https://t.me/SPB_Aleksandr_Sokolov" target="_blank"
+              >Александр Соколов</a
+            ></span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Модальные окна -->
+
+    <div class="modal__overlay" id="modalOverlayCalc">
+      <div class="modal_calculator__wrapper">
+        <div class="title">
+          <h1 class="txt_title txt_bold txt_white">
+            Калькулятор <span class="txt_softAqua">стоимости</span> уборки
+          </h1>
+          <span class="txt_subtitle txt_grey"
+            >Это бесплатно и ни к чему не обязывает!</span
+          >
+        </div>
+        <div class="closeBtn">&times;</div>
+
+        <div class="modal_calculator" id="modalCalc">
+          <aside class="modal_calculator__aside">
+            <h1 class="instruction txt_regular txt_white">
+              <strong class="txt_bold">Выберите нужный ответ</strong><br />и
+              нажмите "Далее"
+            </h1>
+            <span class="title txt_title txt_white txt_bold"
+              >ПОСЛЕ ПРОХОЖДЕНИЯ<br />ВЫ ПОЛУЧИТЕ:</span
+            >
+            <div class="item item_1">
+              <span class="txt_regular txt_white"
+                >Подробный
+                <strong class="txt_bold">предварительный<br />расчёт</strong> с
+                указанием<br />услуг и стоимости</span
+              >
+              <img src="/pics/clipboard.png" alt="clipboard" class="pic_1" />
+            </div>
+            <div class="item item_2">
+              <span class="txt_regular txt_white"
+                ><strong class="txt_bold">Скидка 10% </strong><br />
+                на первый заказ</span
+              >
+              <img src="/pics/percent.png" alt="percent" class="pic_2" />
+            </div>
+          </aside>
+          <form class="modal_calculator__content">
+            <div class="modal__progress">
+              <div class="modal__progressBar" id="modalProgressBar">
+                <span class="txt_regular txt_bold">Вопрос 1 из 4</span>
+              </div>
+            </div>
+
+            <div class="modal__step active" id="step1">
+              <h1 class="title txt_title txt_bold">Где нужно убраться?</h1>
+              <div class="stepContent">
+                <label class="stepItem">
+                  <input type="radio" name="Место" value="квартиры" />
+                  <div class="stepItem__img stepItem__img_1">
+                    <div class="stepItem__dot">
+                      <div class="stepItem__checkWrapper">
+                        <svg
+                          class="stepItem__check"
+                          width="7"
+                          height="7"
+                          viewBox="0 0 7 7"
+                          fill="none"
+                        >
+                          <path
+                            d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="txt_regular txt_bold">Квартира</span>
+                </label>
+                <label class="stepItem">
+                  <input type="radio" name="Место" value="жилого дома" />
+                  <div class="stepItem__img stepItem__img_2">
+                    <div class="stepItem__dot">
+                      <div class="stepItem__checkWrapper">
+                        <svg
+                          class="stepItem__check"
+                          width="7"
+                          height="7"
+                          viewBox="0 0 7 7"
+                          fill="none"
+                        >
+                          <path
+                            d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="txt_regular txt_bold">Жилой дом</span>
+                </label>
+                <label class="stepItem">
+                  <input type="radio" name="Место" value="офиса" />
+                  <div class="stepItem__img stepItem__img_3">
+                    <div class="stepItem__dot">
+                      <div class="stepItem__checkWrapper">
+                        <svg
+                          class="stepItem__check"
+                          width="7"
+                          height="7"
+                          viewBox="0 0 7 7"
+                          fill="none"
+                        >
+                          <path
+                            d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="txt_regular txt_bold">Офис</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="modal__step" id="step2">
+              <h1 class="title txt_title txt_bold">
+                Какая <span class="txt_aquamarine">уборка</span> Вас интересует?
+              </h1>
+              <div class="stepContent">
+                <label class="stepItem">
+                  <input
+                    type="radio"
+                    name="Услуга"
+                    value="Гeнеральная уборка"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Гeнеральная уборка</span>
+                </label>
+                <label class="stepItem">
+                  <input
+                    type="radio"
+                    name="Услуга"
+                    value="Уборка после ремонта"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">После ремонта</span>
+                </label>
+                <label class="stepItem">
+                  <input
+                    type="radio"
+                    name="Услуга"
+                    value="Поддерживающая уборка"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Поддерживающая</span>
+                </label>
+                <label class="stepItem">
+                  <input type="radio" name="Услуга" value="Экспресс уборка" />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Экспресс уборка</span>
+                </label>
+                <!-- <label class="stepItem">
+                  <input type="radio" name="Услуга" value="Мойка окон" />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Мойка окон</span>
+                </label>
+                <label class="stepItem">
+                  <input type="radio" name="Услуга" value="Защитное покрытие" />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Защитное покрытие</span>
+                </label>
+                <label class="stepItem">
+                  <input type="radio" name="Услуга" value="Химчистка" />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Химчистка</span>
+                </label> -->
+              </div>
+            </div>
+
+            <div class="modal__step" id="step3">
+              <h1 class="title txt_title txt_bold">
+                Какая <span class="txt_aquamarine">площадь</span> помещения?
+              </h1>
+              <div class="stepContent">
+                <label class="stepItem">
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <input
+                    class="txt_regular areaInput"
+                    type="number"
+                    name="Метраж"
+                    placeholder="Введите метраж"
+                    autocomplete="off"
+                    min="1"
+                    step="1"
+                    required
+                  />
+                </label>
+              </div>
+            </div>
+
+            <div class="modal__step" id="step4">
+              <div class="title">
+                <h1 class="txt_title txt_bold">
+                  Выберите дополнительные услуги
+                </h1>
+                <span class="txt_subtitle txt_grey"
+                  >При заказе 3 услуг
+                  <span class="txt_aquamarine txt_bold"
+                    >четвёртая в подарок</span
+                  ></span
+                >
+              </div>
+
+              <div class="stepContent">
+                <label class="stepItem">
+                  <input
+                    type="checkbox"
+                    name="Допуслуга[]"
+                    value="Ничего не нужно"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Ничего не нужно</span>
+                </label>
+                <label class="stepItem">
+                  <input
+                    type="checkbox"
+                    name="Допуслуга[]"
+                    value="Мойка холодильника"
+                    class="extraServiceInput"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Мойка холодильника</span>
+                </label>
+                <label class="stepItem">
+                  <input
+                    type="checkbox"
+                    name="Допуслуга[]"
+                    value="Мойка микроволновки"
+                    class="extraServiceInput"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Мойка микроволновки</span>
+                </label>
+                <label class="stepItem">
+                  <input
+                    type="checkbox"
+                    name="Допуслуга[]"
+                    value="Мойка варочной плиты"
+                    class="extraServiceInput"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Мойка варочной плиты</span>
+                </label>
+                <label class="stepItem">
+                  <input
+                    type="checkbox"
+                    name="Допуслуга[]"
+                    value="Мойка духовки"
+                    class="extraServiceInput"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Мойка духовки</span>
+                </label>
+                <label class="stepItem">
+                  <input
+                    type="checkbox"
+                    name="Допуслуга[]"
+                    value="Мойка вытяжки"
+                    class="extraServiceInput"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Мойка вытяжки</span>
+                </label>
+                <label class="stepItem">
+                  <input
+                    type="checkbox"
+                    name="Допуслуга[]"
+                    value="Уборка на балконе"
+                    class="extraServiceInput"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Уборка на балконе</span>
+                </label>
+                <label class="stepItem">
+                  <input
+                    type="checkbox"
+                    name="Допуслуга[]"
+                    value="Мойка потолков"
+                    class="extraServiceInput"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Мойка потолков</span>
+                </label>
+                <label class="stepItem">
+                  <input
+                    type="checkbox"
+                    name="Допуслуга[]"
+                    value="Мойка стен"
+                    class="extraServiceInput"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Мойка стен</span>
+                </label>
+                <label class="stepItem">
+                  <input
+                    type="checkbox"
+                    name="Допуслуга[]"
+                    value="Поменять постельное"
+                    class="extraServiceInput"
+                  />
+                  <div class="stepItem__dot">
+                    <svg
+                      class="stepItem__check"
+                      width="7"
+                      height="7"
+                      viewBox="0 0 7 7"
+                      fill="none"
+                    >
+                      <path
+                        d="M6.97142 1.6983L2.63121 6.0385C2.59298 6.07673 2.53108 6.07673 2.49294 6.0385L0.0285746 3.57404C-0.00956555 3.53599 -0.00956555 3.47409 0.0285746 3.43586L0.627383 2.83705C0.665613 2.79891 0.727512 2.79891 0.765652 2.83705L2.56217 4.63348L6.23443 0.961222C6.27275 0.923082 6.33447 0.923082 6.3727 0.961222L6.97142 1.56003C7.00965 1.59817 7.00965 1.65998 6.97142 1.6983Z"
+                      />
+                    </svg>
+                  </div>
+                  <span class="txt_regular">Поменять постельное</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="buttonsWrapper">
+              <button class="button button_back hide" type="button">
+                <span class="txt_regular">НАЗАД</span>
+              </button>
+
+              <button class="button button_forward" type="button">
+                <span class="txt_regular txt_white">ДАЛЕЕ</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal__overlay" id="modalOverlayResult">
+      <div class="modal_result">
+        <div class="closeBtn">&times;</div>
+        <div class="resultContent">
+          <h1 class="title txt_title">
+            Закажите бережную уборку<br />по
+            <strong class="txt_aquamarine">фиксированной стоимости</strong> с
+            выездом персонала в течении часа
+          </h1>
+          <div class="resultWrapper">
+            <div class="resultSummary txt_regular"></div>
+
+            <div class="resultPrice"></div>
+          </div>
+
+          <p class="txt_subtitle txt_aquamarine">
+            Отправьте свой номер нашему менеджеру Алёне,<br />
+            она свяжется с Вами в течении 10 минут,<br />уточнит детали и
+            поможет оформить заявку
+          </p>
+          <div>
+            <div class="result__buttonsWrapper">
+              <input
+                class="result__input txt_regular"
+                placeholder="Введите Ваш телефон"
+                type="tel"
+                required
+              />
+              <a class="result__button txt_regular txt_white">
+                ОФОРМИТЬ ЗАЯВКУ
+              </a>
+            </div>
+            <div class="result__checkboxBlock">
+              <div class="checkboxWrapper">
+                <img class="check" src="/pics/check.svg" alt="check" />
+              </div>
+              <p class="txt_regular txt_grey">
+                Нажимая на кнопку вы соглашаетесь с<br />условиями
+                <a class="openModalPrivacy txt_regular txt_bold txt_grey"
+                  >Политики конфиденциальности</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal__overlay" id="modalOverlayConfirmation">
+      <div class="modal_confirmation">
+        <div class="closeBtn">&times;</div>
+        <div class="confirmationContent">
+          <h1 class="txt_title txt_white">
+            Ваша <strong class="txt_aquamarine txt_bold">заявка</strong> была
+            принята
+          </h1>
+          <span class="txt_subtitle txt_white"
+            ><strong class="txt_bold">Спасибо</strong> за обращение!</span
+          >
+          <p class="txt_subtitle txt_white">
+            Наш менеджер свяжется<br />
+            с Вами в течении
+            <span class="txt_bold">10 минут</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal__overlay" id="modalOverlayOrder">
+      <div class="modal_order">
+        <div class="closeBtn">&times;</div>
+        <div class="orderContent">
+          <h1 class="title txt_title">
+            Закажите бережную уборку<br />по
+            <strong class="txt_aquamarine">фиксированной стоимости</strong> с
+            выездом персонала в течении часа
+          </h1>
+          <p class="txt_subtitle">
+            Отправьте свой номер нашему менеджеру Алёне,<br />
+            она свяжется с Вами в течении 10 минут,<br />поможет с выбором и
+            расчитает стоимость
+          </p>
+          <form class="order__form">
+            <span class="txt_subtitle txt_bold"
+              >Как удобнее с вами связаться?</span
+            >
+            <div class="order__socialsWrapper">
+              <label class="socialWrapper">
+                <input type="radio" name="Способ связи" value="Телефон" />
+                <img class="socials_phone" src="pics/phone.png" alt="phone" />
+              </label>
+              <label class="socialWrapper">
+                <input type="radio" name="Способ связи" value="WA" />
+                <img
+                  class="socials_wa"
+                  src="pics/social-wa-green.svg"
+                  alt="WA"
+                />
+              </label>
+            </div>
+            <div class="order__buttonsWrapper">
+              <input
+                class="order__input txt_regular"
+                placeholder="Введите Ваш телефон"
+                type="tel"
+                required
+              />
+              <button class="order__button txt_regular txt_white">
+                ЖДУ ЗВОНКА
+              </button>
+            </div>
+            <div class="order__checkboxBlock">
+              <div class="checkboxWrapper">
+                <img class="check" src="/pics/check.svg" alt="check" />
+              </div>
+              <p class="txt_regular txt_grey">
+                Нажимая на кнопку вы соглашаетесь с<br />условиями
+                <a class="openModalPrivacy txt_regular txt_bold txt_grey"
+                  >Политики конфиденциальности</a
+                >
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal__overlay" id="modalOverlayRequisites">
+      <div class="modal_requisites">
+        <div class="closeBtn">&times;</div>
+        <div class="requisitesContent">
+          <h1 class="title txt_title">
+            Реквизиты клининговой компании
+            <span class="txt_logo txt_aquamarine">"White Gloves"</span>
+          </h1>
+          <p class="txt_regular txt_grey">
+            г. Санкт-Петербург, г. Красное Село, ул. Морская, 2 лит. Б<br />
+            Ефименко Алёна<br />
+            ИНН 10000000011<br />
+            ОГРН 3203200000000000<br />
+            Р/сч 40817 810 1231231230<br />
+            ПАО "Сбербанк России"<br />
+            БИК 123123123
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal__overlay" id="modalOverlayPrivacy">
+      <div class="modal_privacy">
+        <div class="closeBtn">&times;</div>
+        <div class="privacyContent">
+          <h1 class="title txt_title">
+            Политика
+            <span class="txt_aquamarine">конфиденциальности</span>
+          </h1>
+          <p class="privacyText txt_regular">
+            Политика в отношении обработки персональных данных<br />
+            1. Общие положения<br />
+            Настоящая политика обработки персональных данных составлена в
+            соответствии с требованиями Федерального закона от 27.07.2006.
+            №152-ФЗ «О персональных данных» (далее - Закон о персональных
+            данных) и определяет порядок обработки персональных данных и меры по
+            обеспечению безопасности персональных данных, предпринимаемые
+            Ефименко Алёной (далее – Оператор).<br />
+            1.1. Оператор ставит своей важнейшей целью и условием осуществления
+            своей деятельности соблюдение прав и свобод человека и гражданина
+            при обработке его персональных данных, в том числе защиты прав на
+            неприкосновенность частной жизни, личную и семейную тайну.<br />
+            1.2. Настоящая политика Оператора в отношении обработки персональных
+            данных (далее – Политика) применяется ко всей информации, которую
+            Оператор может получить о посетителях веб-сайта https://####.<br />
+            2. Основные понятия, используемые в Политике<br />
+            2.1. Автоматизированная обработка персональных данных – обработка
+            персональных данных с помощью средств вычислительной техники.<br />
+            2.2. Блокирование персональных данных – временное прекращение
+            обработки персональных данных (за исключением случаев, если
+            обработка необходима для уточнения персональных данных).<br />
+            2.3. Веб-сайт – совокупность графических и информационных
+            материалов, а также программ для ЭВМ и баз данных, обеспечивающих их
+            доступность в сети интернет по сетевому адресу https://####.<br />
+            2.4. Информационная система персональных данных — совокупность
+            содержащихся в базах данных персональных данных, и обеспечивающих их
+            обработку информационных технологий и технических средств.<br />
+            2.5. Обезличивание персональных данных — действия, в результате
+            которых невозможно определить без использования дополнительной
+            информации принадлежность персональных данных конкретному
+            Пользователю или иному субъекту персональных данных.<br />
+            2.6. Обработка персональных данных – любое действие (операция) или
+            совокупность действий (операций), совершаемых с использованием
+            средств автоматизации или без использования таких средств с
+            персональными данными, включая сбор, запись, систематизацию,
+            накопление, хранение, уточнение (обновление, изменение), извлечение,
+            использование, передачу (распространение, предоставление, доступ),
+            обезличивание, блокирование, удаление, уничтожение персональных
+            данных.<br />
+            2.7. Оператор – государственный орган, муниципальный орган,
+            юридическое или физическое лицо, самостоятельно или совместно с
+            другими лицами организующие и (или) осуществляющие обработку
+            персональных данных, а также определяющие цели обработки
+            персональных данных, состав персональных данных, подлежащих
+            обработке, действия (операции), совершаемые с персональными
+            данными.<br />
+            2.8. Персональные данные – любая информация, относящаяся прямо или
+            косвенно к определенному или определяемому Пользователю веб-сайта
+            https://####.<br />
+            2.9. Персональные данные, разрешенные субъектом персональных данных
+            для распространения, - персональные данные, доступ неограниченного
+            круга лиц к которым предоставлен субъектом персональных данных путем
+            дачи согласия на обработку персональных данных, разрешенных
+            субъектом персональных данных для распространения в порядке,
+            предусмотренном Законом о персональных данных (далее - персональные
+            данные, разрешенные для распространения).<br />
+            2.10. Пользователь – любой посетитель веб-сайта https://####.<br />
+            2.11. Предоставление персональных данных – действия, направленные на
+            раскрытие персональных данных определенному лицу или определенному
+            кругу лиц.<br />
+            2.12. Распространение персональных данных – любые действия,
+            направленные на раскрытие персональных данных неопределенному кругу
+            лиц (передача персональных данных) или на ознакомление с
+            персональными данными неограниченного круга лиц, в том числе
+            обнародование персональных данных в средствах массовой информации,
+            размещение в информационно-телекоммуникационных сетях или
+            предоставление доступа к персональным данным каким-либо иным
+            способом.<br />
+            2.13. Трансграничная передача персональных данных – передача
+            персональных данных на территорию иностранного государства органу
+            власти иностранного государства, иностранному физическому или
+            иностранному юридическому лицу.<br />
+            2.14. Уничтожение персональных данных – любые действия, в результате
+            которых персональные данные уничтожаются безвозвратно с
+            невозможностью дальнейшего восстановления содержания персональных
+            данных в информационной системе персональных данных и (или)
+            уничтожаются материальные носители персональных данных.<br />
+            3. Основные права и обязанности Оператора<br />
+            3.1. Оператор имеет право:<br />
+            – получать от субъекта персональных данных достоверные информацию
+            и/или документы, содержащие персональные данные;<br />
+            – в случае отзыва субъектом персональных данных согласия на
+            обработку персональных данных Оператор вправе продолжить обработку
+            персональных данных без согласия субъекта персональных данных при
+            наличии оснований, указанных в Законе о персональных данных;<br />
+            – самостоятельно определять состав и перечень мер, необходимых и
+            достаточных для обеспечения выполнения обязанностей, предусмотренных
+            Законом о персональных данных и принятыми в соответствии с ним
+            нормативными правовыми актами, если иное не предусмотрено Законом о
+            персональных данных или другими федеральными законами.<br />
+            3.2. Оператор обязан:<br />
+            – предоставлять субъекту персональных данных по его просьбе
+            информацию, касающуюся обработки его персональных данных;<br />
+            – организовывать обработку персональных данных в порядке,
+            установленном действующим законодательством РФ;<br />
+            – отвечать на обращения и запросы субъектов персональных данных и их
+            законных представителей в соответствии с требованиями Закона о
+            персональных данных;<br />
+            – сообщать в уполномоченный орган по защите прав субъектов
+            персональных данных по запросу этого органа необходимую информацию в
+            течение 30 дней с даты получения такого запроса;<br />
+            – публиковать или иным образом обеспечивать неограниченный доступ к
+            настоящей Политике в отношении обработки персональных данных;<br />
+            – принимать правовые, организационные и технические меры для защиты
+            персональных данных от неправомерного или случайного доступа к ним,
+            уничтожения, изменения, блокирования, копирования, предоставления,
+            распространения персональных данных, а также от иных неправомерных
+            действий в отношении персональных данных;<br />
+            – прекратить передачу (распространение, предоставление, доступ)
+            персональных данных, прекратить обработку и уничтожить персональные
+            данные в порядке и случаях, предусмотренных Законом о персональных
+            данных;<br />
+            – исполнять иные обязанности, предусмотренные Законом о персональных
+            данных.<br />
+            4. Основные права и обязанности субъектов персональных данных<br />
+            4.1. Субъекты персональных данных имеют право:<br />
+            – получать информацию, касающуюся обработки его персональных данных,
+            за исключением случаев, предусмотренных федеральными законами.
+            Сведения предоставляются субъекту персональных данных Оператором в
+            доступной форме, и в них не должны содержаться персональные данные,
+            относящиеся к другим субъектам персональных данных, за исключением
+            случаев, когда имеются законные основания для раскрытия таких
+            персональных данных. Перечень информации и порядок ее получения
+            установлен Законом о персональных данных;<br />
+            – требовать от оператора уточнения его персональных данных, их
+            блокирования или уничтожения в случае, если персональные данные
+            являются неполными, устаревшими, неточными, незаконно полученными
+            или не являются необходимыми для заявленной цели обработки, а также
+            принимать предусмотренные законом меры по защите своих прав;<br />
+            – выдвигать условие предварительного согласия при обработке
+            персональных данных в целях продвижения на рынке товаров, работ и
+            услуг;<br />
+            – на отзыв согласия на обработку персональных данных;<br />
+            – обжаловать в уполномоченный орган по защите прав субъектов
+            персональных данных или в судебном порядке неправомерные действия
+            или бездействие Оператора при обработке его персональных данных;<br />
+            – на осуществление иных прав, предусмотренных законодательством
+            РФ.<br />
+            4.2. Субъекты персональных данных обязаны:<br />
+            – предоставлять Оператору достоверные данные о себе;<br />
+            – сообщать Оператору об уточнении (обновлении, изменении) своих
+            персональных данных.<br />
+            4.3. Лица, передавшие Оператору недостоверные сведения о себе, либо
+            сведения о другом субъекте персональных данных без согласия
+            последнего, несут ответственность в соответствии с законодательством
+            РФ.<br />
+            5. Оператор может обрабатывать следующие персональные данные
+            Пользователя<br />
+            5.1. Фамилия, имя, отчество.<br />
+            5.2. Номера телефонов.<br />
+            5.3. Фотографии.<br />
+            5.4. Также на сайте происходит сбор и обработка обезличенных данных
+            о посетителях (в т.ч. файлов «cookie») с помощью сервисов
+            интернет-статистики (Яндекс Метрика и Гугл Аналитика и других).<br />
+            5.5. Вышеперечисленные данные далее по тексту Политики объединены
+            общим понятием Персональные данные.<br />
+            5.6. Обработка специальных категорий персональных данных, касающихся
+            расовой, национальной принадлежности, политических взглядов,
+            религиозных или философских убеждений, интимной жизни, Оператором не
+            осуществляется.<br />
+            5.7. Обработка персональных данных, разрешенных для распространения,
+            из числа специальных категорий персональных данных, указанных в ч. 1
+            ст. 10 Закона о персональных данных, допускается, если соблюдаются
+            запреты и условия, предусмотренные ст. 10.1 Закона о персональных
+            данных.<br />
+            5.8. Согласие Пользователя на обработку персональных данных,
+            разрешенных для распространения, оформляется отдельно от других
+            согласий на обработку его персональных данных. При этом соблюдаются
+            условия, предусмотренные, в частности, ст. 10.1 Закона о
+            персональных данных. Требования к содержанию такого согласия
+            устанавливаются уполномоченным органом по защите прав субъектов
+            персональных данных.<br />
+            5.8.1 Согласие на обработку персональных данных, разрешенных для
+            распространения, Пользователь предоставляет Оператору
+            непосредственно.<br />
+            5.8.2 Оператор обязан в срок не позднее трех рабочих дней с момента
+            получения указанного согласия Пользователя опубликовать информацию
+            об условиях обработки, о наличии запретов и условий на обработку
+            неограниченным кругом лиц персональных данных, разрешенных для
+            распространения.<br />
+            5.8.3 Передача (распространение, предоставление, доступ)
+            персональных данных, разрешенных субъектом персональных данных для
+            распространения, должна быть прекращена в любое время по требованию
+            субъекта персональных данных. Данное требование должно включать в
+            себя фамилию, имя, отчество (при наличии), контактную информацию
+            (номер телефона, адрес электронной почты или почтовый адрес)
+            субъекта персональных данных, а также перечень персональных данных,
+            обработка которых подлежит прекращению. Указанные в данном
+            требовании персональные данные могут обрабатываться только
+            Оператором, которому оно направлено.<br />
+            5.8.4 Согласие на обработку персональных данных, разрешенных для
+            распространения, прекращает свое действие с момента поступления
+            Оператору требования, указанного в п. 5.8.3 настоящей Политики в
+            отношении обработки персональных данных.<br />
+            6. Принципы обработки персональных данных<br />
+            6.1. Обработка персональных данных осуществляется на законной и
+            справедливой основе.<br />
+            6.2. Обработка персональных данных ограничивается достижением
+            конкретных, заранее определенных и законных целей. Не допускается
+            обработка персональных данных, несовместимая с целями сбора
+            персональных данных.<br />
+            6.3. Не допускается объединение баз данных, содержащих персональные
+            данные, обработка которых осуществляется в целях, несовместимых
+            между собой.<br />
+            6.4. Обработке подлежат только персональные данные, которые отвечают
+            целям их обработки.<br />
+            6.5. Содержание и объем обрабатываемых персональных данных
+            соответствуют заявленным целям обработки. Не допускается
+            избыточность обрабатываемых персональных данных по отношению к
+            заявленным целям их обработки.<br />
+            6.6. При обработке персональных данных обеспечивается точность
+            персональных данных, их достаточность, а в необходимых случаях и
+            актуальность по отношению к целям обработки персональных данных.
+            Оператор принимает необходимые меры и/или обеспечивает их принятие
+            по удалению или уточнению неполных или неточных данных.<br />
+            6.7. Хранение персональных данных осуществляется в форме,
+            позволяющей определить субъекта персональных данных, не дольше, чем
+            этого требуют цели обработки персональных данных, если срок хранения
+            персональных данных не установлен федеральным законом, договором,
+            стороной которого, выгодоприобретателем или поручителем по которому
+            является субъект персональных данных. Обрабатываемые персональные
+            данные уничтожаются либо обезличиваются по достижении целей
+            обработки или в случае утраты необходимости в достижении этих целей,
+            если иное не предусмотрено федеральным законом.<br />
+            7. Цели обработки персональных данных<br />
+            7.1. Цель обработки персональных данных Пользователя:<br />
+            – заключение, исполнение и прекращение гражданско-правовых
+            договоров;<br />
+            – предоставление доступа Пользователю к сервисам, информации и/или
+            материалам, содержащимся на веб-сайте https://####.<br />
+            7.2. Также Оператор имеет право направлять Пользователю уведомления
+            о новых продуктах и услугах, специальных предложениях и различных
+            событиях. Пользователь всегда может отказаться от получения
+            информационных сообщений, направив Оператору письмо на адрес
+            электронной почты michalpalich.call@gmail.com с пометкой «Отказ от
+            уведомлений о новых продуктах и услугах и специальных
+            предложениях».<br />
+            7.3. Обезличенные данные Пользователей, собираемые с помощью
+            сервисов интернет-статистики, служат для сбора информации о
+            действиях Пользователей на сайте, улучшения качества сайта и его
+            содержания.<br />
+            8. Правовые основания обработки персональных данных<br />
+            8.1. Правовыми основаниями обработки персональных данных Оператором
+            являются:<br />
+            – перечислите нормативно-правовые акты, регулирующие отношения,
+            связанные с вашей деятельностью, например, если ваша деятельность
+            связана с информационными технологиями, в частности с созданием
+            сайтов, то здесь можно указать Федеральный закон "Об информации,
+            информационных технологиях и о защите информации" от 27.07.2006 N
+            149-ФЗ;<br />
+            – уставные документы Оператора;<br />
+            – договоры, заключаемые между оператором и субъектом персональных
+            данных;<br />
+            – федеральные законы, иные нормативно-правовые акты в сфере защиты
+            персональных данных;<br />
+            – согласия Пользователей на обработку их персональных данных, на
+            обработку персональных данных, разрешенных для распространения.<br />
+            8.2. Оператор обрабатывает персональные данные Пользователя только в
+            случае их заполнения и/или отправки Пользователем самостоятельно
+            через специальные формы, расположенные на сайте https://#### или
+            направленные Оператору посредством электронной почты. Заполняя
+            соответствующие формы и/или отправляя свои персональные данные
+            Оператору, Пользователь выражает свое согласие с данной
+            Политикой.<br />
+            8.3. Оператор обрабатывает обезличенные данные о Пользователе в
+            случае, если это разрешено в настройках браузера Пользователя
+            (включено сохранение файлов «cookie» и использование технологии
+            JavaScript).<br />
+            8.4. Субъект персональных данных самостоятельно принимает решение о
+            предоставлении его персональных данных и дает согласие свободно,
+            своей волей и в своем интересе.<br />
+            9. Условия обработки персональных данных<br />
+            9.1. Обработка персональных данных осуществляется с согласия
+            субъекта персональных данных на обработку его персональных
+            данных.<br />
+            9.2. Обработка персональных данных необходима для достижения целей,
+            предусмотренных международным договором Российской Федерации или
+            законом, для осуществления возложенных законодательством Российской
+            Федерации на оператора функций, полномочий и обязанностей.<br />
+            9.3. Обработка персональных данных необходима для осуществления
+            правосудия, исполнения судебного акта, акта другого органа или
+            должностного лица, подлежащих исполнению в соответствии с
+            законодательством Российской Федерации об исполнительном
+            производстве.<br />
+            9.4. Обработка персональных данных необходима для исполнения
+            договора, стороной которого либо выгодоприобретателем или
+            поручителем по которому является субъект персональных данных, а
+            также для заключения договора по инициативе субъекта персональных
+            данных или договора, по которому субъект персональных данных будет
+            являться выгодоприобретателем или поручителем.<br />
+            9.5. Обработка персональных данных необходима для осуществления прав
+            и законных интересов оператора или третьих лиц либо для достижения
+            общественно значимых целей при условии, что при этом не нарушаются
+            права и свободы субъекта персональных данных.<br />
+            9.6. Осуществляется обработка персональных данных, доступ
+            неограниченного круга лиц к которым предоставлен субъектом
+            персональных данных либо по его просьбе (далее – общедоступные
+            персональные данные).<br />
+            9.7. Осуществляется обработка персональных данных, подлежащих
+            опубликованию или обязательному раскрытию в соответствии с
+            федеральным законом.<br />
+            10. Порядок сбора, хранения, передачи и других видов обработки
+            персональных данных Безопасность персональных данных, которые
+            обрабатываются Оператором, обеспечивается путем реализации правовых,
+            организационных и технических мер, необходимых для выполнения в
+            полном объеме требований действующего законодательства в области
+            защиты персональных данных.<br />
+            10.1. Оператор обеспечивает сохранность персональных данных и
+            принимает все возможные меры, исключающие доступ к персональным
+            данным неуполномоченных лиц.<br />
+            10.2. Персональные данные Пользователя никогда, ни при каких
+            условиях не будут переданы третьим лицам, за исключением случаев,
+            связанных с исполнением действующего законодательства либо в случае,
+            если субъектом персональных данных дано согласие Оператору на
+            передачу данных третьему лицу для исполнения обязательств по
+            гражданско-правовому договору.<br />
+            10.3. В случае выявления неточностей в персональных данных,
+            Пользователь может актуализировать их самостоятельно, путем
+            направления Оператору уведомление на адрес электронной почты
+            Оператора ####@gmail.com с пометкой «Актуализация персональных
+            данных».<br />
+            10.4. Срок обработки персональных данных определяется достижением
+            целей, для которых были собраны персональные данные, если иной срок
+            не предусмотрен договором или действующим законодательством.<br />
+            Пользователь может в любой момент отозвать свое согласие на
+            обработку персональных данных, направив Оператору уведомление
+            посредством электронной почты на электронный адрес Оператора
+            ####@gmail.com с пометкой «Отзыв согласия на обработку персональных
+            данных».<br />
+            10.5. Вся информация, которая собирается сторонними сервисами, в том
+            числе платежными системами, средствами связи и другими поставщиками
+            услуг, хранится и обрабатывается указанными лицами (Операторами) в
+            соответствии с их Пользовательским соглашением и Политикой
+            конфиденциальности. Субъект персональных данных и/или Пользователь
+            обязан самостоятельно своевременно ознакомиться с указанными
+            документами. Оператор не несет ответственность за действия третьих
+            лиц, в том числе указанных в настоящем пункте поставщиков услуг.<br />
+            10.6. Установленные субъектом персональных данных запреты на
+            передачу (кроме предоставления доступа), а также на обработку или
+            условия обработки (кроме получения доступа) персональных данных,
+            разрешенных для распространения, не действуют в случаях обработки
+            персональных данных в государственных, общественных и иных публичных
+            интересах, определенных законодательством РФ.<br />
+            10.7. Оператор при обработке персональных данных обеспечивает
+            конфиденциальность персональных данных.<br />
+            10.8. Оператор осуществляет хранение персональных данных в форме,
+            позволяющей определить субъекта персональных данных, не дольше, чем
+            этого требуют цели обработки персональных данных, если срок хранения
+            персональных данных не установлен федеральным законом, договором,
+            стороной которого, выгодоприобретателем или поручителем по которому
+            является субъект персональных данных.<br />
+            10.9. Условием прекращения обработки персональных данных может
+            являться достижение целей обработки персональных данных, истечение
+            срока действия согласия субъекта персональных данных или отзыв
+            согласия субъектом персональных данных, а также выявление
+            неправомерной обработки персональных данных.<br />
+            11. Перечень действий, производимых Оператором с полученными
+            персональными данными<br />
+            11.1. Оператор осуществляет сбор, запись, систематизацию,
+            накопление, хранение, уточнение (обновление, изменение), извлечение,
+            использование, передачу (распространение, предоставление, доступ),
+            обезличивание, блокирование, удаление и уничтожение персональных
+            данных.<br />
+            11.2. Оператор осуществляет автоматизированную обработку
+            персональных данных с получением и/или передачей полученной
+            информации по информационно-телекоммуникационным сетям или без
+            таковой.<br />
+            12. Трансграничная передача персональных данных<br />
+            12.1. Оператор до начала осуществления трансграничной передачи
+            персональных данных обязан убедиться в том, что иностранным
+            государством, на территорию которого предполагается осуществлять
+            передачу персональных данных, обеспечивается надежная защита прав
+            субъектов персональных данных.<br />
+            12.2. Трансграничная передача персональных данных на территории
+            иностранных государств, не отвечающих вышеуказанным требованиям,
+            может осуществляться только в случае наличия согласия в письменной
+            форме субъекта персональных данных на трансграничную передачу его
+            персональных данных и/или исполнения договора, стороной которого
+            является субъект персональных данных.<br />
+            13. Конфиденциальность персональных данных<br />
+            Оператор и иные лица, получившие доступ к персональным данным,
+            обязаны не раскрывать третьим лицам и не распространять персональные
+            данные без согласия субъекта персональных данных, если иное не
+            предусмотрено федеральным законом.<br />
+            14. Заключительные положения<br />
+            14.1. Пользователь может получить любые разъяснения по интересующим
+            вопросам, касающимся обработки его персональных данных, обратившись
+            к Оператору с помощью электронной почты #####@gmail.com.<br />
+            14.2. В данном документе будут отражены любые изменения политики
+            обработки персональных данных Оператором. Политика действует
+            бессрочно до замены ее новой версией.<br />
+            14.3. Актуальная версия Политики в свободном доступе расположена в
+            сети Интернет по адресу https://####.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
