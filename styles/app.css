@@ -433,7 +433,7 @@ body {
   background-color: #def2f1;
 }
 .services::before {
-  background: center/cover url("/pics/wave3.svg");
+  background: center/cover url("../pics/wave3.svg");
   height: 50px;
   content: "";
   display: block;
@@ -532,7 +532,7 @@ body {
   top: 0.4rem;
   width: 7px;
   height: 7px;
-  background: url("/pics/checkSoftAqua.svg") no-repeat center;
+  background: url("../pics/checkSoftAqua.svg") no-repeat center;
   background-size: contain;
 }
 .services__itemBack .txt_title {
@@ -634,7 +634,7 @@ body {
   padding: 1rem;
 }
 .extraServices::after {
-  background-image: url("/pics/wave4.svg");
+  background-image: url("../pics/wave4.svg");
   background-size: cover;
   background-position: center;
   height: 50px;
@@ -933,7 +933,7 @@ body {
   background-color: #def2f1;
 }
 .report::before {
-  background: center/cover url("/pics/wave5.svg");
+  background: center/cover url("../pics/wave5.svg");
   height: 50px;
   content: "";
   display: block;
@@ -1071,7 +1071,7 @@ body {
 .call {
   position: relative;
   z-index: 1;
-  background: 0% -1%/contain no-repeat url("/pics/wave6.svg"), linear-gradient(rgba(43, 122, 120, 0.2), rgba(43, 122, 120, 0.1)), center/cover no-repeat url(/pics/callBackground.jpg);
+  background: 0% -1%/contain no-repeat url("../pics/wave6.svg"), linear-gradient(rgba(43, 122, 120, 0.2), rgba(43, 122, 120, 0.1)), center/cover no-repeat url("../pics/callBackground.jpg");
 }
 .call::after {
   content: "";
@@ -1097,7 +1097,7 @@ body {
 }
 .call__content {
   padding: 8rem 0;
-  background: right bottom/60% no-repeat url("/pics/callBackground.png");
+  background: right bottom/60% no-repeat url("../pics/callBackground.png");
 }
 .call__title {
   width: 50%;
@@ -1201,16 +1201,16 @@ body {
   border-radius: 50%;
 }
 .equipmentItem__pic_1 {
-  background: bottom right/69% url("/pics/spray1.png") no-repeat, bottom left/58% url("/pics/bottle.png") no-repeat, #3aafa9;
+  background: bottom right/69% url("../pics/spray1.png") no-repeat, bottom left/58% url("../pics/bottle.png") no-repeat, #3aafa9;
 }
 .equipmentItem__pic_2 {
-  background: right/78% url(/pics/mask.png) no-repeat, bottom left/75% url(/pics/glove.png) no-repeat, #3aafa9;
+  background: right/78% url("../pics/mask.png") no-repeat, bottom left/75% url("../pics/glove.png") no-repeat, #3aafa9;
 }
 .equipmentItem__pic_3 {
-  background: bottom/86% url(/pics/hoover2.png) no-repeat, #3aafa9;
+  background: bottom/86% url("../pics/hoover2.png") no-repeat, #3aafa9;
 }
 .equipmentItem__pic_4 {
-  background: bottom/75% url(/pics/towels.png) no-repeat, #3aafa9;
+  background: bottom/75% url("../pics/towels.png") no-repeat, #3aafa9;
 }
 .equipment .cleanerPic {
   max-width: 100%;
@@ -1343,7 +1343,7 @@ body {
   background-color: #def2f1;
 }
 .FAQ::before {
-  background: center/cover url("/pics/wave3.svg");
+  background: center/cover url("../pics/wave3.svg");
   height: 50px;
   content: "";
   display: block;
@@ -1413,7 +1413,7 @@ body {
   cursor: pointer;
 }
 .footer::before {
-  background: center/cover url("/pics/wave1.svg");
+  background: center/cover url("../pics/wave1.svg");
   height: 50px;
   content: "";
   display: block;
@@ -1480,7 +1480,7 @@ body {
 .modal__overlay .modal_calculator__aside {
   border-radius: 30px;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
-  background: bottom right url("/pics/bubles2.png") no-repeat, url("/pics/modalCalcBackground.png"), #3aafa9;
+  background: bottom right url("../pics/bubles2.png") no-repeat, url("../pics/modalCalcBackground.png"), #3aafa9;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1597,13 +1597,13 @@ body {
   position: relative;
 }
 .modal__overlay .modal__step#step1 .stepItem__img_1 {
-  background: linear-gradient(rgba(43, 122, 120, 0.3), rgba(43, 122, 120, 0.2)), center/cover url("/pics/calc_flat.jpg");
+  background: linear-gradient(rgba(43, 122, 120, 0.3), rgba(43, 122, 120, 0.2)), center/cover url("../pics/calc_flat.jpg");
 }
 .modal__overlay .modal__step#step1 .stepItem__img_2 {
-  background: linear-gradient(rgba(43, 122, 120, 0.3), rgba(43, 122, 120, 0.2)), center/cover url("/pics/calc_house.jpg");
+  background: linear-gradient(rgba(43, 122, 120, 0.3), rgba(43, 122, 120, 0.2)), center/cover url("../pics/calc_house.jpg");
 }
 .modal__overlay .modal__step#step1 .stepItem__img_3 {
-  background: linear-gradient(rgba(43, 122, 120, 0.3), rgba(43, 122, 120, 0.2)), center/cover url("/pics/calc_office.jpg");
+  background: linear-gradient(rgba(43, 122, 120, 0.3), rgba(43, 122, 120, 0.2)), center/cover url("../pics/calc_office.jpg");
 }
 .modal__overlay .modal__step#step1 .stepItem__dot {
   position: absolute;
@@ -1791,7 +1791,7 @@ body {
   transform: translate(-50%, -50%);
 }
 .modal__overlay .modal_result {
-  background: bottom right/40% url("../pics/background_manager2.webp") no-repeat, bottom right/100% url("/pics/bubbles3.png") no-repeat, #def2f1;
+  background: bottom right/40% url("../pics/background_manager2.webp") no-repeat, bottom right/100% url("../pics/bubbles3.png") no-repeat, #def2f1;
   width: 85%;
   min-width: 320px;
   max-width: 1030px;
@@ -1960,7 +1960,7 @@ body {
   line-height: 1;
 }
 .modal__overlay .modal_order {
-  background: bottom right/40% url("../pics/background_manager2.webp") no-repeat, bottom right/100% url("/pics/bubbles3.png") no-repeat, #def2f1;
+  background: bottom right/40% url("../pics/background_manager2.webp") no-repeat, bottom right/100% url("../pics/bubbles3.png") no-repeat, #def2f1;
   width: 85%;
   min-width: 320px;
   max-width: 1030px;
