@@ -517,7 +517,7 @@ body {
   background-color: $paleAqua;
 
   &::before {
-    background: center/cover url('/pics/wave3.svg');
+    background: center/cover url('../pics/wave3.svg');
     height: 50px;
     content: '';
     display: block;
@@ -631,7 +631,7 @@ body {
             top: 0.4rem;
             width: 7px;
             height: 7px;
-            background: url('/pics/checkSoftAqua.svg') no-repeat center;
+            background: url('../pics/checkSoftAqua.svg') no-repeat center;
             background-size: contain;
           }
         }
@@ -762,7 +762,7 @@ body {
   }
 
   &::after {
-    background-image: url('/pics/wave4.svg');
+    background-image: url('../pics/wave4.svg');
     background-size: cover;
     background-position: center;
     height: 50px;
@@ -1086,7 +1086,7 @@ body {
   text-align: center;
   background-color: $paleAqua;
   &::before {
-    background: center/cover url('/pics/wave5.svg');
+    background: center/cover url('../pics/wave5.svg');
     height: 50px;
     content: '';
     display: block;
@@ -1237,9 +1237,9 @@ body {
 .call {
   position: relative;
   z-index: 1;
-  background: 0% -1% / contain no-repeat url('/pics/wave6.svg'),
+  background: 0% -1% / contain no-repeat url('../pics/wave6.svg'),
     linear-gradient(rgba($aquamarine, 0.2), rgba($aquamarine, 0.1)),
-    center/cover no-repeat url(/pics/callBackground.jpg);
+    center/cover no-repeat url('../pics/callBackground.jpg');
 
   &::after {
     content: '';
@@ -1270,7 +1270,7 @@ body {
 
   &__content {
     padding: 8rem 0;
-    background: right bottom/60% no-repeat url('/pics/callBackground.png');
+    background: right bottom/60% no-repeat url('../pics/callBackground.png');
   }
 
   &__title {
@@ -1400,21 +1400,21 @@ body {
       border-radius: 50%;
 
       &_1 {
-        background: bottom right/69% url('/pics/spray1.png') no-repeat,
-          bottom left/58% url('/pics/bottle.png') no-repeat, $softAqua;
+        background: bottom right/69% url('../pics/spray1.png') no-repeat,
+          bottom left/58% url('../pics/bottle.png') no-repeat, $softAqua;
       }
 
       &_2 {
-        background: right/78% url(/pics/mask.png) no-repeat,
-          bottom left/75% url(/pics/glove.png) no-repeat, $softAqua;
+        background: right/78% url('../pics/mask.png') no-repeat,
+          bottom left/75% url('../pics/glove.png') no-repeat, $softAqua;
       }
 
       &_3 {
-        background: bottom/86% url(/pics/hoover2.png) no-repeat, $softAqua;
+        background: bottom/86% url('../pics/hoover2.png') no-repeat, $softAqua;
       }
 
       &_4 {
-        background: bottom/75% url(/pics/towels.png) no-repeat, $softAqua;
+        background: bottom/75% url('../pics/towels.png') no-repeat, $softAqua;
       }
     }
   }
@@ -1571,7 +1571,7 @@ body {
 .FAQ {
   background-color: $paleAqua;
   &::before {
-    background: center/cover url('/pics/wave3.svg');
+    background: center/cover url('../pics/wave3.svg');
     height: 50px;
     content: '';
     display: block;
@@ -1655,7 +1655,7 @@ body {
   }
 
   &::before {
-    background: center/cover url('/pics/wave1.svg');
+    background: center/cover url('../pics/wave1.svg');
     height: 50px;
     content: '';
     display: block;
@@ -1732,8 +1732,8 @@ body {
     &__aside {
       border-radius: 30px;
       box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
-      background: bottom right url('/pics/bubles2.png') no-repeat,
-        url('/pics/modalCalcBackground.png'), $softAqua;
+      background: bottom right url('../pics/bubles2.png') no-repeat,
+        url('../pics/modalCalcBackground.png'), $softAqua;
 
       display: flex;
       flex-direction: column;
@@ -1881,7 +1881,7 @@ body {
                 rgba($aquamarine, 0.3),
                 rgba($aquamarine, 0.2)
               ),
-              center / cover url('/pics/calc_flat.jpg');
+              center / cover url('../pics/calc_flat.jpg');
           }
 
           &_2 {
@@ -1889,7 +1889,7 @@ body {
                 rgba($aquamarine, 0.3),
                 rgba($aquamarine, 0.2)
               ),
-              center / cover url('/pics/calc_house.jpg');
+              center / cover url('../pics/calc_house.jpg');
           }
 
           &_3 {
@@ -1897,7 +1897,7 @@ body {
                 rgba($aquamarine, 0.3),
                 rgba($aquamarine, 0.2)
               ),
-              center / cover url('/pics/calc_office.jpg');
+              center / cover url('../pics/calc_office.jpg');
           }
         }
 
@@ -2151,7 +2151,7 @@ body {
   .modal_result {
     background: bottom right/40% url('../pics/background_manager2.webp')
         no-repeat,
-      bottom right/100% url('/pics/bubbles3.png') no-repeat, $paleAqua;
+      bottom right/100% url('../pics/bubbles3.png') no-repeat, $paleAqua;
 
     width: 85%;
     min-width: 320px;
@@ -2362,7 +2362,7 @@ body {
   .modal_order {
     background: bottom right/40% url('../pics/background_manager2.webp')
         no-repeat,
-      bottom right/100% url('/pics/bubbles3.png') no-repeat, $paleAqua;
+      bottom right/100% url('../pics/bubbles3.png') no-repeat, $paleAqua;
 
     width: 85%;
     min-width: 320px;
