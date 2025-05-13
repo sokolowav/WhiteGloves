@@ -593,7 +593,6 @@ body {
         border-radius: 0.5rem;
         overflow-y: auto;
         -ms-overflow-style: none;
-        // scrollbar-width: 0.8rem;
         scrollbar-width: thin;
         scrollbar-color: $softAqua $paleAqua;
 
@@ -609,6 +608,10 @@ body {
         &::-webkit-scrollbar-track {
           background: $paleAqua;
           border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-button {
+          display: none;
         }
 
         .txt_subtitle {
@@ -2002,14 +2005,6 @@ body {
         &:hover {
           background-color: $paleAquaHover;
         }
-
-        // input[type='radio']:checked + .stepItem__dot {
-        //   background-color: $softAqua;
-        // }
-
-        // input[type='radio']:checked + .stepItem__dot .stepItem__check {
-        //   fill: $pureWhite;
-        // }
       }
     }
 
@@ -2055,8 +2050,9 @@ body {
       .stepContent {
         overflow-y: scroll;
         -ms-overflow-style: none;
-        padding-right: 1rem;
-        scrollbar-width: 0.8rem;
+        padding-right: 0.8rem;
+        scrollbar-width: thin;
+        scrollbar-color: $softAqua $paleAqua;
         height: 22rem;
 
         &::-webkit-scrollbar {
@@ -2069,8 +2065,12 @@ body {
         }
 
         &::-webkit-scrollbar-track {
-          background: #def2f1;
+          background: $paleAqua;
           border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-button {
+          display: none;
         }
       }
     }
@@ -2227,7 +2227,8 @@ body {
         overflow-y: auto;
         -ms-overflow-style: none;
         padding-right: 1.5rem;
-        scrollbar-width: 0.6rem;
+        scrollbar-width: thin;
+        scrollbar-color: $softAqua $paleAqua;
         max-height: 14.5rem;
 
         &::-webkit-scrollbar {
@@ -2242,6 +2243,10 @@ body {
         &::-webkit-scrollbar-track {
           background: $paleAquaHover;
           border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-button {
+          display: none;
         }
       }
 
@@ -2575,7 +2580,8 @@ body {
       overflow-y: scroll;
       -ms-overflow-style: none;
       padding-right: 1rem;
-      scrollbar-width: 0.8rem;
+      scrollbar-width: thin;
+      scrollbar-color: $softAqua $paleAqua;
       height: 44.5rem;
 
       &::-webkit-scrollbar {
@@ -2588,8 +2594,12 @@ body {
       }
 
       &::-webkit-scrollbar-track {
-        background: #def2f1;
+        background: $paleAqua;
         border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-button {
+        display: none;
       }
     }
   }
