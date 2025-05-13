@@ -1,5 +1,5 @@
-@import 'normalize.css';
 @import 'fonts.css';
+@import 'normalize.css';
 html {
   min-width: 320px;
   font: 10px/1.2 "Roboto", sans-serif;
@@ -500,7 +500,8 @@ body {
   border-radius: 0.5rem;
   overflow-y: auto;
   -ms-overflow-style: none;
-  scrollbar-width: 0.8rem;
+  scrollbar-width: thin;
+  scrollbar-color: #3aafa9 #def2f1;
 }
 .services__itemBackText::-webkit-scrollbar {
   width: 8px;
@@ -1051,7 +1052,18 @@ body {
   -webkit-appearance: none;
   height: 44px;
   width: 44px;
-  background: center/45px 45px url("../pics/sliderIcon.png");
+  background: center/45px 45px url("../pics/sliderIcon.webp");
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+}
+.report .slider::-moz-range-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 44px;
+  width: 44px;
+  background: center/45px 45px url("../pics/sliderIcon.webp");
   border-radius: 50%;
   cursor: pointer;
   box-shadow: none;

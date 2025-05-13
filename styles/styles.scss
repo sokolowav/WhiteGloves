@@ -593,7 +593,9 @@ body {
         border-radius: 0.5rem;
         overflow-y: auto;
         -ms-overflow-style: none;
-        scrollbar-width: 0.8rem;
+        // scrollbar-width: 0.8rem;
+        scrollbar-width: thin;
+        scrollbar-color: $softAqua $paleAqua;
 
         &::-webkit-scrollbar {
           width: 8px;
@@ -605,7 +607,7 @@ body {
         }
 
         &::-webkit-scrollbar-track {
-          background: #def2f1;
+          background: $paleAqua;
           border-radius: 10px;
         }
 
@@ -1214,12 +1216,25 @@ body {
     -webkit-appearance: none;
     height: 44px;
     width: 44px;
-    background: center/45px 45px url('../pics/sliderIcon.png');
+    background: center/45px 45px url('../pics/sliderIcon.webp');
     border-radius: 50%;
     cursor: pointer;
     box-shadow: none;
     outline: none;
   }
+
+  .slider::-moz-range-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 44px;
+    width: 44px;
+    background: center/45px 45px url('../pics/sliderIcon.webp');
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: none;
+    outline: none;
+  }
+
   .slider-line {
     position: absolute;
     top: 0;

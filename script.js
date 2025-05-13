@@ -877,7 +877,8 @@ extraServiceInputs.forEach((input) => {
 
 updateCheckedInputStyles()
 
-//-------- ORDER MODAL INPUT LOGIC -------
+//-------- ORDER MODAL INPUT LOGIC ------
+
 const callByInputs = document.querySelectorAll('input[name="Способ связи"]')
 
 callByInputs.forEach((input) => {
