@@ -2,6 +2,14 @@ html {
   min-width: 320px;
   font: 10px/1.2 'Roboto', sans-serif;
   color: $charcoalBlue;
+
+  @include w1200 {
+    font: 9px/1.2 'Roboto', sans-serif;
+  }
+
+  @include w1024 {
+    font: 8px/1.2 'Roboto', sans-serif;
+  }
 }
 
 body {
@@ -12,22 +20,42 @@ body {
 
 .container {
   width: 85%;
-  min-width: 320px;
+  min-width: 300px;
   max-width: 1030px;
   height: 100%;
   padding: 2rem 0;
   margin: 0 auto;
+
+  @include w480 {
+    width: 93%;
+  }
 }
 
 .txt {
   &_logo {
     font: bold 4rem/1.5 'Bad Script', sans-serif;
     color: $charcoalBlue;
+
+    @include w768 {
+      font-size: 3.5rem;
+    }
+
+    @include w320 {
+      font-size: 3rem;
+    }
   }
 
   &_title {
     font: normal 3.6rem/1.2 'Raleway', sans-serif;
     color: $charcoalBlue;
+
+    @include w480 {
+      font-size: 3.2rem;
+    }
+
+    @include w360 {
+      font-size: 3rem;
+    }
   }
 
   &_subtitle {
@@ -68,10 +96,6 @@ body {
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s;
-
-  .txt_regular {
-    padding: 0 10px;
-  }
 }
 
 .bubble {
@@ -206,7 +230,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, auto);
     place-items: center end;
-    gap: 15px;
+    gap: 1.5rem;
 
     .timeWrapper {
       .txt_regular {
@@ -223,6 +247,23 @@ body {
           transform: scale(1.05);
         }
       }
+
+      @include w480 {
+        justify-self: center;
+      }
+
+      @include w360 {
+        display: none;
+      }
+    }
+
+    @include w480 {
+      grid-template-columns: repeat(3, auto);
+      place-items: center end;
+    }
+
+    @include w360 {
+      grid-template-columns: repeat(2, auto);
     }
   }
 
@@ -231,12 +272,22 @@ body {
   }
 
   &__socials {
-    .text_regular {
-      opacity: 1;
-    }
     display: flex;
     gap: 10px;
     align-items: center;
+
+    .text_regular {
+      opacity: 1;
+    }
+
+    span {
+      @include w768 {
+        display: none;
+      }
+    }
+    @include w480 {
+      display: none;
+    }
   }
 
   &__ellips {
@@ -260,9 +311,15 @@ body {
   .button {
     background-color: transparent;
     border: solid 1px $paleAqua;
+    padding: 1.8rem;
+
     &:hover {
       background-color: $softAqua;
       border-color: $softAqua;
+    }
+
+    @include w480 {
+      padding: 1.5rem;
     }
   }
 }
@@ -289,6 +346,10 @@ body {
 
   .txt_regular {
     font-size: 2rem;
+
+    @include w360 {
+      font-size: 1.6rem;
+    }
   }
 
   .swiper {
@@ -297,12 +358,17 @@ body {
 
   p {
     width: 70%;
+
+    @include w360 {
+      width: 90%;
+    }
   }
 
   .swiper-pagination-bullet {
     background-color: $pureWhite;
     opacity: 0.5;
     transition: all 0.3s;
+
     &-active {
       background-color: $aquamarine;
       opacity: 1;
@@ -312,6 +378,7 @@ body {
 
   .swiper-slide {
     height: 50rem;
+
     &_firstBackground {
       background: linear-gradient(
           rgba($aquamarine, 0.5),
@@ -345,6 +412,20 @@ body {
 
     .txt_regular {
       font-size: 2rem;
+    }
+
+    @include w768 {
+      width: 80%;
+      gap: 4rem;
+    }
+
+    @include w480 {
+      width: 100%;
+      gap: 3rem;
+    }
+
+    @include w320 {
+      gap: 2rem;
     }
   }
 
@@ -409,11 +490,19 @@ body {
       width: 100%;
     }
   }
+
+  @include w480 {
+    text-align: justify;
+  }
 }
 
 //-------------------------------NAVBAR--------------------------------
 
 .navbar {
+  @include w1200 {
+    display: none;
+  }
+
   width: 100%;
   text-align: center;
 
@@ -444,6 +533,9 @@ body {
 
     .txt_regular {
       font-size: 1.6rem;
+    }
+    @include w360 {
+      display: none;
     }
   }
 
@@ -476,16 +568,26 @@ body {
   }
 
   &__cardboard {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center center;
     justify-content: center;
+    gap: 1rem;
+
+    @include w480 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include w360 {
+      grid-template-columns: 1fr;
+    }
   }
   &__item {
     border-radius: 30px;
-    height: 150px;
-    width: 250px;
+    height: 15rem;
+    width: 100%;
+    max-width: 25rem;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -546,7 +648,7 @@ body {
 
     &Inner {
       position: relative;
-      width: 310px;
+      width: 31rem;
       height: 43.5rem;
       transition: transform 0.8s;
       transform-style: preserve-3d;
@@ -602,7 +704,7 @@ body {
 
         &::-webkit-scrollbar-thumb {
           background-color: $softAqua;
-          border-radius: 1rem;
+          border-radius: 10px;
         }
 
         &::-webkit-scrollbar-track {
@@ -675,8 +777,8 @@ body {
     }
 
     &Img {
-      width: 95px;
-      height: 95px;
+      width: 9.5rem;
+      height: 9.5rem;
       border-radius: 50%;
       border: solid 3px $softAqua;
 
@@ -861,8 +963,38 @@ body {
     padding: 6rem;
 
     .txt_title {
-      font-size: 22px;
+      font-size: 2.2rem;
       text-align: start;
+      @include w480 {
+        text-align: center;
+      }
+    }
+
+    @include w768 {
+      background: right/45% url('../pics/extraServiceOfferGreenSmall.webp')
+          no-repeat,
+        $pureWhite;
+    }
+
+    @include w480 {
+      background: $pureWhite;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+      padding: 4rem;
+    }
+  }
+
+  &__offerPic {
+    display: none;
+
+    @include w480 {
+      width: 60%;
+      display: block;
+    }
+
+    @include w360 {
+      width: 260px;
     }
   }
 
@@ -894,11 +1026,20 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 3rem 2rem;
+    margin: 3rem;
     border-radius: 100px;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+
     .txt_regular {
       font-size: 1.6rem;
+
+      @include w480 {
+        font-size: 1.4rem;
+      }
+    }
+
+    @include w360 {
+      display: none;
     }
   }
 
@@ -910,6 +1051,74 @@ body {
     &:not(.active):hover {
       color: $softAqua;
     }
+  }
+
+  .swiper__tabs_mobile {
+    display: none;
+
+    @include w360 {
+      display: inline-block;
+      position: relative;
+      margin: 2rem auto;
+      width: 22rem;
+    }
+
+    .swiper__tabs_toggle {
+      background: $softAqua;
+      border-radius: 30px;
+      padding: 2.7rem;
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+
+      font-size: 1.4rem;
+      color: $pureWhite;
+      transition: all 0.3s ease;
+      position: relative;
+      z-index: 6;
+    }
+
+    .swiper__tabs_list {
+      background: $pureWhite;
+      padding-top: 4rem;
+      border-top: none;
+      border-radius: 0 0 20px 20px;
+      position: absolute;
+      top: 55%;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+
+      .swiper__tab {
+        padding: 1rem 1.5rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:not(.active):hover {
+          color: $softAqua;
+        }
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .arrow-icon {
+      transition: transform 0.3s ease;
+    }
+
+    .open .arrow-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  .swiper,
+  .swiper-wrapper {
+    width: 100%;
   }
 
   .swiper-slide {
@@ -927,7 +1136,7 @@ body {
 
   .swiper__pic {
     width: 100%;
-    height: auto;
+    height: 100%;
   }
 
   .dotWrapper {
@@ -951,7 +1160,7 @@ body {
     }
     &_5 {
       top: 53%;
-      left: 44%;
+      left: 40%;
     }
     &_6 {
       top: 81%;
@@ -998,7 +1207,7 @@ body {
       left: 70%;
     }
     &_17 {
-      top: 91%;
+      top: 89%;
       left: 15%;
     }
     &_18 {
@@ -1015,7 +1224,7 @@ body {
     }
     &_21 {
       top: 64%;
-      left: 47%;
+      left: 52%;
     }
     &_22 {
       top: 73%;
@@ -1026,7 +1235,7 @@ body {
       left: 17%;
     }
     &_24 {
-      top: 92%;
+      top: 89%;
       left: 57%;
     }
     &_25 {
@@ -1046,7 +1255,7 @@ body {
       left: 20%;
     }
     &_29 {
-      top: 91%;
+      top: 89%;
       left: 65%;
     }
   }
@@ -1082,12 +1291,20 @@ body {
     .txt_regular {
       white-space: nowrap;
     }
+
+    @include w480 {
+      display: none;
+    }
   }
 }
 
 // --------------------------REPORT-----------------------------------------
 
 .report {
+  @include w1200 {
+    display: none;
+  }
+
   text-align: center;
   background-color: $paleAqua;
   &::before {
@@ -1119,7 +1336,13 @@ body {
       grid-template-columns: 1fr 1fr;
       box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
       border-radius: 30px;
+
+      @include w480 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
     }
+
     .swiper__pagination {
       padding: 2rem 0;
       display: flex;
@@ -1253,6 +1476,10 @@ body {
 //---------------------------CALL-------------------------------------------
 
 .call {
+  @include w1200 {
+    display: none;
+  }
+
   position: relative;
   z-index: 1;
   background: 0% -1% / contain no-repeat url('../pics/wave6.svg'),
@@ -1353,6 +1580,10 @@ body {
 //-------------------------EQUIPMENT------------------------------------
 
 .equipment {
+  @include w1200 {
+    display: none;
+  }
+
   text-align: center;
   position: relative;
   background-color: $pureWhite;
@@ -1398,6 +1629,14 @@ body {
       position: relative;
       justify-self: center;
       align-self: center;
+    }
+
+    @include w480 {
+      grid: 1fr 1fr 1.8fr/ 1fr 1fr;
+      grid-template-areas:
+        'item_1 item_3'
+        'item_2 item_4'
+        'item_5 item_5';
     }
   }
 
@@ -1587,6 +1826,10 @@ body {
 //-------------------------------FAQ------------------------------------
 
 .FAQ {
+  @include w1200 {
+    display: none;
+  }
+
   background-color: $paleAqua;
   &::before {
     background: center/cover url('../pics/wave3.svg');
@@ -1601,7 +1844,7 @@ body {
   }
 
   .txt_regular {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   &__list {
@@ -1666,6 +1909,10 @@ body {
 //-------------------------------FOOTER---------------------------------
 
 .footer {
+  @include w1200 {
+    display: none;
+  }
+
   background: $aquamarine;
 
   a {

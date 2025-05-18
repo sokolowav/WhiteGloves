@@ -41,13 +41,26 @@ const demonstrationSwiper = new Swiper('.demonstration__swiper', {
   allowTouchMove: false,
 })
 
-document.querySelectorAll('.swiper__tab').forEach((tab, index) => {
+const mobileToggle = document.querySelector('.swiper__tabs_toggle')
+const mobileList = document.querySelector('.swiper__tabs_list')
+const mobileSelected = document.querySelector('.swiper__tabs_selected')
+
+mobileToggle?.addEventListener('click', () => {
+  mobileList.classList.toggle('hidden')
+  mobileToggle.classList.toggle('open')
+})
+
+document.querySelectorAll('.swiper__tab').forEach((tab) => {
   tab.addEventListener('click', () => {
+    const index = parseInt(tab.dataset.tab, 10)
     demonstrationSwiper.slideTo(index)
     document
       .querySelectorAll('.swiper__tab')
       .forEach((t) => t.classList.remove('active'))
     tab.classList.add('active')
+    mobileSelected.textContent = tab.textContent
+    mobileList.classList.add('hidden')
+    mobileToggle.classList.remove('open')
   })
 })
 
