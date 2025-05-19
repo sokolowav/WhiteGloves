@@ -1206,11 +1206,6 @@ body {
   text-align: center;
   background-color: #def2f1;
 }
-@media screen and (max-width: 1439px) {
-  .report {
-    display: none;
-  }
-}
 .report::before {
   background: center/cover url("../pics/wave5.svg");
   height: 50px;
@@ -1226,6 +1221,11 @@ body {
   margin: 3rem 0;
   overflow: visible;
 }
+@media screen and (max-width: 767px) {
+  .report__swiper {
+    max-width: 390px;
+  }
+}
 .report__swiper .txt_title {
   font-size: 2rem;
   padding-bottom: 1rem;
@@ -1235,19 +1235,32 @@ body {
   background-color: #feffff;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 3rem;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
   border-radius: 30px;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
   .report__swiper .swiper-slide {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 359px) {
+  .report__swiper .swiper-slide {
+    gap: 0;
   }
 }
 .report__swiper .swiper__pagination {
   padding: 2rem 0;
   display: flex;
   gap: 6px;
+}
+@media screen and (max-width: 1023px) {
+  .report__swiper .swiper__pagination {
+    padding: 1rem 0;
+  }
 }
 .report__swiper .swiper__paginationBullet {
   width: 8px;
@@ -1285,14 +1298,35 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 4rem 5rem;
   gap: 2rem;
+  padding-right: 2rem;
 }
 .report__slideInfo p {
-  padding: 0.5rem 8rem 0.5rem 0;
+  width: 80%;
+  padding: 0.5rem 0;
+}
+@media screen and (max-width: 1023px) {
+  .report__slideInfo p {
+    padding: 0;
+  }
 }
 .report__slideInfo .text_headingBold {
   padding-bottom: 2rem;
+}
+@media screen and (max-width: 1023px) {
+  .report__slideInfo {
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .report__slideInfo {
+    padding: 2.5rem;
+  }
+}
+@media screen and (max-width: 359px) {
+  .report__slideInfo {
+    padding: 1.5rem;
+  }
 }
 .report__slidePrice {
   padding: 2rem 3rem;
@@ -1300,8 +1334,8 @@ body {
   border-radius: 30px;
 }
 .report .beforeAfterContainer {
-  height: 100%;
   width: 100%;
+  aspect-ratio: 1/1;
   position: relative;
   overflow: hidden;
   border-radius: 30px;
@@ -1362,6 +1396,20 @@ body {
   background-color: #feffff;
   z-index: 2;
   pointer-events: none;
+}
+@media screen and (max-width: 1023px) {
+  .report .container {
+    min-width: 240px;
+    width: 75%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .report .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .call {

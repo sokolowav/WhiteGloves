@@ -1343,12 +1343,9 @@ body {
 // --------------------------REPORT-----------------------------------------
 
 .report {
-  @include w1200 {
-    display: none;
-  }
-
   text-align: center;
   background-color: $paleAqua;
+
   &::before {
     background: center/cover url('../pics/wave5.svg');
     height: 50px;
@@ -1366,6 +1363,10 @@ body {
     margin: 3rem 0;
     overflow: visible;
 
+    @include w480 {
+      max-width: 390px;
+    }
+
     .txt_title {
       font-size: 2rem;
       padding-bottom: 1rem;
@@ -1376,12 +1377,19 @@ body {
       background-color: $pureWhite;
       display: grid;
       grid-template-columns: 1fr 1fr;
+      gap: 3rem;
       box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
       border-radius: 30px;
+      align-items: center;
 
       @include w480 {
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1rem;
+      }
+
+      @include w320 {
+        gap: 0;
       }
     }
 
@@ -1389,6 +1397,9 @@ body {
       padding: 2rem 0;
       display: flex;
       gap: 6px;
+      @include w768 {
+        padding: 1rem 0;
+      }
     }
 
     .swiper__paginationBullet {
@@ -1429,13 +1440,27 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding: 4rem 5rem;
     gap: 2rem;
+    padding-right: 2rem;
     p {
-      padding: 0.5rem 8rem 0.5rem 0;
+      width: 80%;
+      padding: 0.5rem 0;
+
+      @include w768 {
+        padding: 0;
+      }
     }
     .text_headingBold {
       padding-bottom: 2rem;
+    }
+    @include w768 {
+      gap: 1rem;
+    }
+    @include w480 {
+      padding: 2.5rem;
+    }
+    @include w320 {
+      padding: 1.5rem;
     }
   }
 
@@ -1446,8 +1471,8 @@ body {
   }
 
   .beforeAfterContainer {
-    height: 100%;
     width: 100%;
+    aspect-ratio: 1 / 1;
     position: relative;
     overflow: hidden;
     border-radius: 30px;
@@ -1512,6 +1537,19 @@ body {
     background-color: $pureWhite;
     z-index: 2;
     pointer-events: none;
+  }
+
+  .container {
+    @include w768 {
+      min-width: 240px;
+      width: 75%;
+    }
+    @include w480 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
 
