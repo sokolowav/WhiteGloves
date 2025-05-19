@@ -274,7 +274,9 @@ body {
     display: none;
   }
 }
-.header__ellips {
+.header__elips {
+  width: 1rem;
+  height: 1rem;
   display: inline-block;
 }
 @keyframes blink {
