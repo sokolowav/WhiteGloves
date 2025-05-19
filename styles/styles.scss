@@ -1042,6 +1042,23 @@ body {
 
     @include w360 {
       display: none;
+      background: $pureWhite;
+      padding-top: 8rem;
+      border-top: none;
+      border-radius: 0 0 20px 20px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 5;
+      margin: 0;
+      border-radius: 30px;
+    }
+
+    &.show {
+      @include w360 {
+        display: block;
+      }
     }
   }
 
@@ -1050,77 +1067,105 @@ body {
     padding: 2.5rem 3.5rem;
     border-radius: 100px;
     transition: all 0.3s;
+
+    @include w360 {
+      padding: 1rem 1.5rem;
+    }
+
     &:not(.active):hover {
       color: $softAqua;
     }
   }
 
-  .swiper__tabs_mobile {
+  .swiper__tabsToggle {
+    background: $softAqua;
+    border-radius: 30px;
+    padding: 2.7rem;
+    cursor: pointer;
+    box-shadow: 2px 2px 7px 0px rgba(43, 122, 120, 0.4);
+
     display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    font-size: 1.4rem;
+    color: $pureWhite;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 6;
 
     @include w360 {
-      display: inline-block;
-      position: relative;
-      margin: 2rem auto;
-      width: 22rem;
-    }
-
-    .swiper__tabs_toggle {
-      background: $softAqua;
-      border-radius: 30px;
-      padding: 2.7rem;
-      cursor: pointer;
-
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-
-      font-size: 1.4rem;
-      color: $pureWhite;
-      transition: all 0.3s ease;
-      position: relative;
-      z-index: 6;
     }
+  }
 
-    .swiper__tabs_list {
-      background: $pureWhite;
-      padding-top: 4rem;
-      border-top: none;
-      border-radius: 0 0 20px 20px;
-      position: absolute;
-      top: 55%;
-      left: 0;
-      right: 0;
-      z-index: 5;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  .swiper__tabsWrapper {
+    position: relative;
 
-      .swiper__tab {
-        padding: 1rem 1.5rem;
-        cursor: pointer;
-        transition: all 0.3s;
-        &:not(.active):hover {
-          color: $softAqua;
-        }
+    .active {
+      background-color: $softAqua;
+      color: $pureWhite;
+
+      @include w360 {
+        background-color: $pureWhite;
+        color: $aquamarine;
       }
     }
 
-    .hidden {
-      display: none;
+    @include w360 {
+      display: inline-block;
+      margin: 2rem auto;
+      width: 22rem;
     }
+  }
 
-    .arrow-icon {
-      transition: transform 0.3s ease;
-    }
+  .arrow-icon {
+    transition: transform 0.3s ease;
+  }
 
-    .open .arrow-icon {
-      transform: rotate(180deg);
-    }
+  .open .arrow-icon {
+    transform: rotate(180deg);
   }
 
   .swiper,
   .swiper-wrapper {
     width: 100%;
+  }
+
+  .swiper-wrapper {
+    position: relative;
+  }
+
+  &__overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+
+    &.active {
+      @include w480 {
+        display: flex;
+      }
+    }
+
+    .closeBtn {
+      font-size: 4.5rem;
+      color: $pureWhite;
+      cursor: pointer;
+      position: absolute;
+      top: 1.5rem;
+      right: 2.5rem;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $paleAqua;
+      }
+    }
   }
 
   .swiper-slide {
@@ -1129,11 +1174,6 @@ body {
     overflow: hidden;
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
     position: relative;
-  }
-
-  .active {
-    background-color: $softAqua;
-    color: $pureWhite;
   }
 
   .swiper__pic {
@@ -1209,7 +1249,7 @@ body {
       left: 70%;
     }
     &_17 {
-      top: 89%;
+      top: 86%;
       left: 15%;
     }
     &_18 {
@@ -1237,7 +1277,7 @@ body {
       left: 17%;
     }
     &_24 {
-      top: 89%;
+      top: 86%;
       left: 57%;
     }
     &_25 {
@@ -1257,7 +1297,7 @@ body {
       left: 20%;
     }
     &_29 {
-      top: 89%;
+      top: 86%;
       left: 65%;
     }
   }

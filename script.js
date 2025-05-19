@@ -40,13 +40,14 @@ const demonstrationSwiper = new Swiper('.demonstration__swiper', {
   effect: 'fade',
   allowTouchMove: false,
 })
-
-const mobileToggle = document.querySelector('.swiper__tabs_toggle')
-const mobileList = document.querySelector('.swiper__tabs_list')
+const mobileToggle = document.querySelector('.swiper__tabsToggle')
+const tabs = document.querySelector('.swiper__tabs')
 const mobileSelected = document.querySelector('.swiper__tabs_selected')
+const demonstrationOverlay = document.querySelector('.demonstration__overlay')
+const closeBtn = demonstrationOverlay.querySelector('.closeBtn')
 
 mobileToggle?.addEventListener('click', () => {
-  mobileList.classList.toggle('hidden')
+  tabs.classList.toggle('show')
   mobileToggle.classList.toggle('open')
 })
 
@@ -59,10 +60,25 @@ document.querySelectorAll('.swiper__tab').forEach((tab) => {
       .forEach((t) => t.classList.remove('active'))
     tab.classList.add('active')
     mobileSelected.textContent = tab.textContent
-    mobileList.classList.add('hidden')
+    tabs.classList.remove('show')
     mobileToggle.classList.remove('open')
+    demonstrationOverlay.classList.remove('active')
   })
 })
+
+document.querySelectorAll('.dotWrapper').forEach((dot) =>
+  dot.addEventListener('click', () => {
+    const text = dot.querySelector('span').innerHTML
+    const textWrapper = demonstrationOverlay.querySelector('span')
+    textWrapper.innerHTML = text
+
+    demonstrationOverlay.classList.add('active')
+  })
+)
+
+closeBtn.addEventListener('click', () =>
+  demonstrationOverlay.classList.remove('active')
+)
 
 // ----- SWIPER REPORT --------------------------------------------
 const reportSwiper = new Swiper('.report__swiper', {

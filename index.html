@@ -1048,31 +1048,28 @@
         <p class="txt_subtitle txt_grey">
           Так выглядит качественная работа в наших глазах
         </p>
-        <div class="swiper__tabs">
-          <div class="swiper__tab txt_regular active" data-tab="0">Спальня</div>
-          <div class="swiper__tab txt_regular" data-tab="1">Кухня</div>
-          <div class="swiper__tab txt_regular" data-tab="2">Уборная</div>
-          <div class="swiper__tab txt_regular" data-tab="3">Прихожая</div>
-        </div>
-        
-        <div class="swiper__tabs_mobile">
-          <div class="swiper__tabs_toggle">
+        <div class="swiper__tabsWrapper">
+          <div class="swiper__tabsToggle">
             <span class="swiper__tabs_selected">Спальня</span>
             <svg class="arrow-icon" viewBox="0 0 10 6" width="10" height="6">
               <path d="M1 1l4 4 4-4" stroke="#feffff" stroke-width="2" fill="none"/>
             </svg>
           </div>
-          <div class="swiper__tabs_list hidden">
-            <div class="swiper__tab txt_regular" data-tab="0">Спальня</div>
+          <div class="swiper__tabs">
+            <div class="swiper__tab txt_regular active" data-tab="0">Спальня</div>
             <div class="swiper__tab txt_regular" data-tab="1">Кухня</div>
             <div class="swiper__tab txt_regular" data-tab="2">Уборная</div>
             <div class="swiper__tab txt_regular" data-tab="3">Прихожая</div>
-          </div>
+          </div>  
         </div>
 
 
         <div class="demonstration__swiper">
           <div class="swiper-wrapper">
+            <div class="demonstration__overlay">
+              <div class="closeBtn">&times;</div>
+              <span class="txt_regular txt_bold txt_white"></span>
+            </div>
             <div class="swiper-slide">
               <img
                 src="./pics/demonstration_bedroom.jpg"
@@ -1083,7 +1080,7 @@
                 <img src="./pics/circle.svg" alt="circle" class="dot" />
                 <div class="textWrapper textWrapper_right">
                   <span class="txt_regular"
-                    >Отмоем осветительные<br />
+                    >Отмоем осветительные <br />
                     приборы</span
                   >
                 </div>
