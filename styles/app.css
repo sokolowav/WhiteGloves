@@ -1585,10 +1585,8 @@ body {
 }
 @media screen and (max-width: 359px) {
   .equipmentContent {
-    grid: auto auto auto/1fr 1fr;
-    grid-template-areas: "item_1 item_3" "item_5 item_5" "item_2 item_4";
-    place-items: start center;
-    justify-content: center;
+    grid-template-columns: repeat(2, 145px);
+    column-gap: 1rem;
   }
 }
 .equipmentItem {
@@ -1817,13 +1815,13 @@ body {
 .footer {
   background: #2b7a78;
 }
-@media screen and (max-width: 1439px) {
-  .footer {
-    display: none;
-  }
-}
 .footer a {
   cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .footer a {
+    display: inline-block;
+  }
 }
 .footer::before {
   background: center/cover url("../pics/wave1.svg");
@@ -1836,17 +1834,61 @@ body {
   grid-template-columns: repeat(5, auto);
   place-items: center center;
 }
+@media screen and (max-width: 767px) {
+  .footer__content {
+    row-gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "logo . socials" "requisites requisites requisites" "policy policy policy" "greatDeveloper greatDeveloper greatDeveloper";
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer span.txt_regular {
+    grid-area: greatDeveloper;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer .txt_logo {
+    grid-area: logo;
+    white-space: nowrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer .openModalRequisites {
+    grid-area: requisites;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer .openModalPrivacy {
+    grid-area: policy;
+  }
+}
 .footer .socialsWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
+@media screen and (max-width: 767px) {
+  .footer .socialsWrapper {
+    grid-area: socials;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .footer .socialsWrapper span {
+    display: none;
+  }
+}
 .footer .socialsIcons {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+@media screen and (max-width: 1023px) {
+  .footer .socialsIcons {
+    gap: 1rem;
+  }
 }
 
 .modal__overlay {

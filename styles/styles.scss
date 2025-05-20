@@ -1751,11 +1751,8 @@ body {
     }
 
     @include w320 {
-      grid: auto auto auto/ 1fr 1fr;
-      grid-template-areas: 'item_1 item_3' 'item_5 item_5' 'item_2 item_4';
-
-      place-items: start center;
-      justify-content: center;
+      grid-template-columns: repeat(2, 145px);
+      column-gap: 1rem;
     }
   }
 
@@ -2027,14 +2024,14 @@ body {
 //-------------------------------FOOTER---------------------------------
 
 .footer {
-  @include w1200 {
-    display: none;
-  }
-
   background: $aquamarine;
 
   a {
     cursor: pointer;
+
+    @include w480 {
+      display: inline-block;
+    }
   }
 
   &::before {
@@ -2048,6 +2045,42 @@ body {
     display: grid;
     grid-template-columns: repeat(5, auto);
     place-items: center center;
+
+    @include w480 {
+      row-gap: 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas:
+        'logo . socials'
+        'requisites requisites requisites'
+        'policy policy policy'
+        'greatDeveloper greatDeveloper greatDeveloper';
+    }
+  }
+
+  span.txt_regular {
+    @include w480 {
+      grid-area: greatDeveloper;
+    }
+  }
+
+  .txt_logo {
+    @include w480 {
+      grid-area: logo;
+      white-space: nowrap;
+    }
+  }
+
+  .openModalRequisites {
+    @include w480 {
+      grid-area: requisites;
+    }
+  }
+
+  .openModalPrivacy {
+    @include w480 {
+      grid-area: policy;
+    }
   }
 
   .socialsWrapper {
@@ -2055,6 +2088,16 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
+
+    @include w480 {
+      grid-area: socials;
+    }
+
+    span {
+      @include w768 {
+        display: none;
+      }
+    }
   }
 
   .socialsIcons {
@@ -2062,6 +2105,10 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+
+    @include w768 {
+      gap: 1rem;
+    }
   }
 }
 
