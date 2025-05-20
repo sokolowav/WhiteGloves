@@ -1442,6 +1442,17 @@ body {
     align-items: flex-start;
     gap: 2rem;
     padding-right: 2rem;
+
+    @include w768 {
+      gap: 1rem;
+    }
+    @include w480 {
+      padding: 2.5rem;
+    }
+    @include w320 {
+      padding: 1.5rem;
+    }
+
     p {
       width: 80%;
       padding: 0.5rem 0;
@@ -1454,17 +1465,9 @@ body {
         width: 90%;
       }
     }
+
     .text_headingBold {
       padding-bottom: 2rem;
-    }
-    @include w768 {
-      gap: 1rem;
-    }
-    @include w480 {
-      padding: 2.5rem;
-    }
-    @include w320 {
-      padding: 1.5rem;
     }
   }
 
@@ -1560,10 +1563,6 @@ body {
 //---------------------------CALL-------------------------------------------
 
 .call {
-  @include w1200 {
-    display: none;
-  }
-
   position: relative;
   z-index: 1;
   background: 0% -1% / contain no-repeat url('../pics/wave6.svg'),
@@ -1591,6 +1590,9 @@ body {
 
   .txt_subtitle {
     padding-bottom: 4rem;
+    @include w480 {
+      padding-bottom: 3rem;
+    }
   }
 
   .call__text.txt_regular {
@@ -1600,10 +1602,35 @@ body {
   &__content {
     padding: 8rem 0;
     background: right bottom/60% no-repeat url('../pics/callBackground.png');
+
+    @include w1024 {
+      background: right bottom/67rem no-repeat url('../pics/callBackground.png');
+    }
+
+    @include w768 {
+      padding: 7rem 0;
+    }
+
+    @include w480 {
+      padding: 5rem 0;
+      background: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__title {
     width: 50%;
+
+    @include w480 {
+      width: 75%;
+      text-align: center;
+    }
+
+    @include w360 {
+      width: 80%;
+    }
   }
 
   &__bottomBlock {
@@ -1614,6 +1641,10 @@ body {
     flex-direction: column;
     gap: 2rem;
     box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
+
+    @include w480 {
+      padding: 3rem 3.5rem;
+    }
   }
 
   .button_socials {

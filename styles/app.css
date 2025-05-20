@@ -1301,6 +1301,21 @@ body {
   gap: 2rem;
   padding-right: 2rem;
 }
+@media screen and (max-width: 1023px) {
+  .report__slideInfo {
+    gap: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .report__slideInfo {
+    padding: 2.5rem;
+  }
+}
+@media screen and (max-width: 359px) {
+  .report__slideInfo {
+    padding: 1.5rem;
+  }
+}
 .report__slideInfo p {
   width: 80%;
   padding: 0.5rem 0;
@@ -1317,21 +1332,6 @@ body {
 }
 .report__slideInfo .text_headingBold {
   padding-bottom: 2rem;
-}
-@media screen and (max-width: 1023px) {
-  .report__slideInfo {
-    gap: 1rem;
-  }
-}
-@media screen and (max-width: 767px) {
-  .report__slideInfo {
-    padding: 2.5rem;
-  }
-}
-@media screen and (max-width: 359px) {
-  .report__slideInfo {
-    padding: 1.5rem;
-  }
 }
 .report__slidePrice {
   padding: 2rem 3rem;
@@ -1422,11 +1422,6 @@ body {
   z-index: 1;
   background: 0% -1%/contain no-repeat url("../pics/wave6.svg"), linear-gradient(rgba(43, 122, 120, 0.2), rgba(43, 122, 120, 0.1)), center/cover no-repeat url("../pics/callBackground.jpg");
 }
-@media screen and (max-width: 1439px) {
-  .call {
-    display: none;
-  }
-}
 .call::after {
   content: "";
   position: absolute;
@@ -1446,6 +1441,11 @@ body {
 .call .txt_subtitle {
   padding-bottom: 4rem;
 }
+@media screen and (max-width: 767px) {
+  .call .txt_subtitle {
+    padding-bottom: 3rem;
+  }
+}
 .call .call__text.txt_regular {
   font-size: 1.6rem;
 }
@@ -1453,8 +1453,38 @@ body {
   padding: 8rem 0;
   background: right bottom/60% no-repeat url("../pics/callBackground.png");
 }
+@media screen and (max-width: 1200px) {
+  .call__content {
+    background: right bottom/67rem no-repeat url("../pics/callBackground.png");
+  }
+}
+@media screen and (max-width: 1023px) {
+  .call__content {
+    padding: 7rem 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .call__content {
+    padding: 5rem 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .call__title {
   width: 50%;
+}
+@media screen and (max-width: 767px) {
+  .call__title {
+    width: 75%;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 479px) {
+  .call__title {
+    width: 80%;
+  }
 }
 .call__bottomBlock {
   background: #feffff;
@@ -1464,6 +1494,11 @@ body {
   flex-direction: column;
   gap: 2rem;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
+}
+@media screen and (max-width: 767px) {
+  .call__bottomBlock {
+    padding: 3rem 3.5rem;
+  }
 }
 .call .button_socials {
   padding: 2rem 5rem;
