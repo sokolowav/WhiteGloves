@@ -1310,6 +1310,11 @@ body {
     padding: 0;
   }
 }
+@media screen and (max-width: 479px) {
+  .report__slideInfo p {
+    width: 90%;
+  }
+}
 .report__slideInfo .text_headingBold {
   padding-bottom: 2rem;
 }

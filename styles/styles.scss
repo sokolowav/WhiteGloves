@@ -1449,6 +1449,10 @@ body {
       @include w768 {
         padding: 0;
       }
+
+      @include w360 {
+        width: 90%;
+      }
     }
     .text_headingBold {
       padding-bottom: 2rem;
