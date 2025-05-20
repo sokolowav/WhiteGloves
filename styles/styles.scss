@@ -1695,10 +1695,6 @@ body {
 //-------------------------EQUIPMENT------------------------------------
 
 .equipment {
-  @include w1200 {
-    display: none;
-  }
-
   text-align: center;
   position: relative;
   background-color: $pureWhite;
@@ -1747,11 +1743,19 @@ body {
     }
 
     @include w480 {
-      grid: 1fr 1fr 1.8fr/ 1fr 1fr;
-      grid-template-areas:
-        'item_1 item_3'
-        'item_2 item_4'
-        'item_5 item_5';
+      grid: auto auto auto/ 155px 155px;
+      grid-template-areas: 'item_1 item_3' 'item_5 item_5' 'item_2 item_4';
+      gap: 3rem 2rem;
+      place-items: start center;
+      justify-content: center;
+    }
+
+    @include w320 {
+      grid: auto auto auto/ 1fr 1fr;
+      grid-template-areas: 'item_1 item_3' 'item_5 item_5' 'item_2 item_4';
+
+      place-items: start center;
+      justify-content: center;
     }
   }
 
@@ -1941,10 +1945,6 @@ body {
 //-------------------------------FAQ------------------------------------
 
 .FAQ {
-  @include w1200 {
-    display: none;
-  }
-
   background-color: $paleAqua;
   &::before {
     background: center/cover url('../pics/wave3.svg');
@@ -1980,7 +1980,10 @@ body {
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
-    gap: 3rem;
+
+    span {
+      flex-shrink: 100;
+    }
   }
 
   &__itemAnswer {

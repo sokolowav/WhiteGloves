@@ -1541,11 +1541,6 @@ body {
   position: relative;
   background-color: #feffff;
 }
-@media screen and (max-width: 1439px) {
-  .equipment {
-    display: none;
-  }
-}
 .equipment .title {
   padding: 2rem 0;
 }
@@ -1581,8 +1576,19 @@ body {
 }
 @media screen and (max-width: 767px) {
   .equipmentContent {
-    grid: 1fr 1fr 1.8fr/1fr 1fr;
-    grid-template-areas: "item_1 item_3" "item_2 item_4" "item_5 item_5";
+    grid: auto auto auto/155px 155px;
+    grid-template-areas: "item_1 item_3" "item_5 item_5" "item_2 item_4";
+    gap: 3rem 2rem;
+    place-items: start center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 359px) {
+  .equipmentContent {
+    grid: auto auto auto/1fr 1fr;
+    grid-template-areas: "item_1 item_3" "item_5 item_5" "item_2 item_4";
+    place-items: start center;
+    justify-content: center;
   }
 }
 .equipmentItem {
@@ -1742,11 +1748,6 @@ body {
 .FAQ {
   background-color: #def2f1;
 }
-@media screen and (max-width: 1439px) {
-  .FAQ {
-    display: none;
-  }
-}
 .FAQ::before {
   background: center/cover url("../pics/wave3.svg");
   height: 50px;
@@ -1776,7 +1777,9 @@ body {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  gap: 3rem;
+}
+.FAQ__itemQuestion span {
+  flex-shrink: 100;
 }
 .FAQ__itemAnswer {
   width: 80%;
