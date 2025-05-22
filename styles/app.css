@@ -1933,6 +1933,11 @@ body {
     gap: 1rem;
   }
 }
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_calculator {
+    grid-template-rows: auto 11rem;
+  }
+}
 .modal__overlay .modal_calculator__wrapper {
   background: transparent;
   width: 85%;
@@ -1975,14 +1980,15 @@ body {
     gap: 1rem;
     grid-template-areas: "instruction title title" "instruction item_1 item_2";
     padding: 2rem 3rem;
+    place-items: center center;
+    justify-content: center;
   }
 }
 @media screen and (max-width: 479px) {
   .modal__overlay .modal_calculator__aside {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 7rem;
-    grid-template-areas: "instruction";
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 2rem 3rem;
   }
 }
@@ -2006,6 +2012,7 @@ body {
     grid-area: instruction;
     place-self: center start;
     height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -2015,6 +2022,11 @@ body {
 @media screen and (max-width: 767px) {
   .modal__overlay .modal_calculator__aside .instruction {
     padding: 1.5rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_calculator__aside .instruction {
+    background: transparent;
   }
 }
 .modal__overlay .modal_calculator__aside .instruction strong {
@@ -2044,6 +2056,7 @@ body {
 .modal__overlay .modal_calculator__aside .item {
   display: flex;
   align-items: center;
+  gap: 1rem;
 }
 @media screen and (max-width: 1023px) {
   .modal__overlay .modal_calculator__aside .item {

@@ -2156,6 +2156,10 @@ body {
       gap: 1rem;
     }
 
+    @include w360 {
+      grid-template-rows: auto 11rem;
+    }
+
     &__wrapper {
       background: transparent;
       width: 85%;
@@ -2199,13 +2203,14 @@ body {
         gap: 1rem;
         grid-template-areas: 'instruction title title' 'instruction item_1 item_2';
         padding: 2rem 3rem;
+        place-items: center center;
+        justify-content: center;
       }
 
       @include w360 {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 7rem;
-        grid-template-areas: 'instruction';
+        display: flex;
+        align-items: center;
+        justify-content: center;
         padding: 2rem 3rem;
       }
 
@@ -2230,6 +2235,7 @@ body {
           grid-area: instruction;
           place-self: center start;
           height: 100%;
+          width: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -2238,6 +2244,10 @@ body {
 
         @include w480 {
           padding: 1.5rem;
+        }
+
+        @include w360 {
+          background: transparent;
         }
 
         strong {
@@ -2268,6 +2278,7 @@ body {
       .item {
         display: flex;
         align-items: center;
+        gap: 1rem;
 
         @include w768 {
           place-self: center center;
