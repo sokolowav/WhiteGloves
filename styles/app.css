@@ -1920,10 +1920,23 @@ body {
   grid-template-columns: 300px auto;
   gap: 2rem;
 }
+@media screen and (max-width: 1439px) {
+  .modal__overlay .modal_calculator {
+    grid-template-columns: 1fr 2.5fr;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_calculator {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 15rem;
+    grid-template-areas: "calculator" "aside";
+    gap: 1rem;
+  }
+}
 .modal__overlay .modal_calculator__wrapper {
   background: transparent;
   width: 85%;
-  min-width: 320px;
+  min-width: 300px;
   max-width: 1030px;
   margin: 0 auto;
   position: relative;
@@ -1932,10 +1945,15 @@ body {
   padding: 1rem 0 2rem;
   text-align: center;
 }
+@media screen and (max-width: 1200px) {
+  .modal__overlay .modal_calculator__wrapper .title {
+    padding: 1rem 0;
+  }
+}
 .modal__overlay .modal_calculator__aside {
   border-radius: 30px;
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
-  background: bottom right url("../pics/bubles2.png") no-repeat, url("../pics/modalCalcBackground.png"), #3aafa9;
+  background: bottom right url("../pics/bubles2.png") no-repeat, center/cover url("../pics/modalCalcBackground.png") no-repeat, #3aafa9;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1943,8 +1961,38 @@ body {
   gap: 3rem;
   padding: 4rem 3rem 7rem;
 }
+@media screen and (max-width: 1200px) {
+  .modal__overlay .modal_calculator__aside {
+    gap: 2rem;
+    padding: 4rem 3rem 4rem;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_calculator__aside {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 3rem 7rem;
+    gap: 1rem;
+    grid-template-areas: "instruction title title" "instruction item_1 item_2";
+    padding: 2rem 3rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_calculator__aside {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7rem;
+    grid-template-areas: "instruction";
+    padding: 2rem 3rem;
+  }
+}
 .modal__overlay .modal_calculator__aside .txt_title {
   font-size: 1.6rem;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_calculator__aside .break {
+    display: inline-block;
+  }
 }
 .modal__overlay .modal_calculator__aside .instruction {
   text-align: center;
@@ -1953,30 +2001,114 @@ body {
   border-radius: 20px;
   transition: all 0.3s;
 }
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_calculator__aside .instruction {
+    grid-area: instruction;
+    place-self: center start;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_calculator__aside .instruction {
+    padding: 1.5rem;
+  }
+}
+.modal__overlay .modal_calculator__aside .instruction strong {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_calculator__aside .instruction strong {
+    display: inline;
+  }
+}
 .modal__overlay .modal_calculator__aside .instruction.alert {
   scale: 1.15;
 }
 .modal__overlay .modal_calculator__aside .title {
   text-align: center;
 }
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_calculator__aside .title {
+    grid-area: title;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_calculator__aside .title {
+    display: none;
+  }
+}
 .modal__overlay .modal_calculator__aside .item {
   display: flex;
   align-items: center;
 }
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_calculator__aside .item {
+    place-self: center center;
+  }
+}
 .modal__overlay .modal_calculator__aside .item_1 {
   flex-direction: row-reverse;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_calculator__aside .item_1 {
+    grid-area: item_1;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_calculator__aside .item_1 {
+    display: none;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_calculator__aside .item_2 {
+    flex-direction: row-reverse;
+    grid-area: item_2;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_calculator__aside .item_2 {
+    display: none;
+  }
 }
 .modal__overlay .modal_calculator__aside .item .txt_regular {
   font-size: 1.4rem;
 }
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_calculator__aside .item .delete {
+    display: none;
+  }
+}
 .modal__overlay .modal_calculator__aside .item .pic_1 {
   width: 10rem;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_calculator__aside .item .pic_1 {
+    width: 6rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_calculator__aside .item .pic_1 {
+    width: 4rem;
+  }
 }
 .modal__overlay .modal_calculator__aside .item .pic_2 {
   width: 12rem;
 }
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_calculator__aside .item .pic_2 {
+    width: 8rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_calculator__aside .item .pic_2 {
+    width: 5rem;
+  }
+}
 .modal__overlay .modal_calculator__content {
-  height: 60rem;
   padding: 4rem 3.5rem 4rem 4.5rem;
   background-color: #feffff;
   border-radius: 30px;
@@ -1987,17 +2119,27 @@ body {
   justify-content: space-between;
   gap: 2rem;
 }
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_calculator__content {
+    grid-area: calculator;
+  }
+}
 .modal__overlay .modal__step {
+  width: 100%;
   text-align: center;
   display: none;
   overflow: hidden;
-  height: 41rem;
 }
 .modal__overlay .modal__step.active {
   display: block;
 }
 .modal__overlay .modal__step .title {
   padding-bottom: 3.5rem;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal__step .title {
+    padding-bottom: 2rem;
+  }
 }
 .modal__overlay .modal__step .txt_title {
   font-size: 2.2rem;
@@ -2011,6 +2153,13 @@ body {
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal__step .stepContent {
+    height: 22rem;
+    justify-content: center;
+    gap: 2rem;
+  }
 }
 .modal__overlay .modal__step .stepItem {
   display: flex;
@@ -2036,7 +2185,13 @@ body {
 }
 .modal__overlay .modal__step#step1 .stepItem {
   flex-direction: column;
+  align-items: center;
   gap: 2rem;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal__step#step1 .stepItem {
+    width: 20%;
+  }
 }
 .modal__overlay .modal__step#step1 .stepItem .txt_bold {
   font-weight: 600;
@@ -2050,6 +2205,12 @@ body {
   height: 26rem;
   border-radius: 30px;
   position: relative;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal__step#step1 .stepItem__img {
+    width: 100%;
+    height: 18rem;
+  }
 }
 .modal__overlay .modal__step#step1 .stepItem__img_1 {
   background: linear-gradient(rgba(43, 122, 120, 0.3), rgba(43, 122, 120, 0.2)), center/cover url("../pics/calc_flat.jpg");
@@ -2186,6 +2347,11 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: "button_back button_forward .";
   gap: 1rem;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .buttonsWrapper {
+    height: 5rem;
+  }
 }
 .modal__overlay .buttonsWrapper .button {
   height: 100%;

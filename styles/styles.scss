@@ -2145,10 +2145,21 @@ body {
     grid-template-columns: 300px auto;
     gap: 2rem;
 
+    @include w1200 {
+      grid-template-columns: 1fr 2.5fr;
+    }
+
+    @include w768 {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 15rem;
+      grid-template-areas: 'calculator' 'aside';
+      gap: 1rem;
+    }
+
     &__wrapper {
       background: transparent;
       width: 85%;
-      min-width: 320px;
+      min-width: 300px;
       max-width: 1030px;
       margin: 0 auto;
       position: relative;
@@ -2156,6 +2167,10 @@ body {
       .title {
         padding: 1rem 0 2rem;
         text-align: center;
+
+        @include w1024 {
+          padding: 1rem 0;
+        }
       }
     }
 
@@ -2163,7 +2178,7 @@ body {
       border-radius: 30px;
       box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.3);
       background: bottom right url('../pics/bubles2.png') no-repeat,
-        url('../pics/modalCalcBackground.png'), $softAqua;
+        center/cover url('../pics/modalCalcBackground.png') no-repeat, $softAqua;
 
       display: flex;
       flex-direction: column;
@@ -2172,8 +2187,36 @@ body {
       gap: 3rem;
       padding: 4rem 3rem 7rem;
 
+      @include w1024 {
+        gap: 2rem;
+        padding: 4rem 3rem 4rem;
+      }
+
+      @include w768 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 3rem 7rem;
+        gap: 1rem;
+        grid-template-areas: 'instruction title title' 'instruction item_1 item_2';
+        padding: 2rem 3rem;
+      }
+
+      @include w360 {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 7rem;
+        grid-template-areas: 'instruction';
+        padding: 2rem 3rem;
+      }
+
       .txt_title {
         font-size: 1.6rem;
+      }
+
+      .break {
+        @include w768 {
+          display: inline-block;
+        }
       }
 
       .instruction {
@@ -2183,40 +2226,111 @@ body {
         border-radius: 20px;
         transition: all 0.3s;
 
+        @include w768 {
+          grid-area: instruction;
+          place-self: center start;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+
+        @include w480 {
+          padding: 1.5rem;
+        }
+
+        strong {
+          display: block;
+
+          @include w480 {
+            display: inline;
+          }
+        }
+
         &.alert {
-          // background-color: $paleAqua;
           scale: 1.15;
         }
       }
 
       .title {
         text-align: center;
+
+        @include w768 {
+          grid-area: title;
+        }
+
+        @include w360 {
+          display: none;
+        }
       }
 
       .item {
         display: flex;
         align-items: center;
 
+        @include w768 {
+          place-self: center center;
+        }
+
         &_1 {
           flex-direction: row-reverse;
+          @include w768 {
+            grid-area: item_1;
+          }
+          @include w360 {
+            display: none;
+          }
+        }
+
+        &_2 {
+          @include w768 {
+            flex-direction: row-reverse;
+            grid-area: item_2;
+          }
+
+          @include w360 {
+            display: none;
+          }
         }
 
         .txt_regular {
           font-size: 1.4rem;
         }
 
+        .delete {
+          @include w480 {
+            display: none;
+          }
+        }
+
         .pic_1 {
           width: 10rem;
+
+          @include w768 {
+            width: 6rem;
+          }
+
+          @include w480 {
+            width: 4rem;
+          }
         }
 
         .pic_2 {
           width: 12rem;
+
+          @include w768 {
+            width: 8rem;
+          }
+
+          @include w480 {
+            width: 5rem;
+          }
         }
       }
     }
 
     &__content {
-      height: 60rem;
       padding: 4rem 3.5rem 4rem 4.5rem;
 
       background-color: $pureWhite;
@@ -2227,14 +2341,18 @@ body {
       align-items: center;
       justify-content: space-between;
       gap: 2rem;
+
+      @include w768 {
+        grid-area: calculator;
+      }
     }
   }
 
   .modal__step {
+    width: 100%;
     text-align: center;
     display: none;
     overflow: hidden;
-    height: 41rem;
 
     &.active {
       display: block;
@@ -2242,6 +2360,10 @@ body {
 
     .title {
       padding-bottom: 3.5rem;
+
+      @include w768 {
+        padding-bottom: 2rem;
+      }
     }
 
     .txt_title {
@@ -2258,6 +2380,12 @@ body {
       justify-content: space-between;
       gap: 1rem;
       flex-wrap: wrap;
+
+      @include w768 {
+        height: 22rem;
+        justify-content: center;
+        gap: 2rem;
+      }
     }
 
     .stepItem {
@@ -2289,7 +2417,12 @@ body {
     &#step1 {
       .stepItem {
         flex-direction: column;
+        align-items: center;
         gap: 2rem;
+
+        @include w768 {
+          width: 20%;
+        }
 
         .txt_bold {
           font-weight: 600;
@@ -2305,6 +2438,11 @@ body {
           height: 26rem;
           border-radius: 30px;
           position: relative;
+
+          @include w768 {
+            width: 100%;
+            height: 18rem;
+          }
 
           &_1 {
             background: linear-gradient(
@@ -2495,6 +2633,10 @@ body {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 'button_back button_forward .';
     gap: 1rem;
+
+    @include w768 {
+      height: 5rem;
+    }
 
     .button {
       height: 100%;
