@@ -2167,6 +2167,9 @@ body {
       max-width: 1030px;
       margin: 0 auto;
       position: relative;
+      display:flex;
+      flex-direction: column;
+      align-items:center;
 
       .title {
         padding: 1rem 0 2rem;
@@ -2174,6 +2177,16 @@ body {
 
         @include w1024 {
           padding: 1rem 0;
+        }
+
+        @include w360 {
+          width: 80%;
+        }
+
+        .delete {
+          @include w480 {
+            display: none;
+          }
         }
       }
     }
@@ -2354,6 +2367,12 @@ body {
       gap: 2rem;
 
       @include w768 {
+        padding: 4rem 3.5rem;
+        grid-area: calculator;
+      }
+
+      @include w480 {
+        padding: 3.5rem 3rem;
         grid-area: calculator;
       }
     }
@@ -2374,6 +2393,9 @@ body {
 
       @include w768 {
         padding-bottom: 2rem;
+      }
+      @include w360 {
+       width:100%;
       }
     }
 
@@ -2396,6 +2418,10 @@ body {
         height: 22rem;
         justify-content: center;
         gap: 2rem;
+      }
+
+      @include w480 {
+        gap: 1rem;
       }
     }
 
@@ -2431,10 +2457,6 @@ body {
         align-items: center;
         gap: 2rem;
 
-        @include w768 {
-          width: 20%;
-        }
-
         .txt_bold {
           font-weight: 600;
           transition: all 0.3s;
@@ -2451,8 +2473,19 @@ body {
           position: relative;
 
           @include w768 {
-            width: 100%;
+            width: 14rem;
             height: 18rem;
+          }
+
+          @include w360 {
+            width: 10rem;
+            height: 16rem;
+            border-radius: 20px;
+          }
+
+          @include w320 {
+            width: 9.5rem;
+            height: 15rem;
           }
 
           &_1 {

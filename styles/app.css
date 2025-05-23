@@ -1945,6 +1945,9 @@ body {
   max-width: 1030px;
   margin: 0 auto;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .modal__overlay .modal_calculator__wrapper .title {
   padding: 1rem 0 2rem;
@@ -1953,6 +1956,16 @@ body {
 @media screen and (max-width: 1200px) {
   .modal__overlay .modal_calculator__wrapper .title {
     padding: 1rem 0;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_calculator__wrapper .title {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_calculator__wrapper .title .delete {
+    display: none;
   }
 }
 .modal__overlay .modal_calculator__aside {
@@ -2134,6 +2147,13 @@ body {
 }
 @media screen and (max-width: 1023px) {
   .modal__overlay .modal_calculator__content {
+    padding: 4rem 3.5rem;
+    grid-area: calculator;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_calculator__content {
+    padding: 3.5rem 3rem;
     grid-area: calculator;
   }
 }
@@ -2154,6 +2174,11 @@ body {
     padding-bottom: 2rem;
   }
 }
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal__step .title {
+    width: 100%;
+  }
+}
 .modal__overlay .modal__step .txt_title {
   font-size: 2.2rem;
 }
@@ -2172,6 +2197,11 @@ body {
     height: 22rem;
     justify-content: center;
     gap: 2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal__step .stepContent {
+    gap: 1rem;
   }
 }
 .modal__overlay .modal__step .stepItem {
@@ -2201,11 +2231,6 @@ body {
   align-items: center;
   gap: 2rem;
 }
-@media screen and (max-width: 1023px) {
-  .modal__overlay .modal__step#step1 .stepItem {
-    width: 20%;
-  }
-}
 .modal__overlay .modal__step#step1 .stepItem .txt_bold {
   font-weight: 600;
   transition: all 0.3s;
@@ -2221,8 +2246,21 @@ body {
 }
 @media screen and (max-width: 1023px) {
   .modal__overlay .modal__step#step1 .stepItem__img {
-    width: 100%;
+    width: 14rem;
     height: 18rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal__step#step1 .stepItem__img {
+    width: 10rem;
+    height: 16rem;
+    border-radius: 20px;
+  }
+}
+@media screen and (max-width: 359px) {
+  .modal__overlay .modal__step#step1 .stepItem__img {
+    width: 9.5rem;
+    height: 15rem;
   }
 }
 .modal__overlay .modal__step#step1 .stepItem__img_1 {
