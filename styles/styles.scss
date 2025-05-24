@@ -2835,10 +2835,7 @@ body {
       background: bottom right/100% url('../pics/bubbles3.png') no-repeat,
         $paleAqua;
       padding: 3rem 3.6rem;
-    }
-
-    @include w360 {
-      height: 66rem;
+      height: auto;
     }
 
     .closeBtn {
@@ -2852,6 +2849,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        gap: 2rem;
 
         @include w768 {
           width: 100%;
@@ -2864,6 +2862,12 @@ body {
 
         .buttonsWrapper {
           grid-template-columns: 1fr 1fr;
+        }
+
+        .break {
+          @include w360 {
+            display: inline;
+          }
         }
       }
 
@@ -2879,6 +2883,10 @@ body {
 
         @include w480 {
           width: 70%;
+        }
+
+        @include w360 {
+          width: 90%;
         }
 
         @include w320 {
@@ -3051,7 +3059,8 @@ body {
       line-height: 1;
 
       @include w360 {
-        font-size: 2.8rem;
+        text-align: center;
+        font-size: 2.4rem;
       }
       @include w320 {
         font-size: 2rem;
@@ -3059,7 +3068,7 @@ body {
     }
 
     .txt_subtitle {
-      font-size: 1.6rem !important;
+      font-size: 1.9rem !important;
     }
   }
 

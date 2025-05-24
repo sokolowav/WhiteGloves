@@ -2536,11 +2536,7 @@ body {
   .modal__overlay .modal_result {
     background: bottom right/100% url("../pics/bubbles3.png") no-repeat, #def2f1;
     padding: 3rem 3.6rem;
-  }
-}
-@media screen and (max-width: 479px) {
-  .modal__overlay .modal_result {
-    height: 66rem;
+    height: auto;
   }
 }
 .modal__overlay .modal_result .closeBtn {
@@ -2552,6 +2548,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2rem;
 }
 @media screen and (max-width: 1023px) {
   .modal__overlay .modal_result .resultContent {
@@ -2564,6 +2561,11 @@ body {
 }
 .modal__overlay .modal_result .resultContent .buttonsWrapper {
   grid-template-columns: 1fr 1fr;
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_result .resultContent .break {
+    display: inline;
+  }
 }
 .modal__overlay .modal_result .resultWrapper {
   display: flex;
@@ -2579,6 +2581,11 @@ body {
 @media screen and (max-width: 767px) {
   .modal__overlay .modal_result .resultWrapper {
     width: 70%;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_result .resultWrapper {
+    width: 90%;
   }
 }
 @media screen and (max-width: 359px) {
@@ -2734,7 +2741,8 @@ body {
 }
 @media screen and (max-width: 479px) {
   .modal__overlay .modal_result .txt_title {
-    font-size: 2.8rem;
+    text-align: center;
+    font-size: 2.4rem;
   }
 }
 @media screen and (max-width: 359px) {
@@ -2743,7 +2751,7 @@ body {
   }
 }
 .modal__overlay .modal_result .txt_subtitle {
-  font-size: 1.6rem !important;
+  font-size: 1.9rem !important;
 }
 .modal__overlay .modal_confirmation {
   background: left top/110% url("../pics/modalConfirmationBackground.png"), #3aafa9;
