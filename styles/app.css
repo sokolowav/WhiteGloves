@@ -1917,8 +1917,9 @@ body {
 }
 .modal__overlay .modal_calculator {
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: 1fr 2.5fr;
   gap: 2rem;
+  width: 100%;
 }
 @media screen and (max-width: 1439px) {
   .modal__overlay .modal_calculator {
@@ -1966,6 +1967,16 @@ body {
 @media screen and (max-width: 767px) {
   .modal__overlay .modal_calculator__wrapper .title .delete {
     display: none;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_calculator__wrapper .title .txt_title {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_calculator__wrapper .title .txt_subtitle {
+    font-size: 1.5rem;
   }
 }
 .modal__overlay .modal_calculator__aside {
@@ -2162,6 +2173,17 @@ body {
   text-align: center;
   display: none;
   overflow: hidden;
+  height: 37rem;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal__step {
+    height: 27.2rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal__step {
+    height: 24.7rem;
+  }
 }
 .modal__overlay .modal__step.active {
   display: block;
@@ -2182,19 +2204,23 @@ body {
 .modal__overlay .modal__step .txt_title {
   font-size: 2.2rem;
 }
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal__step .txt_title {
+    font-size: 2rem !important;
+  }
+}
 .modal__overlay .modal__step .txt_subtitle {
   font-size: 1.8rem;
 }
 .modal__overlay .modal__step .stepContent {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   gap: 1rem;
   flex-wrap: wrap;
 }
 @media screen and (max-width: 1023px) {
   .modal__overlay .modal__step .stepContent {
-    height: 22rem;
     justify-content: center;
     gap: 2rem;
   }
@@ -2369,26 +2395,37 @@ body {
 .modal__overlay .modal__step#step3 input.txt_regular {
   font-size: 1.4rem;
 }
-.modal__overlay .modal__step#step4 .stepContent {
-  overflow-y: scroll;
+.modal__overlay .modal__step#step4 .stepContent, .modal__overlay .modal__step#step2 .stepContent {
+  overflow-y: auto;
   -ms-overflow-style: none;
   padding-right: 0.8rem;
   scrollbar-width: thin;
   scrollbar-color: #3aafa9 #def2f1;
   height: 22rem;
+  align-content: flex-start;
 }
-.modal__overlay .modal__step#step4 .stepContent::-webkit-scrollbar {
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal__step#step4 .stepContent, .modal__overlay .modal__step#step2 .stepContent {
+    height: 19.5rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal__step#step4 .stepContent, .modal__overlay .modal__step#step2 .stepContent {
+    height: 17.5rem;
+  }
+}
+.modal__overlay .modal__step#step4 .stepContent::-webkit-scrollbar, .modal__overlay .modal__step#step2 .stepContent::-webkit-scrollbar {
   width: 8px;
 }
-.modal__overlay .modal__step#step4 .stepContent::-webkit-scrollbar-thumb {
+.modal__overlay .modal__step#step4 .stepContent::-webkit-scrollbar-thumb, .modal__overlay .modal__step#step2 .stepContent::-webkit-scrollbar-thumb {
   background-color: #3aafa9;
   border-radius: 10px;
 }
-.modal__overlay .modal__step#step4 .stepContent::-webkit-scrollbar-track {
+.modal__overlay .modal__step#step4 .stepContent::-webkit-scrollbar-track, .modal__overlay .modal__step#step2 .stepContent::-webkit-scrollbar-track {
   background: #def2f1;
   border-radius: 10px;
 }
-.modal__overlay .modal__step#step4 .stepContent::-webkit-scrollbar-button {
+.modal__overlay .modal__step#step4 .stepContent::-webkit-scrollbar-button, .modal__overlay .modal__step#step2 .stepContent::-webkit-scrollbar-button {
   display: none;
 }
 .modal__overlay .buttonsWrapper {

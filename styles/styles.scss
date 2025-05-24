@@ -2142,8 +2142,9 @@ body {
 
   .modal_calculator {
     display: grid;
-    grid-template-columns: 300px auto;
+    grid-template-columns: 1fr 2.5fr;
     gap: 2rem;
+    width: 100%;
 
     @include w1200 {
       grid-template-columns: 1fr 2.5fr;
@@ -2167,9 +2168,9 @@ body {
       max-width: 1030px;
       margin: 0 auto;
       position: relative;
-      display:flex;
+      display: flex;
       flex-direction: column;
-      align-items:center;
+      align-items: center;
 
       .title {
         padding: 1rem 0 2rem;
@@ -2186,6 +2187,18 @@ body {
         .delete {
           @include w480 {
             display: none;
+          }
+        }
+
+        .txt_title {
+          @include w360 {
+            font-size: 2.5rem;
+          }
+        }
+
+        .txt_subtitle {
+          @include w360 {
+            font-size: 1.5rem;
           }
         }
       }
@@ -2383,6 +2396,15 @@ body {
     text-align: center;
     display: none;
     overflow: hidden;
+    height: 37rem;
+
+    @include w768 {
+      height: 27.2rem;
+    }
+
+    @include w360 {
+      height: 24.7rem;
+    }
 
     &.active {
       display: block;
@@ -2394,13 +2416,18 @@ body {
       @include w768 {
         padding-bottom: 2rem;
       }
+
       @include w360 {
-       width:100%;
+        width: 100%;
       }
     }
 
     .txt_title {
       font-size: 2.2rem;
+
+      @include w360 {
+        font-size: 2rem !important;
+      }
     }
 
     .txt_subtitle {
@@ -2410,12 +2437,11 @@ body {
     .stepContent {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: space-around;
       gap: 1rem;
       flex-wrap: wrap;
 
       @include w768 {
-        height: 22rem;
         justify-content: center;
         gap: 2rem;
       }
@@ -2640,14 +2666,24 @@ body {
       }
     }
 
-    &#step4 {
+    &#step4,
+    &#step2 {
       .stepContent {
-        overflow-y: scroll;
+        overflow-y: auto;
         -ms-overflow-style: none;
         padding-right: 0.8rem;
         scrollbar-width: thin;
         scrollbar-color: $softAqua $paleAqua;
         height: 22rem;
+        align-content: flex-start;
+
+        @include w768 {
+          height: 19.5rem;
+        }
+
+        @include w360 {
+          height: 17.5rem;
+        }
 
         &::-webkit-scrollbar {
           width: 8px;
