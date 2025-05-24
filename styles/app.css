@@ -2514,7 +2514,7 @@ body {
 .modal__overlay .modal_result {
   background: bottom right/40% url("../pics/background_manager2.webp") no-repeat, bottom right/100% url("../pics/bubbles3.png") no-repeat, #def2f1;
   width: 85%;
-  min-width: 320px;
+  min-width: 300px;
   max-width: 1030px;
   margin: 0 auto;
   position: relative;
@@ -2522,8 +2522,26 @@ body {
   border-radius: 30px;
   padding: 5rem 5.8rem 5.5rem;
 }
-.modal__overlay .modal_result .txt_title {
-  font-size: 3.6rem;
+@media screen and (max-width: 1439px) {
+  .modal__overlay .modal_result {
+    background: bottom right/37% url("../pics/background_manager2.webp") no-repeat, bottom right/100% url("../pics/bubbles3.png") no-repeat, #def2f1;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .modal__overlay .modal_result {
+    background: bottom right/40rem url("../pics/background_manager2.webp") no-repeat, bottom right/100% url("../pics/bubbles3.png") no-repeat, #def2f1;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_result {
+    background: bottom right/100% url("../pics/bubbles3.png") no-repeat, #def2f1;
+    padding: 3rem 3.6rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_result {
+    height: 66rem;
+  }
 }
 .modal__overlay .modal_result .closeBtn {
   top: -5.5rem;
@@ -2534,6 +2552,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_result .resultContent {
+    width: 100%;
+  }
 }
 .modal__overlay .modal_result .resultContent .price {
   align-self: center;
@@ -2546,9 +2569,24 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  width: 60%;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_result .resultWrapper {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_result .resultWrapper {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 359px) {
+  .modal__overlay .modal_result .resultWrapper {
+    width: 95%;
+  }
 }
 .modal__overlay .modal_result .resultSummary, .modal__overlay .modal_result .resultPrice {
-  width: 60%;
   display: grid;
   grid-template-columns: auto auto;
   gap: 1rem;
@@ -2591,6 +2629,16 @@ body {
   box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
 }
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_result .result__input {
+    padding: 2.7rem 3.4rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_result .result__input {
+    padding: 2rem 3.4rem;
+  }
+}
 .modal__overlay .modal_result .result__input.alert::placeholder {
   text-decoration: underline;
 }
@@ -2608,6 +2656,12 @@ body {
   align-items: center;
   gap: 1rem;
 }
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_result .result__buttonsWrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .modal__overlay .modal_result .result__button {
   display: inline-block;
   padding: 2.6rem 7rem;
@@ -2618,6 +2672,16 @@ body {
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_result .result__button {
+    padding: 2.6rem 3rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_result .result__button {
+    padding: 2rem 4.7rem;
+  }
 }
 .modal__overlay .modal_result .result__button:hover {
   background-color: #2b7a78;
@@ -2652,13 +2716,34 @@ body {
 }
 .modal__overlay .modal_result .title {
   padding-bottom: 1rem;
+  width: 85%;
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_result .title {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_result .title {
+    width: 100%;
+  }
 }
 .modal__overlay .modal_result .txt_title {
   font-size: 3.2rem;
   line-height: 1;
 }
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_result .txt_title {
+    font-size: 2.8rem;
+  }
+}
+@media screen and (max-width: 359px) {
+  .modal__overlay .modal_result .txt_title {
+    font-size: 2rem;
+  }
+}
 .modal__overlay .modal_result .txt_subtitle {
-  font-size: 1.6rem;
+  font-size: 1.6rem !important;
 }
 .modal__overlay .modal_confirmation {
   background: left top/110% url("../pics/modalConfirmationBackground.png"), #3aafa9;

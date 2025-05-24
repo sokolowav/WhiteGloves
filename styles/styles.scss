@@ -2706,8 +2706,7 @@ body {
     }
     &#step4 {
       .stepContent {
-
-        overflow-y: scroll;  
+        overflow-y: scroll;
         @include w360 {
           height: 15rem;
         }
@@ -2812,7 +2811,7 @@ body {
       bottom right/100% url('../pics/bubbles3.png') no-repeat, $paleAqua;
 
     width: 85%;
-    min-width: 320px;
+    min-width: 300px;
     max-width: 1030px;
     margin: 0 auto;
     position: relative;
@@ -2820,8 +2819,26 @@ body {
     border-radius: 30px;
     padding: 5rem 5.8rem 5.5rem;
 
-    .txt_title {
-      font-size: 3.6rem;
+    @include w1200 {
+      background: bottom right/37% url('../pics/background_manager2.webp')
+          no-repeat,
+        bottom right/100% url('../pics/bubbles3.png') no-repeat, $paleAqua;
+    }
+
+    @include w1024 {
+      background: bottom right/40rem url('../pics/background_manager2.webp')
+          no-repeat,
+        bottom right/100% url('../pics/bubbles3.png') no-repeat, $paleAqua;
+    }
+
+    @include w480 {
+      background: bottom right/100% url('../pics/bubbles3.png') no-repeat,
+        $paleAqua;
+      padding: 3rem 3.6rem;
+    }
+
+    @include w360 {
+      height: 66rem;
     }
 
     .closeBtn {
@@ -2835,6 +2852,10 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        @include w768 {
+          width: 100%;
+        }
 
         .price {
           align-self: center;
@@ -2850,11 +2871,23 @@ body {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        width: 60%;
+
+        @include w768 {
+          width: 50%;
+        }
+
+        @include w480 {
+          width: 70%;
+        }
+
+        @include w320 {
+          width: 95%;
+        }
       }
 
       &Summary,
       &Price {
-        width: 60%;
         display: grid;
         grid-template-columns: auto auto;
         gap: 1rem;
@@ -2905,6 +2938,14 @@ body {
         box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
         transition: all 0.3s;
 
+        @include w480 {
+          padding: 2.7rem 3.4rem;
+        }
+
+        @include w360 {
+          padding: 2rem 3.4rem;
+        }
+
         &.alert {
           &::placeholder {
             text-decoration: underline;
@@ -2927,10 +2968,16 @@ body {
         display: flex;
         align-items: center;
         gap: 1rem;
+
+        @include w360 {
+          flex-direction: column;
+          justify-content: center;
+        }
       }
 
       &__button {
         display: inline-block;
+
         padding: 2.6rem 7rem;
         border: none;
         border-radius: 100px;
@@ -2939,6 +2986,13 @@ body {
         text-decoration: none;
         cursor: pointer;
         transition: all 0.3s;
+
+        @include w480 {
+          padding: 2.6rem 3rem;
+        }
+        @include w360 {
+          padding: 2rem 4.7rem;
+        }
 
         &:hover {
           background-color: $aquamarine;
@@ -2981,14 +3035,31 @@ body {
 
     .title {
       padding-bottom: 1rem;
+      width: 85%;
+
+      @include w768 {
+        width: 70%;
+      }
+
+      @include w480 {
+        width: 100%;
+      }
     }
+
     .txt_title {
       font-size: 3.2rem;
       line-height: 1;
+
+      @include w360 {
+        font-size: 2.8rem;
+      }
+      @include w320 {
+        font-size: 2rem;
+      }
     }
 
     .txt_subtitle {
-      font-size: 1.6rem;
+      font-size: 1.6rem !important;
     }
   }
 
