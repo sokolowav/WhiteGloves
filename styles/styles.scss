@@ -2704,6 +2704,15 @@ body {
         }
       }
     }
+    &#step4 {
+      .stepContent {
+
+        overflow-y: scroll;  
+        @include w360 {
+          height: 15rem;
+        }
+      }
+    }
   }
 
   .buttonsWrapper {

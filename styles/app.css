@@ -2428,6 +2428,14 @@ body {
 .modal__overlay .modal__step#step4 .stepContent::-webkit-scrollbar-button, .modal__overlay .modal__step#step2 .stepContent::-webkit-scrollbar-button {
   display: none;
 }
+.modal__overlay .modal__step#step4 .stepContent {
+  overflow-y: scroll;
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal__step#step4 .stepContent {
+    height: 15rem;
+  }
+}
 .modal__overlay .buttonsWrapper {
   height: 7rem;
   width: 100%;
