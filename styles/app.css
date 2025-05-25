@@ -19,7 +19,7 @@ html {
 body {
   background-color: #feffff;
   min-width: 320px;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .container {
@@ -1908,8 +1908,7 @@ body {
   color: #3aafa9;
   cursor: pointer;
   position: absolute;
-  top: 1.5rem;
-  right: 0;
+  right: 0rem;
   transition: color 0.3s;
 }
 .modal__overlay .closeBtn:hover {
@@ -1941,10 +1940,6 @@ body {
 }
 .modal__overlay .modal_calculator__wrapper {
   background: transparent;
-  width: 85%;
-  min-width: 300px;
-  max-width: 1030px;
-  margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2513,10 +2508,8 @@ body {
 }
 .modal__overlay .modal_result {
   background: bottom right/40% url("../pics/background_manager2.webp") no-repeat, bottom right/100% url("../pics/bubbles3.png") no-repeat, #def2f1;
-  width: 85%;
-  min-width: 300px;
-  max-width: 1030px;
-  margin: 0 auto;
+  width: 100%;
+  margin-top: 3.5rem;
   position: relative;
   height: 60rem;
   border-radius: 30px;
@@ -2541,6 +2534,7 @@ body {
 }
 .modal__overlay .modal_result .closeBtn {
   top: -5.5rem;
+  right: 0rem;
 }
 .modal__overlay .modal_result .resultContent {
   width: 70%;
@@ -2765,10 +2759,8 @@ body {
 }
 .modal__overlay .modal_confirmation {
   background: left top/110% url("../pics/modalConfirmationBackground.png"), #3aafa9;
-  width: 85%;
-  min-width: 300px;
-  max-width: 650px;
-  margin: 0 auto;
+  margin-top: 3.5rem;
+  width: 100%;
   position: relative;
   height: 40rem;
   border-radius: 30px;
@@ -2803,6 +2795,7 @@ body {
 }
 .modal__overlay .modal_confirmation .closeBtn {
   top: -5.5rem;
+  right: 0rem;
 }
 .modal__overlay .modal_confirmation .confirmationContent {
   width: 55%;
@@ -2849,10 +2842,7 @@ body {
 }
 .modal__overlay .modal_order {
   background: bottom right/40% url("../pics/background_manager2.webp") no-repeat, bottom right/100% url("../pics/bubbles3.png") no-repeat, #def2f1;
-  width: 85%;
-  min-width: 300px;
-  max-width: 1030px;
-  margin: 0 auto;
+  margin-top: 3.5rem;
   position: relative;
   height: 60rem;
   border-radius: 30px;
@@ -2877,6 +2867,7 @@ body {
 }
 .modal__overlay .modal_order .closeBtn {
   top: -5.5rem;
+  right: 0rem;
 }
 .modal__overlay .modal_order .title {
   padding-bottom: 1rem;
@@ -3069,12 +3060,10 @@ body {
 }
 .modal__overlay .modal_requisites,
 .modal__overlay .modal_privacy {
-  background: #feffff;
-  width: 85%;
-  min-width: 300px;
-  max-width: 1030px;
-  margin: 0 auto;
+  margin-top: 3.5rem;
   position: relative;
+  background: #feffff;
+  width: 100%;
   border-radius: 30px;
   padding: 5rem 5.8rem 5.5rem;
 }
@@ -3087,6 +3076,7 @@ body {
 .modal__overlay .modal_requisites .closeBtn,
 .modal__overlay .modal_privacy .closeBtn {
   top: -5.5rem;
+  right: 0rem;
 }
 .modal__overlay .modal_requisites .txt_title,
 .modal__overlay .modal_privacy .txt_title {
@@ -3166,6 +3156,25 @@ body {
   border-radius: 10px;
 }
 .modal__overlay .modal_privacy .privacyText::-webkit-scrollbar-button {
+  display: none;
+}
+.modal__overlay .modalWrapper {
+  background: transparent;
+  width: 85%;
+  min-width: 300px;
+  max-width: 1030px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100dvh;
+  overflow-y: auto;
+  padding: 3rem 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.modal__overlay .modalWrapper::-webkit-scrollbar {
   display: none;
 }
 

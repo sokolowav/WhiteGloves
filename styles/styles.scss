@@ -15,7 +15,7 @@ html {
 body {
   background-color: $pureWhite;
   min-width: 320px;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .container {
@@ -2131,8 +2131,7 @@ body {
     color: $softAqua;
     cursor: pointer;
     position: absolute;
-    top: 1.5rem;
-    right: 0;
+    right: 0rem;
     transition: color 0.3s;
 
     &:hover {
@@ -2163,10 +2162,6 @@ body {
 
     &__wrapper {
       background: transparent;
-      width: 85%;
-      min-width: 300px;
-      max-width: 1030px;
-      margin: 0 auto;
       position: relative;
       display: flex;
       flex-direction: column;
@@ -2810,10 +2805,8 @@ body {
         no-repeat,
       bottom right/100% url('../pics/bubbles3.png') no-repeat, $paleAqua;
 
-    width: 85%;
-    min-width: 300px;
-    max-width: 1030px;
-    margin: 0 auto;
+    width: 100%;
+    margin-top: 3.5rem;
     position: relative;
     height: 60rem;
     border-radius: 30px;
@@ -2840,6 +2833,7 @@ body {
 
     .closeBtn {
       top: -5.5rem;
+      right: 0rem;
     }
 
     .result {
@@ -3084,11 +3078,10 @@ body {
   .modal_confirmation {
     background: left top/110% url('../pics/modalConfirmationBackground.png'),
       $softAqua;
+    margin-top: 3.5rem;
 
-    width: 85%;
-    min-width: 300px;
-    max-width: 650px;
-    margin: 0 auto;
+    width: 100%;
+
     position: relative;
     height: 40rem;
     border-radius: 30px;
@@ -3125,6 +3118,7 @@ body {
 
     .closeBtn {
       top: -5.5rem;
+      right: 0rem;
     }
 
     .confirmationContent {
@@ -3172,10 +3166,8 @@ body {
         no-repeat,
       bottom right/100% url('../pics/bubbles3.png') no-repeat, $paleAqua;
 
-    width: 85%;
-    min-width: 300px;
-    max-width: 1030px;
-    margin: 0 auto;
+    margin-top: 3.5rem;
+
     position: relative;
     height: 60rem;
     border-radius: 30px;
@@ -3202,6 +3194,7 @@ body {
 
     .closeBtn {
       top: -5.5rem;
+      right: 0rem;
     }
 
     .title {
@@ -3411,12 +3404,10 @@ body {
 
   .modal_requisites,
   .modal_privacy {
-    background: $pureWhite;
-    width: 85%;
-    min-width: 300px;
-    max-width: 1030px;
-    margin: 0 auto;
+    margin-top: 3.5rem;
     position: relative;
+    background: $pureWhite;
+    width: 100%;
     border-radius: 30px;
     padding: 5rem 5.8rem 5.5rem;
 
@@ -3426,6 +3417,7 @@ body {
 
     .closeBtn {
       top: -5.5rem;
+      right: 0rem;
     }
 
     .txt_title {
@@ -3497,6 +3489,28 @@ body {
       &::-webkit-scrollbar-button {
         display: none;
       }
+    }
+  }
+
+  .modalWrapper {
+    background: transparent;
+    width: 85%;
+    min-width: 300px;
+    max-width: 1030px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100dvh;
+    overflow-y: auto;
+    padding: 3rem 0;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
   }
 }
