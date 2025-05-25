@@ -2555,6 +2555,11 @@ body {
     width: 100%;
   }
 }
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_result .resultContent .txt_subtitle.txt_aquamarine {
+    text-align: center;
+  }
+}
 .modal__overlay .modal_result .resultContent .price {
   align-self: center;
   justify-self: end;
@@ -2761,13 +2766,40 @@ body {
 .modal__overlay .modal_confirmation {
   background: left top/110% url("../pics/modalConfirmationBackground.png"), #3aafa9;
   width: 85%;
-  min-width: 320px;
+  min-width: 300px;
   max-width: 650px;
   margin: 0 auto;
   position: relative;
   height: 40rem;
   border-radius: 30px;
   padding: 5rem 5.8rem 5.5rem;
+}
+@media screen and (max-width: 1200px) {
+  .modal__overlay .modal_confirmation {
+    background: left top/cover url("../pics/modalConfirmationBackground.png") no-repeat, #3aafa9;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_confirmation {
+    background: right top/cover url(../pics/modalConfirmationBackground.png) no-repeat, #3aafa9;
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_confirmation {
+    border-radius: 20px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 359px) {
+  .modal__overlay .modal_confirmation {
+    background: cover url(../pics/modalConfirmationBackground.png) no-repeat, #3aafa9;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_confirmation .break {
+    display: inline;
+  }
 }
 .modal__overlay .modal_confirmation .closeBtn {
   top: -5.5rem;
@@ -2779,8 +2811,41 @@ body {
   flex-direction: column;
   gap: 4rem;
 }
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_confirmation .confirmationContent {
+    justify-content: center;
+    gap: 4rem;
+    width: 49%;
+  }
+}
+@media screen and (max-width: 359px) {
+  .modal__overlay .modal_confirmation .confirmationContent {
+    width: 60%;
+    gap: 2rem;
+  }
+}
 .modal__overlay .modal_confirmation .txt_title {
   line-height: 1;
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_confirmation .txt_title {
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 359px) {
+  .modal__overlay .modal_confirmation .txt_title {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_confirmation .txt_subtitle {
+    font-size: 1.9rem;
+  }
+}
+@media screen and (max-width: 359px) {
+  .modal__overlay .modal_confirmation .txt_subtitle {
+    font-size: 1.6rem;
+  }
 }
 .modal__overlay .modal_order {
   background: bottom right/40% url("../pics/background_manager2.webp") no-repeat, bottom right/100% url("../pics/bubbles3.png") no-repeat, #def2f1;
@@ -3006,12 +3071,18 @@ body {
 .modal__overlay .modal_privacy {
   background: #feffff;
   width: 85%;
-  min-width: 320px;
+  min-width: 300px;
   max-width: 1030px;
   margin: 0 auto;
   position: relative;
   border-radius: 30px;
   padding: 5rem 5.8rem 5.5rem;
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_requisites,
+  .modal__overlay .modal_privacy {
+    padding: 3rem 3.6rem;
+  }
 }
 .modal__overlay .modal_requisites .closeBtn,
 .modal__overlay .modal_privacy .closeBtn {
@@ -3021,6 +3092,38 @@ body {
 .modal__overlay .modal_privacy .txt_title {
   line-height: 1;
 }
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_requisites .txt_title,
+  .modal__overlay .modal_privacy .txt_title {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_requisites .txt_title,
+  .modal__overlay .modal_privacy .txt_title {
+    text-align: center;
+    font-size: 2.6rem;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_requisites .txt_title,
+  .modal__overlay .modal_privacy .txt_title {
+    text-align: center;
+    font-size: 2.4rem;
+  }
+}
+@media screen and (max-width: 359px) {
+  .modal__overlay .modal_requisites .txt_title,
+  .modal__overlay .modal_privacy .txt_title {
+    font-size: 2.2rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_requisites .txt_logo.txt_aquamarine,
+  .modal__overlay .modal_privacy .txt_logo.txt_aquamarine {
+    display: block;
+  }
+}
 .modal__overlay .modal_requisites .txt_regular,
 .modal__overlay .modal_privacy .txt_regular {
   font-size: 1.6rem;
@@ -3028,6 +3131,12 @@ body {
 .modal__overlay .modal_requisites .title,
 .modal__overlay .modal_privacy .title {
   padding-bottom: 1rem;
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_requisites .title,
+  .modal__overlay .modal_privacy .title {
+    text-align: center;
+  }
 }
 .modal__overlay .modal_privacy {
   height: 60rem;
@@ -3039,6 +3148,11 @@ body {
   scrollbar-width: thin;
   scrollbar-color: #3aafa9 #def2f1;
   height: 44.5rem;
+}
+@media screen and (max-width: 767px) {
+  .modal__overlay .modal_privacy .privacyText {
+    height: 47.5rem;
+  }
 }
 .modal__overlay .modal_privacy .privacyText::-webkit-scrollbar {
   width: 8px;

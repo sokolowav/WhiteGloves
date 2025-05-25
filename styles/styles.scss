@@ -2855,6 +2855,12 @@ body {
           width: 100%;
         }
 
+        .txt_subtitle.txt_aquamarine {
+          @include w360 {
+            text-align: center;
+          }
+        }
+
         .price {
           align-self: center;
           justify-self: end;
@@ -3080,13 +3086,42 @@ body {
       $softAqua;
 
     width: 85%;
-    min-width: 320px;
+    min-width: 300px;
     max-width: 650px;
     margin: 0 auto;
     position: relative;
     height: 40rem;
     border-radius: 30px;
     padding: 5rem 5.8rem 5.5rem;
+
+    @include w1024 {
+      background: left top/cover url('../pics/modalConfirmationBackground.png')
+          no-repeat,
+        $softAqua;
+    }
+
+    @include w480 {
+      background: right top / cover url(../pics/modalConfirmationBackground.png)
+          no-repeat,
+        $softAqua;
+      padding: 3rem;
+    }
+
+    @include w360 {
+      border-radius: 20px;
+      height: auto;
+    }
+
+    @include w320 {
+      background: cover url(../pics/modalConfirmationBackground.png) no-repeat,
+        $softAqua;
+    }
+
+    .break {
+      @include w480 {
+        display: inline;
+      }
+    }
 
     .closeBtn {
       top: -5.5rem;
@@ -3098,10 +3133,37 @@ body {
       display: flex;
       flex-direction: column;
       gap: 4rem;
+
+      @include w480 {
+        justify-content: center;
+        gap: 4rem;
+        width: 49%;
+      }
+
+      @include w320 {
+        width: 60%;
+        gap: 2rem;
+      }
     }
 
     .txt_title {
       line-height: 1;
+      @include w360 {
+        font-size: 2.4rem;
+      }
+      @include w320 {
+        font-size: 2.2rem;
+      }
+    }
+
+    .txt_subtitle {
+      @include w480 {
+        font-size: 1.9rem;
+      }
+
+      @include w320 {
+        font-size: 1.6rem;
+      }
     }
   }
 
@@ -3351,12 +3413,16 @@ body {
   .modal_privacy {
     background: $pureWhite;
     width: 85%;
-    min-width: 320px;
+    min-width: 300px;
     max-width: 1030px;
     margin: 0 auto;
     position: relative;
     border-radius: 30px;
     padding: 5rem 5.8rem 5.5rem;
+
+    @include w480 {
+      padding: 3rem 3.6rem;
+    }
 
     .closeBtn {
       top: -5.5rem;
@@ -3364,6 +3430,29 @@ body {
 
     .txt_title {
       line-height: 1;
+
+      @include w768 {
+        font-size: 3rem;
+      }
+
+      @include w480 {
+        text-align: center;
+        font-size: 2.6rem;
+      }
+
+      @include w360 {
+        text-align: center;
+        font-size: 2.4rem;
+      }
+      @include w320 {
+        font-size: 2.2rem;
+      }
+    }
+
+    .txt_logo.txt_aquamarine {
+      @include w480 {
+        display: block;
+      }
     }
     .txt_regular {
       font-size: 1.6rem;
@@ -3371,6 +3460,9 @@ body {
 
     .title {
       padding-bottom: 1rem;
+      @include w480 {
+        text-align: center;
+      }
     }
   }
 
@@ -3383,6 +3475,10 @@ body {
       scrollbar-width: thin;
       scrollbar-color: $softAqua $paleAqua;
       height: 44.5rem;
+
+      @include w480 {
+        height: 47.5rem;
+      }
 
       &::-webkit-scrollbar {
         width: 8px;
