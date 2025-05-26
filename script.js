@@ -213,6 +213,7 @@ document.addEventListener('DOMContentLoaded', function () {
     navbar.classList.add('visible')
     navbarVisible = true
   }
+
   //--Active link behavior--
   navLinks.forEach((link) => {
     link.addEventListener('click', function (e) {
@@ -252,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       })
     },
-    { threshold: 0.4 }
+    { threshold: 0.25 }
   )
 
   servicesObserver.observe(servicesSection)
@@ -275,6 +276,74 @@ document.addEventListener('DOMContentLoaded', function () {
   )
 
   sections.forEach((section) => sectionObserver.observe(section))
+
+  //--Navbar mobile logic--
+  const burger = document.querySelector('#navbarBurger')
+  const navbarArrow = document.querySelector('#navbarArrow')
+  const mobileMenu = document.createElement('div')
+  mobileMenu.classList.add('navbar__tabs_mobile')
+
+  function openMobileNavbar() {
+    burger.classList.add('active')
+    mobileMenu.classList.add('active', 'fadeInRightSection')
+  }
+
+  function closeMobileNavbar() {
+    burger.classList.remove('active')
+    mobileMenu.classList.remove('fadeInRightSection')
+    mobileMenu.classList.add('fadeOutRightSection')
+
+    setTimeout(
+      () => mobileMenu.classList.remove('active', 'fadeOutRightSection'),
+      300
+    )
+  }
+
+  navbarTabs.forEach((tab) => {
+    const clone = tab.cloneNode(true)
+    mobileMenu.appendChild(clone)
+  })
+
+  document.body.appendChild(mobileMenu)
+
+  burger.addEventListener('click', () =>
+    burger.classList.contains('active')
+      ? closeMobileNavbar()
+      : openMobileNavbar()
+  )
+
+  mobileMenu.querySelectorAll('.navbar__tab').forEach((tab) => {
+    tab.addEventListener('click', (e) => {
+      e.preventDefault()
+      const link = tab.querySelector('a')
+      const target = document.querySelector(link.getAttribute('href'))
+
+      if (target) {
+        const offsetPosition =
+          target.getBoundingClientRect().top + window.pageYOffset
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        })
+      }
+
+      closeMobileNavbar()
+    })
+  })
+
+  navbarArrow.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    })
+    closeMobileNavbar()
+  })
+
+  window.addEventListener('resize', () => {
+    const isMobileNow = window.innerWidth <= 767
+    if (!isMobileNow) closeMobileNavbar()
+  })
 })
 
 //-----------------DETAILS----------------------------------

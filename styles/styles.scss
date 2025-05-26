@@ -501,13 +501,8 @@ body {
 //-------------------------------NAVBAR--------------------------------
 
 .navbar {
-  @include w1200 {
-    display: none;
-  }
-
   width: 100%;
   text-align: center;
-
   position: fixed;
   top: 0.5rem;
   left: 50%;
@@ -523,21 +518,99 @@ body {
     pointer-events: auto;
   }
 
+  @include w480 {
+    display: none;
+  }
+
+  &__arrow,
+  &__burger {
+    display: none;
+    position: fixed;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    z-index: 1001;
+    background-color: $softAqua;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+
+    &:hover {
+      background-color: $aquamarine;
+    }
+
+    @include w480 {
+      display: flex;
+    }
+  }
+
+  &__arrow {
+    bottom: 2rem;
+  }
+
+  &__burger {
+    bottom: 8.5rem;
+    flex-direction: column;
+    gap: 4px;
+
+    span {
+      display: block;
+      width: 20px;
+      height: 3px;
+      background-color: $pureWhite;
+      border-radius: 2px;
+      transition: 0.3s ease;
+    }
+
+    &.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    &.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    &.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+  }
+
   &__tabs {
     width: 100%;
     background-color: $pureWhite;
     display: inline-grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(6, minmax(7rem, auto));
     align-items: center;
     justify-items: stretch;
     border-radius: 100px;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
 
+    @include w480 {
+      display: none;
+    }
+
     .txt_regular {
       font-size: 1.6rem;
     }
-    @include w360 {
+
+    &_mobile {
       display: none;
+      position: fixed;
+      bottom: 13.5rem;
+      right: 2rem;
+      background-color: $pureWhite;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      flex-direction: column;
+      padding: 1rem;
+      z-index: 1000;
+
+      &.active {
+        display: flex;
+      }
     }
   }
 
@@ -549,6 +622,28 @@ body {
     white-space: nowrap;
     &:not(.active):hover {
       color: $aquamarine;
+    }
+    &:first-child {
+      padding-left: 1rem;
+
+      @include w480 {
+        padding-left: 2rem;
+      }
+    }
+
+    &:last-child {
+      padding-right: 1rem;
+
+      @include w480 {
+        padding-right: 2rem;
+      }
+    }
+
+    @include w480 {
+      padding: 2rem;
+      text-align: right;
+      white-space: nowrap;
+      font-size: 1.6rem !important;
     }
   }
 
