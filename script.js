@@ -241,22 +241,35 @@ document.addEventListener('DOMContentLoaded', function () {
   const servicesObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting && !navbarVisible) {
+        if (entry.isIntersecting && !navbarVisible && window.scrollY > 100) {
           navbar.classList.add('visible')
           navbarVisible = true
         } else if (
-          !entry.isIntersecting &&
-          window.scrollY < servicesSection.offsetTop
+          (!entry.isIntersecting || window.scrollY <= 100) &&
+          navbarVisible
         ) {
           navbar.classList.remove('visible')
           navbarVisible = false
         }
       })
     },
-    { threshold: 0.25 }
+    { threshold: 0.1 }
   )
 
   servicesObserver.observe(servicesSection)
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY <= 100 && navbarVisible) {
+      navbar.classList.remove('visible')
+      navbarVisible = false
+    } else if (
+      window.scrollY > 100 &&
+      servicesSection.getBoundingClientRect().top < window.innerHeight
+    ) {
+      navbar.classList.add('visible')
+      navbarVisible = true
+    }
+  })
 
   const sectionObserver = new IntersectionObserver(
     (entries) => {
@@ -343,11 +356,6 @@ document.addEventListener('DOMContentLoaded', function () {
     closeMobileNavbar()
   })
 
-  window.addEventListener('resize', () => {
-    const isMobileNow = window.innerWidth <= 767
-    if (!isMobileNow) closeMobileNavbar()
-  })
-
   const showControls = () => {
     clearTimeout(timeoutId)
     timeoutId = setTimeout(() => {
@@ -399,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function () {
       clearTimeout(timeoutId)
       burger.classList.remove('fadeOutRightSection', 'fadeInRightSection')
       navbarArrow.classList.remove('fadeOutRightSection', 'fadeInRightSection')
-    }
+    } else if (window.innerWidth <= 767) closeMobileNavbar()
   })
 })
 
