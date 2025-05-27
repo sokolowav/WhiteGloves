@@ -280,6 +280,9 @@ document.addEventListener('DOMContentLoaded', function () {
   //--Navbar mobile logic--
   const burger = document.querySelector('#navbarBurger')
   const navbarArrow = document.querySelector('#navbarArrow')
+  const footer = document.querySelector('.footer')
+  let isHidden = false
+  let timeoutId = null
   const mobileMenu = document.createElement('div')
   mobileMenu.classList.add('navbar__tabs_mobile')
 
@@ -343,6 +346,60 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', () => {
     const isMobileNow = window.innerWidth <= 767
     if (!isMobileNow) closeMobileNavbar()
+  })
+
+  const showControls = () => {
+    clearTimeout(timeoutId)
+    timeoutId = setTimeout(() => {
+      if (isHidden) {
+        burger.classList.remove('fadeOutRightSection')
+        navbarArrow.classList.remove('fadeOutRightSection')
+        burger.classList.add('fadeInRightSection')
+        navbarArrow.classList.add('fadeInRightSection')
+        isHidden = false
+      }
+    }, 300)
+  }
+
+  const hideControls = () => {
+    clearTimeout(timeoutId)
+    timeoutId = setTimeout(() => {
+      if (!isHidden) {
+        burger.classList.remove('fadeInRightSection')
+        navbarArrow.classList.remove('fadeInRightSection')
+        burger.classList.add('fadeOutRightSection')
+        navbarArrow.classList.add('fadeOutRightSection')
+        isHidden = true
+      }
+    }, 300)
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          hideControls()
+        } else {
+          showControls()
+        }
+      })
+    },
+    {
+      root: null,
+      threshold: 0.1,
+    }
+  )
+
+  if (footer && window.innerWidth <= 767) {
+    observer.observe(footer)
+  }
+
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 767) {
+      clearTimeout(timeoutId)
+      burger.classList.remove('fadeOutRightSection', 'fadeInRightSection')
+      navbarArrow.classList.remove('fadeOutRightSection', 'fadeInRightSection')
+    }
   })
 })
 
