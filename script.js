@@ -407,7 +407,9 @@ document.addEventListener('DOMContentLoaded', function () {
       clearTimeout(timeoutId)
       burger.classList.remove('fadeOutRightSection', 'fadeInRightSection')
       navbarArrow.classList.remove('fadeOutRightSection', 'fadeInRightSection')
-    } else if (window.innerWidth <= 767) closeMobileNavbar()
+
+      closeMobileNavbar()
+    }
   })
 })
 
