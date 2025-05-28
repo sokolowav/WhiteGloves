@@ -549,8 +549,10 @@ body {
   padding: 1rem;
   z-index: 1000;
 }
-.navbar__tabs_mobile.active {
-  display: flex;
+@media screen and (max-width: 767px) {
+  .navbar__tabs_mobile.active {
+    display: flex;
+  }
 }
 .navbar__tab {
   cursor: pointer;
@@ -2036,6 +2038,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem 0 !important;
 }
 .modal__overlay .modal_calculator__wrapper .title {
   padding: 1rem 0 2rem;
