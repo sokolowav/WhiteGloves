@@ -1509,7 +1509,7 @@ body {
 .call {
   position: relative;
   z-index: 1;
-  background: 0% -1%/contain no-repeat url("../pics/wave6.svg"), linear-gradient(rgba(43, 122, 120, 0.2), rgba(43, 122, 120, 0.1)), center/cover no-repeat url("../pics/callBackground.jpg");
+  background: 0% -1%/100% no-repeat url("../pics/wave6.svg"), linear-gradient(rgba(43, 122, 120, 0.2), rgba(43, 122, 120, 0.1)), center/cover no-repeat url("../pics/callBackground.jpg");
 }
 .call::after {
   content: "";
@@ -2855,11 +2855,11 @@ body {
   }
 }
 .modal__overlay .modal_confirmation {
-  background: left top/110% url("../pics/modalConfirmationBackground.png"), #3aafa9;
+  background: left top/110% url("../pics/modalConfirmationBackground.webp"), #3aafa9;
   margin-top: 3.5rem;
-  width: 85%;
+  width: 50%;
   min-width: 300px;
-  max-width: 1030px;
+  max-width: 670px;
   margin: 0 auto;
   position: relative;
   height: 40rem;
@@ -2868,13 +2868,20 @@ body {
 }
 @media screen and (max-width: 1200px) {
   .modal__overlay .modal_confirmation {
-    background: left top/cover url("../pics/modalConfirmationBackground.png") no-repeat, #3aafa9;
+    width: 75%;
+    background: right top/cover url("../pics/modalConfirmationBackground.webp") no-repeat, #3aafa9;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .modal__overlay .modal_confirmation {
+    background: right top/cover url("../pics/modalConfirmationBackground.webp") no-repeat, #3aafa9;
   }
 }
 @media screen and (max-width: 767px) {
   .modal__overlay .modal_confirmation {
-    background: right top/cover url(../pics/modalConfirmationBackground.png) no-repeat, #3aafa9;
-    padding: 3rem;
+    background: right top/cover url("../pics/modalConfirmationBackground.webp") no-repeat, #3aafa9;
+    padding: 4rem;
+    width: 85%;
   }
 }
 @media screen and (max-width: 479px) {
@@ -2885,7 +2892,7 @@ body {
 }
 @media screen and (max-width: 359px) {
   .modal__overlay .modal_confirmation {
-    background: cover url(../pics/modalConfirmationBackground.png) no-repeat, #3aafa9;
+    background: cover url("../pics/modalConfirmationBackground.webp") no-repeat, #3aafa9;
   }
 }
 @media screen and (max-width: 767px) {
@@ -2909,6 +2916,12 @@ body {
     justify-content: center;
     gap: 4rem;
     width: 49%;
+  }
+}
+@media screen and (max-width: 479px) {
+  .modal__overlay .modal_confirmation .confirmationContent {
+    width: 60%;
+    gap: 3rem;
   }
 }
 @media screen and (max-width: 359px) {

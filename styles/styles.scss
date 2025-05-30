@@ -1662,7 +1662,7 @@ body {
 .call {
   position: relative;
   z-index: 1;
-  background: 0% -1% / contain no-repeat url('../pics/wave6.svg'),
+  background: 0% -1% / 100% no-repeat url('../pics/wave6.svg'),
     linear-gradient(rgba($aquamarine, 0.2), rgba($aquamarine, 0.1)),
     center/cover no-repeat url('../pics/callBackground.jpg');
 
@@ -3181,13 +3181,13 @@ body {
   }
 
   .modal_confirmation {
-    background: left top/110% url('../pics/modalConfirmationBackground.png'),
+    background: left top/110% url('../pics/modalConfirmationBackground.webp'),
       $softAqua;
     margin-top: 3.5rem;
 
-    width: 85%;
+    width: 50%;
     min-width: 300px;
-    max-width: 1030px;
+    max-width: 670px;
     margin: 0 auto;
 
     position: relative;
@@ -3196,16 +3196,24 @@ body {
     padding: 5rem 5.8rem 5.5rem;
 
     @include w1024 {
-      background: left top/cover url('../pics/modalConfirmationBackground.png')
-          no-repeat,
+      width: 75%;
+      background: right top/cover
+          url('../pics/modalConfirmationBackground.webp') no-repeat,
+        $softAqua;
+    }
+
+    @include w768 {
+      background: right top/cover
+          url('../pics/modalConfirmationBackground.webp') no-repeat,
         $softAqua;
     }
 
     @include w480 {
-      background: right top / cover url(../pics/modalConfirmationBackground.png)
-          no-repeat,
+      background: right top / cover
+          url('../pics/modalConfirmationBackground.webp') no-repeat,
         $softAqua;
-      padding: 3rem;
+      padding: 4rem;
+      width: 85%;
     }
 
     @include w360 {
@@ -3214,7 +3222,8 @@ body {
     }
 
     @include w320 {
-      background: cover url(../pics/modalConfirmationBackground.png) no-repeat,
+      background: cover url('../pics/modalConfirmationBackground.webp')
+          no-repeat,
         $softAqua;
     }
 
@@ -3240,6 +3249,11 @@ body {
         justify-content: center;
         gap: 4rem;
         width: 49%;
+      }
+
+      @include w360 {
+        width: 60%;
+        gap: 3rem;
       }
 
       @include w320 {
