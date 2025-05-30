@@ -62,7 +62,15 @@ document.querySelectorAll('.swiper__tab').forEach((tab) => {
     mobileSelected.textContent = tab.textContent
     tabs.classList.remove('show')
     mobileToggle.classList.remove('open')
-    demonstrationOverlay.classList.remove('active')
+
+    demonstrationOverlay.classList.add('fade-out')
+
+    setTimeout(() => {
+      demonstrationOverlay.classList.remove('fade-out')
+      demonstrationOverlay.classList.remove('active')
+      demonstrationOverlay.style.visibility = 'hidden'
+      demonstrationOverlay.style.pointerEvents = 'none'
+    }, 300)
   })
 })
 
@@ -71,14 +79,22 @@ document.querySelectorAll('.dotWrapper').forEach((dot) =>
     const text = dot.querySelector('span').innerHTML
     const textWrapper = demonstrationOverlay.querySelector('span')
     textWrapper.innerHTML = text
-
+    demonstrationOverlay.style.visibility = 'visible'
+    demonstrationOverlay.style.pointerEvents = 'auto'
     demonstrationOverlay.classList.add('active')
   })
 )
 
-closeBtn.addEventListener('click', () =>
-  demonstrationOverlay.classList.remove('active')
-)
+closeBtn.addEventListener('click', () => {
+  demonstrationOverlay.classList.add('fade-out')
+
+  setTimeout(() => {
+    demonstrationOverlay.classList.remove('fade-out')
+    demonstrationOverlay.classList.remove('active')
+    demonstrationOverlay.style.visibility = 'hidden'
+    demonstrationOverlay.style.pointerEvents = 'none'
+  }, 300)
+})
 
 // ----- SWIPER REPORT --------------------------------------------
 const reportSwiper = new Swiper('.report__swiper', {
