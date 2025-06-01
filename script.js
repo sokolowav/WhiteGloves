@@ -62,9 +62,7 @@ document.querySelectorAll('.swiper__tab').forEach((tab) => {
     mobileSelected.textContent = tab.textContent
     tabs.classList.remove('show')
     mobileToggle.classList.remove('open')
-
     demonstrationOverlay.classList.add('fade-out')
-
     setTimeout(() => {
       demonstrationOverlay.classList.remove('fade-out')
       demonstrationOverlay.classList.remove('active')
@@ -438,9 +436,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const closeBtn = item.querySelector('.closeBtn')
 
     detailsBtn.addEventListener('click', () => {
-      // Закрываем все карточки
       items.forEach((el) => el.classList.remove('flipped'))
-      // Открываем только текущую
       item.classList.add('flipped')
     })
 
@@ -580,24 +576,46 @@ document.addEventListener('DOMContentLoaded', () => {
   function openModalCalc() {
     modalOverlayCalc.classList.add('active')
     document.body.style.overflow = 'hidden'
-
-    modalCalcLeftItem.classList.add('fadeInLeftSection')
-    modalCalcRightItem.classList.add('fadeInRightSection')
+    if (window.innerWidth <= 1023) {
+      modalCalcLeftItem.classList.add('fadeInBottomSection')
+      modalCalcRightItem.classList.add('fadeInBottomSection')
+    } else {
+      modalCalcLeftItem.classList.add('fadeInLeftSection')
+      modalCalcRightItem.classList.add('fadeInRightSection')
+    }
   }
 
   function closeModalCalc() {
-    modalCalcLeftItem.classList.remove('fadeInLeftSection')
-    modalCalcRightItem.classList.remove('fadeInRightSection')
+    modalCalcLeftItem.classList.remove(
+      'fadeInLeftSection',
+      'fadeInBottomSection'
+    )
+    modalCalcRightItem.classList.remove(
+      'fadeInRightSection',
+      'fadeInBottomSection'
+    )
 
-    modalCalcLeftItem.classList.add('fadeOutLeftSection')
-    modalCalcRightItem.classList.add('fadeOutRightSection')
+    if (window.innerWidth <= 1023) {
+      modalCalcLeftItem.classList.add('fadeOutBottomSection')
+      modalCalcRightItem.classList.add('fadeOutBottomSection')
 
-    setTimeout(() => {
-      modalOverlayCalc.classList.remove('active')
-      document.body.style.overflow = ''
-      modalCalcLeftItem.classList.remove('fadeOutLeftSection')
-      modalCalcRightItem.classList.remove('fadeOutRightSection')
-    }, 300)
+      setTimeout(() => {
+        modalOverlayCalc.classList.remove('active')
+        document.body.style.overflow = ''
+        modalCalcLeftItem.classList.remove('fadeOutBottomSection')
+        modalCalcRightItem.classList.remove('fadeOutBottomSection')
+      }, 300)
+    } else {
+      modalCalcLeftItem.classList.add('fadeOutLeftSection')
+      modalCalcRightItem.classList.add('fadeOutRightSection')
+
+      setTimeout(() => {
+        modalOverlayCalc.classList.remove('active')
+        document.body.style.overflow = ''
+        modalCalcLeftItem.classList.remove('fadeOutLeftSection')
+        modalCalcRightItem.classList.remove('fadeOutRightSection')
+      }, 300)
+    }
   }
 
   function openModalResult() {
