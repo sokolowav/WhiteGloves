@@ -930,7 +930,10 @@ document.addEventListener('DOMContentLoaded', () => {
       return
     }
 
-    //здесь отправка формы
+    sendToTelegram({
+      phone: phoneInputEquipment.value,
+    })
+
     formEquipment.reset()
     openModalConfirmation()
   })
@@ -1123,3 +1126,32 @@ phoneInputEquipment.addEventListener('keydown', (e) => {
     document.querySelector('.equipment__button').click()
   }
 })
+
+//------- Telegram --------
+function sendToTelegram({ phone, serviceSummary, total }) {
+  console.log('send')
+  const token = '7958013860:AAGfxuJMiCqGxHZAiyAqmqe4aFErBqOu7M0'
+  const chatId = '556232815'
+  const message = `
+🧾 <b>Новый заказ:</b>
+
+📞 <b>Телефон:</b> ${phone}
+🧹 <b>Услуги:</b> ${serviceSummary || 'неизвестны'} 
+💰 <b>Стоимость:</b> ${total?.toLocaleString('ru-RU') || 'неизвестна'} ₽
+`
+  console.log(message)
+  const url = `https://api.telegram.org/bot${token}/sendMessage`
+  const data = {
+    chat_id: chatId,
+    text: message,
+    parse_mode: 'HTML',
+  }
+
+  fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  }).then((res) => {
+    if (!res.ok) console.error('Ошибка отправки в Telegram')
+  })
+}
