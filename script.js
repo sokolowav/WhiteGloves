@@ -555,16 +555,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const serviceCost = area * servicePrice
     total += serviceCost
 
-    extras.forEach((extra) => {
+    const allExtras = extras.map((extra) => {
       const isPerSquare = ['Мойка потолков', 'Мойка стен'].includes(extra.name)
       const cost = isPerSquare ? extra.price * area : extra.price
-
-      extraPriceResults.push({
+      return {
         name: extra.name,
         amount: cost,
-      })
+      }
+    })
 
-      total += cost
+    const sortedExtras = [...allExtras].sort((a, b) => a.amount - b.amount)
+
+    const freebiesCount = Math.floor(allExtras.length / 4)
+    const freeExtras = sortedExtras.slice(0, freebiesCount)
+
+    const freeExtraNames = freeExtras.map((item) => item.name)
+
+    allExtras.forEach((extra) => {
+      const finalAmount = freeExtraNames.includes(extra.name) ? 0 : extra.amount
+      extraPriceResults.push({
+        name: extra.name,
+        amount: finalAmount,
+      })
+      total += finalAmount
     })
 
     return {
