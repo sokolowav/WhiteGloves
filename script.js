@@ -391,6 +391,7 @@ document.addEventListener('DOMContentLoaded', function () {
         navbarArrow.classList.remove('fadeInRightSection')
         burger.classList.add('fadeOutRightSection')
         navbarArrow.classList.add('fadeOutRightSection')
+        closeMobileNavbar()
         isHidden = true
       }
     }, 300)
