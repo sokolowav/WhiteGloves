@@ -548,6 +548,9 @@ document.addEventListener('DOMContentLoaded', () => {
     'Поменять постельное': 200,
   }
 
+  let serviceSummary = {}
+  let total = ''
+
   function calculatePrice(area, servicePrice, extras) {
     const extraPriceResults = []
     let total = 0
@@ -651,10 +654,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }))
 
     const priceResults = calculatePrice(area, servicePrice, extraServiceItems)
+    serviceSummary[
+      `${service} ` + `${place} площадью ${area} м²`
+    ] = `${priceResults.serviceCost.toLocaleString('ru-RU')} ₽`
 
     resultSummaryContainer.innerHTML = `
     <span class="txt_regular">
-      ${service}<br />${place} площадью ${area} м²</span>
+      ${service} <br />${place} площадью ${area} м²</span>
     <span class="txt_regular servicePrice price">${priceResults.serviceCost.toLocaleString(
       'ru-RU'
     )} ₽</span>
@@ -665,6 +671,9 @@ document.addEventListener('DOMContentLoaded', () => {
       cost.classList.add('price')
       name.textContent = `${item.name}`
       cost.textContent = `${item.amount.toLocaleString('ru-RU')} ₽`
+      serviceSummary[`${item.name}`] = `${item.amount.toLocaleString(
+        'ru-RU'
+      )} ₽`
       resultSummaryContainer.appendChild(name)
       resultSummaryContainer.appendChild(cost)
     })
@@ -673,7 +682,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <span class="txt_subtitle txt_bold resultPrice">Стоимость:</span>
     <span class="txt_subtitle txt_bold txt_aquamarine price">
       ${priceResults.total.toLocaleString('ru-RU')} ₽</span>`
-
+    total = `${priceResults.total.toLocaleString('ru-RU')} ₽`
     modalOverlayResult.classList.add('active')
     modalResult.classList.add('fadeInBottomSection')
     document.body.style.overflow = 'hidden'
@@ -877,7 +886,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return
     }
 
-    //здесь отправка формы
+    sendToTelegram({ phone: phoneInputResult.value, serviceSummary, total })
+    serviceSummary = {}
+    total = ''
     phoneInputResult.value = ''
     closeModalResult()
     resetFormCalc()
@@ -904,7 +915,11 @@ document.addEventListener('DOMContentLoaded', () => {
       return
     }
 
-    //здесь отправка формы
+    sendToTelegram({
+      phone: phoneInputOrder.value,
+      contactMethod: contactMethod,
+    })
+    contactMethod = undefined
     resetFormOrder()
     closeModalOrder()
     setTimeout(() => openModalConfirmation(), 300)
@@ -1096,6 +1111,7 @@ updateCheckedInputStyles()
 //-------- ORDER MODAL INPUT LOGIC ------
 
 const callByInputs = document.querySelectorAll('input[name="Способ связи"]')
+let contactMethod = undefined
 
 callByInputs.forEach((input) => {
   input.addEventListener('change', () => {
@@ -1105,9 +1121,10 @@ callByInputs.forEach((input) => {
 
     labels.forEach((label) => {
       const input = label.querySelector('input[type="radio"]')
-      input.checked
-        ? label.classList.add('checked')
-        : label.classList.remove('checked')
+      if (input.checked) {
+        contactMethod = input.value
+        label.classList.add('checked')
+      } else label.classList.remove('checked')
     })
   })
 })
@@ -1136,8 +1153,8 @@ function sendToTelegram({ phone, contactMethod, serviceSummary, total }) {
 
 📞 <b>Телефон:</b> ${phone}
 📲 <b>Способ связи:</b> ${contactMethod || '-'} 
-🧹 <b>Услуги:</b> ${serviceSummary || '-'} 
-💰 <b>Стоимость:</b> ${total?.toLocaleString('ru-RU') || '-'} ₽
+🧹 <b>Услуги:</b> ${JSON.stringify(serviceSummary) || '-'} 
+💰 <b>Стоимость:</b> ${total || '-'}
 `
 
   const url = `https://api.telegram.org/bot${token}/sendMessage`
@@ -1146,6 +1163,7 @@ function sendToTelegram({ phone, contactMethod, serviceSummary, total }) {
     text: message,
     parse_mode: 'HTML',
   }
+  console.log(message)
 
   fetch(url, {
     method: 'POST',
