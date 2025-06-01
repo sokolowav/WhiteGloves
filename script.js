@@ -1128,18 +1128,18 @@ phoneInputEquipment.addEventListener('keydown', (e) => {
 })
 
 //------- Telegram --------
-function sendToTelegram({ phone, serviceSummary, total }) {
-  console.log('send')
+function sendToTelegram({ phone, contactMethod, serviceSummary, total }) {
   const token = '7958013860:AAGfxuJMiCqGxHZAiyAqmqe4aFErBqOu7M0'
-  const chatId = '556232815'
+  const chatId = '-4925572098'
   const message = `
 🧾 <b>Новый заказ:</b>
 
 📞 <b>Телефон:</b> ${phone}
-🧹 <b>Услуги:</b> ${serviceSummary || 'неизвестны'} 
-💰 <b>Стоимость:</b> ${total?.toLocaleString('ru-RU') || 'неизвестна'} ₽
+📲 <b>Способ связи:</b> ${contactMethod || '-'} 
+🧹 <b>Услуги:</b> ${serviceSummary || '-'} 
+💰 <b>Стоимость:</b> ${total?.toLocaleString('ru-RU') || '-'} ₽
 `
-  console.log(message)
+
   const url = `https://api.telegram.org/bot${token}/sendMessage`
   const data = {
     chat_id: chatId,
