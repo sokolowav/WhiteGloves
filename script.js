@@ -1147,8 +1147,8 @@ phoneInputEquipment.addEventListener('keydown', (e) => {
 //------- Telegram --------
 function sendToTelegram({ phone, contactMethod, serviceSummary, total }) {
   const token = '7958013860:AAGfxuJMiCqGxHZAiyAqmqe4aFErBqOu7M0'
-  // const chatId = '-4925572098'
-  const chatId = '556232815'
+  const chatId = '-4925572098'
+  // const chatId = '556232815'
   let serviceSummaryFormatted = '-'
   if (serviceSummary)
     serviceSummaryFormatted =
