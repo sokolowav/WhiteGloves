@@ -1149,12 +1149,20 @@ function sendToTelegram({ phone, contactMethod, serviceSummary, total }) {
   const token = '7958013860:AAGfxuJMiCqGxHZAiyAqmqe4aFErBqOu7M0'
   // const chatId = '-4925572098'
   const chatId = '556232815'
+  let serviceSummaryFormatted = '-'
+  if (serviceSummary)
+    serviceSummaryFormatted =
+      '\n' +
+      Object.entries(serviceSummary)
+        .map(([key, value]) => `${key}: ${value}`)
+        .join('\n')
+
   const message = `
 🧾 <b>Новый заказ с сайта:</b>
 
 📞 <b>Телефон: ${phone} </b>
 📲 <b>Способ связи:</b> ${contactMethod || '-'} 
-🧹 <b>Услуги:</b> ${JSON.stringify(serviceSummary) || '-'} 
+🧹 <b>Услуги:</b> ${serviceSummaryFormatted}
 💰 <b>Стоимость:</b> ${total || '-'}
 `
 
