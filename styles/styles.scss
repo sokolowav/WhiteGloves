@@ -2594,6 +2594,10 @@ body {
         align-items: center;
         gap: 2rem;
 
+        @include w320 {
+          gap: 1.8rem;
+        }
+
         .txt_bold {
           font-weight: 600;
           transition: all 0.3s;

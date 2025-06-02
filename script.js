@@ -1149,9 +1149,9 @@ function sendToTelegram({ phone, contactMethod, serviceSummary, total }) {
   const token = '7958013860:AAGfxuJMiCqGxHZAiyAqmqe4aFErBqOu7M0'
   const chatId = '-4925572098'
   const message = `
-🧾 <b>Новый заказ:</b>
+🧾 <b>Новый заказ с сайта:</b>
 
-📞 <b>Телефон:</b> ${phone}
+📞 <b>Телефон: ${phone} </b>
 📲 <b>Способ связи:</b> ${contactMethod || '-'} 
 🧹 <b>Услуги:</b> ${JSON.stringify(serviceSummary) || '-'} 
 💰 <b>Стоимость:</b> ${total || '-'}

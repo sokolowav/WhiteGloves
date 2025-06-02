@@ -2359,6 +2359,11 @@ body {
   align-items: center;
   gap: 2rem;
 }
+@media screen and (max-width: 359px) {
+  .modal__overlay .modal__step#step1 .stepItem {
+    gap: 1.8rem;
+  }
+}
 .modal__overlay .modal__step#step1 .stepItem .txt_bold {
   font-weight: 600;
   transition: all 0.3s;
