@@ -2359,7 +2359,7 @@ body {
   align-items: center;
   gap: 2rem;
 }
-@media screen and (max-width: 359px) {
+@media screen and (max-width: 479px) {
   .modal__overlay .modal__step#step1 .stepItem {
     gap: 1.8rem;
   }

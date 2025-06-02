@@ -2594,7 +2594,7 @@ body {
         align-items: center;
         gap: 2rem;
 
-        @include w320 {
+        @include w360 {
           gap: 1.8rem;
         }
 
