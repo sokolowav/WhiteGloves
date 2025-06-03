@@ -1173,7 +1173,6 @@ function sendToTelegram({ phone, contactMethod, serviceSummary, total }) {
     text: message,
     parse_mode: 'HTML',
   }
-  console.log(message)
 
   fetch(url, {
     method: 'POST',
